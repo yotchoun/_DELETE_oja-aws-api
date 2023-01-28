@@ -1,7 +1,6 @@
 package com.mafoya.oja.service;
 
 import com.mafoya.oja.exception.DataNotFoundException;
-import com.mafoya.oja.mapper.OjaMapper;
 import com.mafoya.oja.model.Employee;
 import com.mafoya.oja.repository.EmployeeRepository;
 
