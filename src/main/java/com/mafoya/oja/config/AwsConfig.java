@@ -35,4 +35,7 @@ public class AwsConfig {
      */
     private String endpoint;
 
+
+    private String profileName;
+
 }

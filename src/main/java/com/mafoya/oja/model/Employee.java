@@ -10,7 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@DynamoDBTable(tableName = "Employee")
+@DynamoDBTable(tableName = "OjaEmployee-dev")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor

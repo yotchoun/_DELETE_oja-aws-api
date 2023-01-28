@@ -14,7 +14,7 @@ import org.springframework.data.annotation.Id;
 import java.time.Instant;
 
 @Data
-@DynamoDBTable(tableName = "Order")
+@DynamoDBTable(tableName = "OjaOrder-dev")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
