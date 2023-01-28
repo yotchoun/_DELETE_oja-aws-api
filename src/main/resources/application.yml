@@ -1,0 +1,9 @@
+
+server:
+  port: '8083'
+# AWS properties
+aws:
+  access-key: ${AWS_ACCESS_KEY}
+  secret-key: ${AWS_SECRET_ACCESS_KEY}
+  region: ${AWS_REGION}
+  endpoint: ${AWS_DYNAMODB_ENDPOINT}
