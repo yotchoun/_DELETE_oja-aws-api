@@ -1,11 +1,13 @@
 package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
+import com.mafoya.oja.dto.EmployeeDto;
 import com.mafoya.oja.model.Employee;
 import com.mafoya.oja.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,8 +33,8 @@ public class EmployeeController {
     }
 
     @PostMapping("/employees")
-    public Employee createEmployee(@RequestHeader("authorization") String authorization, @RequestBody Employee employee) {
-        return this.employeeService.create(authorization, employee);
+    public Employee createEmployee(@RequestBody @Valid EmployeeDto employeeDto, @RequestHeader("authorization") String authorization) {
+        return this.employeeService.create(authorization, employeeDto);
     }
 
     @PutMapping("/employees/{id}")

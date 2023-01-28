@@ -8,3 +8,9 @@ aws:
   region: ${AWS_REGION}
   endpoint: ${AWS_DYNAMODB_ENDPOINT}
   profile-name: ${AWS_PROFILE_NAME}
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG

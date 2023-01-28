@@ -1,6 +1,8 @@
 package com.mafoya.oja.service;
 
+import com.mafoya.oja.dto.EmployeeDto;
 import com.mafoya.oja.exception.DataNotFoundException;
+import com.mafoya.oja.mapper.OjaMapper;
 import com.mafoya.oja.model.Employee;
 import com.mafoya.oja.repository.EmployeeRepository;
 
@@ -16,8 +18,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public Employee create(String authorization, Employee employee) {
-        return employeeRepository.save(employee);
+    public Employee create(String authorization, EmployeeDto employeeDto) {
+        return employeeRepository.save(OjaMapper.mapEmployeeToDo(employeeDto));
     }
 
     @Override

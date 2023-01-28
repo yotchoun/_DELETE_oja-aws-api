@@ -7,9 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import software.amazon.awssdk.enhanced.dynamodb.model.PageIterable;
 
-import java.util.List;
-import java.util.Optional;
-
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
