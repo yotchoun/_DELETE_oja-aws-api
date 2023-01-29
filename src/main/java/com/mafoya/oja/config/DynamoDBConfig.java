@@ -30,15 +30,15 @@ public class DynamoDBConfig {
         return new AWSStaticCredentialsProvider(new BasicAWSCredentials(config.getAccessKey(), config.getSecretKey()));
     }
 
-    @Bean
-    public DynamoDBMapperConfig dynamoDBMapperConfig() {
-        return DynamoDBMapperConfig.DEFAULT;
-    }
+//    @Bean
+//    public DynamoDBMapperConfig dynamoDBMapperConfig() {
+//        return DynamoDBMapperConfig.DEFAULT;
+//    }
 
-    @Bean
-    public DynamoDBMapper dynamoDBMapper(AmazonDynamoDB amazonDynamoDB, DynamoDBMapperConfig config) {
-        return new DynamoDBMapper(amazonDynamoDB, config);
-    }
+//    @Bean
+//    public DynamoDBMapper dynamoDBMapper(AmazonDynamoDB amazonDynamoDB, DynamoDBMapperConfig config) {
+//        return new DynamoDBMapper(amazonDynamoDB, config);
+//    }
 
     @Bean
     public AmazonDynamoDB amazonDynamoDB() {
