@@ -26,10 +26,10 @@ public class Order {
 
     @DynamoDBRangeKey(attributeName = "orderID")
     private String orderSerial;
-    @DynamoDBAttribute
+    @DynamoDBAttribute(attributeName = "orderValue")
     private double orderValue;
 
-    @DynamoDBAttribute
+    @DynamoDBAttribute(attributeName = "createdDate")
     private Instant createdDate;
 
 }

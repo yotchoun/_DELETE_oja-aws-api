@@ -14,3 +14,12 @@ logging:
     org:
       springframework:
         web: DEBUG
+
+spring:
+  data:
+    dynamodb:
+      entity2ddl:
+        writeCapacity: '1'
+        readCapacity: '10'
+        gsiProjectionType: ALL
+        auto: create-only
