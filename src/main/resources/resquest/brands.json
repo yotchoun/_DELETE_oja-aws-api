@@ -1,0 +1,211 @@
+[
+  {
+    "id": "2dbb367f-d432-4d90-867b-756f2b4a0dcb",
+    "slug": "ferrari",
+    "name": "Ferrari",
+    "image": "/assets/images/brands/ferrari.png",
+    "type": "car",
+    "for": {
+      "demo": "market-1",
+      "type": "car-brands"
+    }
+  },
+  {
+    "id": "44668f9f-e8e4-473e-bae4-591e45adf4e4",
+    "slug": "tesla",
+    "name": "Tesla",
+    "image": "/assets/images/brands/tesla.png",
+    "type": "car",
+    "for": {
+      "demo": "market-1",
+      "type": "car-brands"
+    }
+  },
+  {
+    "id": "91d0d7e5-d260-46f1-8445-bc098c5ae630",
+    "slug": "bmw",
+    "name": "Bmw",
+    "image": "/assets/images/brands/bmw.png",
+    "type": "car",
+    "for": {
+      "demo": "market-1",
+      "type": "car-brands"
+    }
+  },
+  {
+    "id": "e8f9d5c3-8bfa-473a-8029-e6813cfd1a99",
+    "slug": "toyota",
+    "name": "Toyota",
+    "image": "/assets/images/brands/toyota.png",
+    "type": "car",
+    "for": {
+      "demo": "market-1",
+      "type": "car-brands"
+    }
+  },
+  {
+    "id": "76436695-c58d-4402-9af7-bbc46fdc57b0",
+    "slug": "mini",
+    "name": "Mini",
+    "image": "/assets/images/brands/mini.png",
+    "type": "car",
+    "for": {
+      "demo": "market-1",
+      "type": "car-brands"
+    }
+  },
+  {
+    "id": "95909c6c-91e7-4b64-a26b-0e3a56f144c2",
+    "slug": "ford",
+    "name": "Ford",
+    "image": "/assets/images/brands/ford.png",
+    "type": "car",
+    "for": {
+      "demo": "market-1",
+      "type": "car-brands"
+    }
+  },
+  {
+    "id": "e73dc783-c355-4a30-9ae3-4995d4f13513",
+    "slug": "apple",
+    "name": "Apple",
+    "image": "/assets/images/brands/apple.png",
+    "type": "mobile",
+    "for": {
+      "demo": "market-1",
+      "type": "mobile-brands"
+    }
+  },
+  {
+    "id": "52cc15f6-d076-432b-94d2-1bd73bd01447",
+    "slug": "dell",
+    "name": "Dell",
+    "image": "/assets/images/brands/dell.png",
+    "type": "mobile",
+    "for": {
+      "demo": "market-1",
+      "type": "mobile-brands"
+    }
+  },
+  {
+    "id": "6c794f56-aaa4-433b-a6fe-3b78dbb357f9",
+    "slug": "xiaomi",
+    "name": "Xiaomi",
+    "image": "/assets/images/brands/xiaomi.png",
+    "type": "mobile",
+    "for": {
+      "demo": "market-1",
+      "type": "mobile-brands"
+    }
+  },
+  {
+    "id": "75f6ccee-8946-41a7-977f-61b3a5fc6401",
+    "slug": "asus",
+    "name": "Asus",
+    "image": "/assets/images/brands/asus.png",
+    "type": "mobile",
+    "for": {
+      "demo": "market-1",
+      "type": "mobile-brands"
+    }
+  },
+  {
+    "id": "d0a80046-7044-4b77-a1c2-2d06335e9d2e",
+    "slug": "sony",
+    "name": "Sony",
+    "image": "/assets/images/brands/sony.png",
+    "type": "mobile",
+    "for": {
+      "demo": "market-1",
+      "type": "mobile-brands"
+    }
+  },
+  {
+    "id": "9fedbaee-67cd-47ef-9447-07b9041fc79d",
+    "slug": "acer",
+    "name": "Acer",
+    "image": "/assets/images/brands/acer.png",
+    "type": "mobile",
+    "for": {
+      "demo": "market-1",
+      "type": "mobile-brands"
+    }
+  },
+  {
+    "id": "b61a66bb-bad1-41b5-bb93-c855f93e0bb5",
+    "slug": "ray-ban",
+    "name": "Ray-ban",
+    "image": "/assets/images/brands/ray-ban.png",
+    "type": "optics",
+    "for": {
+      "demo": "market-1",
+      "type": "optics-brands"
+    }
+  },
+  {
+    "id": "940c08f2-d4b7-4dfc-927c-5648581f43f5",
+    "slug": "zeiss",
+    "name": "Zeiss",
+    "image": "/assets/images/brands/zeiss.png",
+    "type": "optics",
+    "for": {
+      "demo": "market-1",
+      "type": "optics-brands"
+    }
+  },
+  {
+    "id": "d43dd2b2-555f-4fb9-b923-6a0cdb6c3f43",
+    "slug": "occular",
+    "name": "Occular",
+    "image": "/assets/images/brands/occular.png",
+    "type": "optics",
+    "for": {
+      "demo": "market-1",
+      "type": "optics-brands"
+    }
+  },
+  {
+    "id": "74e2c93e-ba4c-413e-97d0-1bfd969f35ee",
+    "slug": "apple",
+    "name": "Apple",
+    "image": "/assets/images/brands/apple.png",
+    "type": "optics",
+    "for": {
+      "demo": "market-1",
+      "type": "optics-brands"
+    }
+  },
+  {
+    "id": "22e9b7ce-b32d-4877-9442-6c2273ef9ed1",
+    "slug": "titan",
+    "name": "Titan",
+    "image": "/assets/images/brands/titan.png",
+    "type": "optics",
+    "for": {
+      "demo": "market-1",
+      "type": "optics-brands"
+    }
+  },
+  {
+    "id": "5b7ca86c-8f24-43b4-9e6f-65dbe2bb1426",
+    "slug": "london-britches",
+    "name": "London Britches",
+    "image": "/assets/images/products/london-britches.png",
+    "type": "fashion",
+    "for": {
+      "demo": "market-1",
+      "type": "featured-brands"
+    }
+  },
+  {
+    "id": "b2aab7d3-10d4-445d-bd07-e23e44c1daea",
+    "slug": "jim-and-jago",
+    "name": "Jim & Jago",
+    "image": "/assets/images/products/jim and jiko.png",
+    "type": "fashion",
+    "for": {
+      "demo": "market-1",
+      "type": "featured-brands"
+    }
+  }
+]
