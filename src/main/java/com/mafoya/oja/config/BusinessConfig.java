@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class BusinessConfig {
 
     @Bean
-    BrandService employeeService(BrandRepository brandRepository) {
+    BrandService brandService(BrandRepository brandRepository) {
         return new BrandServiceImpl(brandRepository);
     }
 
