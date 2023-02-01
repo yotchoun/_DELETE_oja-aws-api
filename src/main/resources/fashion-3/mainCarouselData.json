@@ -1,0 +1,22 @@
+[
+  {
+    id: 1,
+    discount: 30,
+    category: "Men",
+    buttonLink: "#",
+    buttonText: "Shop Now",
+    title: "Lifestyle collection",
+    imgUrl: "/assets/images/banners/banner-24.jpg",
+    description: "Get Free Shipping on orders over $99.00"
+  },
+  {
+    id: 2,
+    discount: 35,
+    buttonLink: "#",
+    category: "Women",
+    buttonText: "Shop Now",
+    title: "Lifestyle collection",
+    imgUrl: "/assets/images/banners/banner-23.jpg",
+    description: "Get Free Shipping on orders over $99.00"
+  }
+]

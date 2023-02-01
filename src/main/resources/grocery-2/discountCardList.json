@@ -1,0 +1,26 @@
+[
+  {
+    id: 1,
+    title: "25% Special Off Today Only for Vegetables",
+    subtitle: "Till 10 Sept, 2021",
+    imgUrl: "/assets/images/products/kisspng-organic-food-leaf-vegetable-fruit-rich-vegetables-5aa9f4d026ae09 1.png",
+    shopUrl: "/",
+    bgColor: "#F6FFE5"
+  },
+  {
+    id: 2,
+    title: "15% Off for All Product Only Need to Subscribe",
+    subtitle: "Subscribe Us",
+    imgUrl: "/assets/images/products/kisspng-organic-food-milk-food-gift-baskets-grocery-5abeaffc1e5b25 1.png",
+    shopUrl: "/",
+    bgColor: "#FFF8E5"
+  },
+  {
+    id: 3,
+    title: "25% Special Off Today Only for Vegetables",
+    subtitle: "Till 10 Sept, 2021",
+    imgUrl: "/assets/images/products/kisspng-organic-food-leaf-vegetable-fruit-rich-vegetables-5aa9f4d026ae09 1.png",
+    shopUrl: "/",
+    bgColor: "#F6FFE5"
+  }
+]

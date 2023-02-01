@@ -1,0 +1,18 @@
+[
+  {
+    id: 1,
+    buttonLink: "#",
+    buttonText: "Shop Now",
+    subTitle: "GIFT SHOP",
+    imgUrl: "/assets/images/Gift Shop/Header.png",
+    title: "The gift of a man is his goodwill. Take care of gift"
+  },
+  {
+    id: 2,
+    buttonLink: "#",
+    buttonText: "Shop Now",
+    subTitle: "GIFT SHOP",
+    imgUrl: "/assets/images/Gift Shop/Header.png",
+    title: "The gift of a man is his goodwill. Take care of gift"
+  }
+]

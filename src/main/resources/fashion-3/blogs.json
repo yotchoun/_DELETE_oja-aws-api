@@ -1,0 +1,308 @@
+[
+  {
+    id: "f54ee5db-ff89-4d86-ade8-86d949db7b03",
+    title: "Repellendus accusamus occaecati.",
+    description: "Saepe praesentium saepe iste minus totam excepturi expedita. Illum deserunt suscipit rerum officiis consequatur dicta odio. Necessitatibus perferendis aspernatur eum. Saepe voluptatum beatae. Hic veritatis libero nisi excepturi omnis explicabo et.",
+    thumbnail: "/assets/images/blogs/post-1.jpg",
+    shop: {
+      id: "c2a4ed2d-6708-4c1e-aa36-eddfd0496ce7",
+      slug: "constant-shoppers",
+      user: {
+        id: "5c47a8cb-c032-4e5d-81ff-fd082f8f7740",
+        email: "Berniece0@hotmail.com",
+        phone: "730-935-5160 x73867",
+        avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/561.jpg",
+        password: "Yj2bbCH9JqNNv_K",
+        dateOfBirth: "1993-08-19T08:41:32.306Z",
+        verified: true,
+        name: {
+          firstName: "Alphonso",
+          lastName: "Goodwin"
+        }
+      },
+      email: "Darian90@hotmail.com",
+      name: "Constant Shoppers",
+      phone: "(613) 343-9004",
+      address: "845 N. Stonybrook Ave. Tonawanda, NY 14210, Denmark",
+      verified: false,
+      coverPicture: "/assets/images/banners/banner-4.png",
+      profilePicture: "/assets/images/faces/propic(3).png",
+      socialLinks: {
+        facebook: null,
+        youtube: null,
+        twitter: null,
+        instagram: null
+      }
+    },
+    user: {
+      id: "468e1914-4e05-4da7-b84b-b099a4832ce2",
+      email: "Beaulah_Hodkiewicz@hotmail.com",
+      phone: "407.691.9583",
+      avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/558.jpg",
+      password: "K1v19JSlmawcx2Y",
+      dateOfBirth: "1945-03-08T22:29:18.813Z",
+      verified: true,
+      name: {
+        firstName: "Eloy",
+        lastName: "Breitenberg"
+      }
+    },
+    createdAt: "2022-11-08T07:15:55.897Z",
+    slug: "repellendus-accusamus-occaecati."
+  },
+  {
+    id: "d27ab586-d42b-4389-8d30-252abcc66d71",
+    title: "Libero facere quaerat molestiae.",
+    description: "Vel laboriosam maiores molestias voluptatem. Facere dolores praesentium natus exercitationem dolore. Eos esse velit expedita ratione corporis sed quae. Odit minima libero sint. Placeat illo veritatis vitae sint laborum officia fugit. Dignissimos illo neque animi vero soluta earum velit beatae.",
+    thumbnail: "/assets/images/blogs/post-2.jpg",
+    shop: {
+      id: "c2a4ed2d-6708-4c1e-aa36-eddfd0496ce7",
+      slug: "constant-shoppers",
+      user: {
+        id: "5c47a8cb-c032-4e5d-81ff-fd082f8f7740",
+        email: "Berniece0@hotmail.com",
+        phone: "730-935-5160 x73867",
+        avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/561.jpg",
+        password: "Yj2bbCH9JqNNv_K",
+        dateOfBirth: "1993-08-19T08:41:32.306Z",
+        verified: true,
+        name: {
+          firstName: "Alphonso",
+          lastName: "Goodwin"
+        }
+      },
+      email: "Darian90@hotmail.com",
+      name: "Constant Shoppers",
+      phone: "(613) 343-9004",
+      address: "845 N. Stonybrook Ave. Tonawanda, NY 14210, Denmark",
+      verified: false,
+      coverPicture: "/assets/images/banners/banner-4.png",
+      profilePicture: "/assets/images/faces/propic(3).png",
+      socialLinks: {
+        facebook: null,
+        youtube: null,
+        twitter: null,
+        instagram: null
+      }
+    },
+    user: {
+      id: "2a2afbff-c146-439b-8f51-9c54c5b80a38",
+      email: "Tess.Daniel70@yahoo.com",
+      phone: "(786) 823-7500",
+      avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/244.jpg",
+      password: "6ipNKe4R838NjzI",
+      dateOfBirth: "1943-07-27T02:23:47.963Z",
+      verified: true,
+      name: {
+        firstName: "Norma",
+        lastName: "Kuphal"
+      }
+    },
+    createdAt: "2022-11-08T02:43:37.445Z",
+    slug: "libero-facere-quaerat-molestiae."
+  },
+  {
+    id: "3bc71b63-c646-4add-a199-46b617a827b6",
+    title: "Provident voluptate beatae nesciunt velit ducimus corrupti magnam ratione cupiditate.",
+    description: "Perspiciatis quos excepturi. Harum neque id voluptates corrupti natus enim dolore nesciunt. Placeat occaecati dolores quae aliquam quaerat rem accusantium. Qui iusto delectus consectetur deserunt debitis.",
+    thumbnail: "/assets/images/blogs/post-3.jpg",
+    shop: {
+      id: "3864a9a4-529b-4464-9271-6187450e7b95",
+      slug: "scarlett-beauty",
+      user: {
+        id: "468e1914-4e05-4da7-b84b-b099a4832ce2",
+        email: "Beaulah_Hodkiewicz@hotmail.com",
+        phone: "407.691.9583",
+        avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/558.jpg",
+        password: "K1v19JSlmawcx2Y",
+        dateOfBirth: "1945-03-08T22:29:18.813Z",
+        verified: true,
+        name: {
+          firstName: "Eloy",
+          lastName: "Breitenberg"
+        }
+      },
+      email: "Taylor.Witting@gmail.com",
+      name: "Scarlett Beauty",
+      phone: "(613) 343-9004",
+      address: "845 N. Stonybrook Ave. Tonawanda, NY 14210, Denmark",
+      verified: false,
+      coverPicture: "/assets/images/banners/cycle.png",
+      profilePicture: "/assets/images/faces/propic.png",
+      socialLinks: {
+        facebook: null,
+        youtube: null,
+        twitter: null,
+        instagram: null
+      }
+    },
+    user: {
+      id: "774fa44e-14aa-43a6-9828-dcd1487cee95",
+      email: "Kali20@gmail.com",
+      phone: "791-300-8158",
+      avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1142.jpg",
+      password: "m31Cbw7j_q2sac4",
+      dateOfBirth: "1942-10-27T06:40:00.162Z",
+      verified: true,
+      name: {
+        firstName: "Madelynn",
+        lastName: "Borer"
+      }
+    },
+    createdAt: "2022-11-07T21:42:34.912Z",
+    slug: "provident-voluptate-beatae-nesciunt-velit-ducimus-corrupti-magnam-ratione-cupiditate."
+  },
+  {
+    id: "55a6dd5c-61cc-42d6-825f-bb43d8a7f341",
+    title: "Sed nulla ea cumque minima rem corrupti eligendi illo.",
+    description: "Libero repudiandae hic in enim cupiditate adipisci quasi. Dolore perferendis amet voluptate ut. Deserunt quod nobis est fugiat deleniti. Eaque dolorum maiores iste non consectetur deserunt. Voluptatem distinctio impedit.",
+    thumbnail: "/assets/images/blogs/post-4.jpg",
+    shop: {
+      id: "778ce3a0-096b-402e-823f-cbc56e138238",
+      slug: "coveted-clicks",
+      user: {
+        id: "2600d37b-1c1a-4fdd-b777-d952b2bcd4b3",
+        email: "Edna.Tremblay@gmail.com",
+        phone: "728-309-9460 x400",
+        avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/114.jpg",
+        password: "5lpzzrdtgKvvYPW",
+        dateOfBirth: "1990-12-22T13:03:25.917Z",
+        verified: true,
+        name: {
+          firstName: "Will",
+          lastName: "Bauch"
+        }
+      },
+      email: "Westley46@hotmail.com",
+      name: "Coveted Clicks",
+      phone: "(613) 343-9004",
+      address: "845 N. Stonybrook Ave. Tonawanda, NY 14210, Denmark",
+      verified: false,
+      coverPicture: "/assets/images/banners/banner-3.png",
+      profilePicture: "/assets/images/faces/propic(2).png",
+      socialLinks: {
+        facebook: null,
+        youtube: null,
+        twitter: null,
+        instagram: null
+      }
+    },
+    user: {
+      id: "774fa44e-14aa-43a6-9828-dcd1487cee95",
+      email: "Kali20@gmail.com",
+      phone: "791-300-8158",
+      avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1142.jpg",
+      password: "m31Cbw7j_q2sac4",
+      dateOfBirth: "1942-10-27T06:40:00.162Z",
+      verified: true,
+      name: {
+        firstName: "Madelynn",
+        lastName: "Borer"
+      }
+    },
+    createdAt: "2022-11-07T13:41:06.970Z",
+    slug: "sed-nulla-ea-cumque-minima-rem-corrupti-eligendi-illo."
+  },
+  {
+    id: "4ec28f31-4d68-4f10-ae2e-bd36993d6307",
+    title: "Quidem quos aspernatur quos recusandae unde iure.",
+    description: "Id omnis fugit dolorem atque suscipit quasi dolores perspiciatis. Illo aut quisquam magni fuga earum atque a ducimus veritatis. Ducimus architecto laborum soluta facilis ea optio consectetur. Harum aliquid atque a incidunt ea sed a suscipit. Iusto expedita nulla quisquam vitae pariatur.",
+    thumbnail: "/assets/images/blogs/post-5.jpg",
+    shop: {
+      id: "0e5c950e-0158-4368-bc77-2a589b85264e",
+      slug: "anytime-buys",
+      user: {
+        id: "774fa44e-14aa-43a6-9828-dcd1487cee95",
+        email: "Kali20@gmail.com",
+        phone: "791-300-8158",
+        avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1142.jpg",
+        password: "m31Cbw7j_q2sac4",
+        dateOfBirth: "1942-10-27T06:40:00.162Z",
+        verified: true,
+        name: {
+          firstName: "Madelynn",
+          lastName: "Borer"
+        }
+      },
+      email: "Clement.Cruickshank29@hotmail.com",
+      name: "Anytime Buys",
+      phone: "(613) 343-9004",
+      address: "845 N. Stonybrook Ave. Tonawanda, NY 14210, Denmark",
+      verified: false,
+      coverPicture: "/assets/images/banners/banner-6.png",
+      profilePicture: "/assets/images/faces/propic(5).png",
+      socialLinks: {
+        facebook: null,
+        youtube: null,
+        twitter: null,
+        instagram: null
+      }
+    },
+    user: {
+      id: "2a2afbff-c146-439b-8f51-9c54c5b80a38",
+      email: "Tess.Daniel70@yahoo.com",
+      phone: "(786) 823-7500",
+      avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/244.jpg",
+      password: "6ipNKe4R838NjzI",
+      dateOfBirth: "1943-07-27T02:23:47.963Z",
+      verified: true,
+      name: {
+        firstName: "Norma",
+        lastName: "Kuphal"
+      }
+    },
+    createdAt: "2022-11-07T15:36:52.848Z",
+    slug: "quidem-quos-aspernatur-quos-recusandae-unde-iure."
+  },
+  {
+    id: "6d8688a5-165c-4313-8272-2bfd75cd3065",
+    title: "Pariatur recusandae sapiente adipisci velit.",
+    description: "Dignissimos tempore et. Ex perferendis hic ratione. Occaecati voluptatibus expedita harum voluptatibus occaecati qui unde quae harum. Molestias quisquam quaerat. Molestiae odit libero debitis quisquam iste expedita recusandae odit. Expedita soluta totam harum pariatur.",
+    thumbnail: "/assets/images/blogs/post-6.jpg",
+    shop: {
+      id: "778ce3a0-096b-402e-823f-cbc56e138238",
+      slug: "coveted-clicks",
+      user: {
+        id: "2600d37b-1c1a-4fdd-b777-d952b2bcd4b3",
+        email: "Edna.Tremblay@gmail.com",
+        phone: "728-309-9460 x400",
+        avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/114.jpg",
+        password: "5lpzzrdtgKvvYPW",
+        dateOfBirth: "1990-12-22T13:03:25.917Z",
+        verified: true,
+        name: {
+          firstName: "Will",
+          lastName: "Bauch"
+        }
+      },
+      email: "Westley46@hotmail.com",
+      name: "Coveted Clicks",
+      phone: "(613) 343-9004",
+      address: "845 N. Stonybrook Ave. Tonawanda, NY 14210, Denmark",
+      verified: false,
+      coverPicture: "/assets/images/banners/banner-3.png",
+      profilePicture: "/assets/images/faces/propic(2).png",
+      socialLinks: {
+        facebook: null,
+        youtube: null,
+        twitter: null,
+        instagram: null
+      }
+    },
+    user: {
+      id: "78b60949-8984-4fd6-b4ff-9b6bf9dab0b2",
+      email: "Jammie_Howell53@gmail.com",
+      phone: "(778) 541-7590",
+      avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/933.jpg",
+      password: "NLEL3u8mqTB4ciA",
+      dateOfBirth: "1993-11-21T08:19:37.273Z",
+      verified: true,
+      name: {
+        firstName: "Gisselle",
+        lastName: "Lebsack"
+      }
+    },
+    createdAt: "2022-11-07T14:54:24.645Z",
+    slug: "pariatur-recusandae-sapiente-adipisci-velit."
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    id: "9aee1898-23e0-4965-8f0d-427dc963ae07",
+    slug: "alibaba",
+    name: "AliBaba",
+    image: "/assets/images/brands/alibaba.png",
+    type: "fashion"
+  },
+  {
+    id: "024ec2a2-7ca7-46c2-8990-f78ac4215dd1",
+    slug: "levis",
+    name: "Levis",
+    image: "/assets/images/brands/levis.png",
+    type: "fashion"
+  },
+  {
+    id: "e370f16a-90e2-4f26-b9af-a38d6f645a4c",
+    slug: "lotto",
+    name: "Lotto",
+    image: "/assets/images/brands/lotto.png",
+    type: "fashion"
+  },
+  {
+    id: "d8f4c60e-6bac-4fdc-9880-999fbddac97d",
+    slug: "raymond",
+    name: "Raymond",
+    image: "/assets/images/brands/raymond.png",
+    type: "fashion"
+  },
+  {
+    id: "0c74cb7c-6082-4640-9380-815928be7127",
+    slug: "samsung",
+    name: "Samsung",
+    image: "/assets/images/brands/samsung.png",
+    type: "fashion"
+  }
+]

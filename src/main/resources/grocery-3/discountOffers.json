@@ -1,0 +1,14 @@
+[
+  {
+    title: "Till 10 Dec, 2021",
+    discountOffer: "25% Special Off Today Only for Vegetables",
+    imgUrl: "/assets/images/Groceries Shop/vagitable.png",
+    buttonText: "Shop Now"
+  },
+  {
+    title: "New Offer!",
+    discountOffer: "15% Special Off Today Only for Fruits Item.",
+    imgUrl: "/assets/images/Groceries Shop/Offer Card.png",
+    buttonText: "Shop Now"
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    id: "c8f24a5d-4337-4a35-b8a5-2f05dc3201ff",
+    title: "Art of Keeping Home Minimal & Organised.",
+    description: "Maecenas leo ante, gravida vel lectus ac, iaculis lobortis enim. Proin nec orci nec nisl consequat molestie quis sit amet elit. Ut venenatis dignissim diam in auctor.",
+    thumbnail: "/assets/images/products/blog-1.png",
+    shop: {
+      id: "b5678cf6-28a2-4327-ac7c-53a48b583971",
+      slug: "scroll-through",
+      user: {
+        id: "ec2e2713-bd92-451e-b792-cde1318a8e7f",
+        email: "Lincoln19@gmail.com",
+        phone: "577-286-7320",
+        avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1145.jpg",
+        password: "_vJGJD5guoBUsvI",
+        dateOfBirth: "1951-08-12T00:39:19.560Z",
+        verified: true,
+        name: {
+          firstName: "Wilson",
+          lastName: "Wisoky"
+        }
+      },
+      email: "Freeman.Bailey94@hotmail.com",
+      name: "Scroll Through",
+      phone: "(613) 343-9004",
+      address: "845 N. Stonybrook Ave. Tonawanda, NY 14210, Denmark",
+      verified: false,
+      coverPicture: "/assets/images/banners/banner.png",
+      profilePicture: "/assets/images/faces/propic(1).png",
+      socialLinks: {
+        facebook: null,
+        youtube: null,
+        twitter: null,
+        instagram: null
+      }
+    },
+    user: {
+      id: "4f167465-df5e-4a0b-b12f-dd9889e99878",
+      email: "King.Bernhard69@gmail.com",
+      phone: "(837) 750-8829",
+      avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/295.jpg",
+      password: "ecqAhz55kZAhmgZ",
+      dateOfBirth: "1970-11-28T13:46:48.135Z",
+      verified: true,
+      name: {
+        firstName: "London",
+        lastName: "Herzog"
+      }
+    },
+    createdAt: "24 Feb 2020",
+    slug: "art-of-keeping-home-minimal-and-organised.",
+    comments: 3
+  },
+  {
+    id: "c0533881-5c5c-4041-8e40-3d74cd4d1f97",
+    title: "The Monthly Guide to Cleaning Your Home",
+    description: "Maecenas leo ante, gravida vel lectus ac, iaculis lobortis enim. Proin nec orci nec nisl consequat molestie quis sit amet elit. Ut venenatis dignissim diam in auctor.",
+    thumbnail: "/assets/images/products/blog-2.png",
+    shop: {
+      id: "a1649fd1-f9ba-4065-b2b4-f5a0170757de",
+      slug: "scarlett-beauty",
+      user: {
+        id: "76c6c5dc-4d80-48dc-82b6-6f4bdba35d8f",
+        email: "Jayde.Gutmann34@gmail.com",
+        phone: "760-952-4971 x587",
+        avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/799.jpg",
+        password: "yJ04pLFpLkAnWSg",
+        dateOfBirth: "1960-09-18T19:07:42.220Z",
+        verified: true,
+        name: {
+          firstName: "Vita",
+          lastName: "Kerluke"
+        }
+      },
+      email: "America.Zemlak@yahoo.com",
+      name: "Scarlett Beauty",
+      phone: "(613) 343-9004",
+      address: "845 N. Stonybrook Ave. Tonawanda, NY 14210, Denmark",
+      verified: false,
+      coverPicture: "/assets/images/banners/cycle.png",
+      profilePicture: "/assets/images/faces/propic.png",
+      socialLinks: {
+        facebook: null,
+        youtube: null,
+        twitter: null,
+        instagram: null
+      }
+    },
+    user: {
+      id: "4f167465-df5e-4a0b-b12f-dd9889e99878",
+      email: "King.Bernhard69@gmail.com",
+      phone: "(837) 750-8829",
+      avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/295.jpg",
+      password: "ecqAhz55kZAhmgZ",
+      dateOfBirth: "1970-11-28T13:46:48.135Z",
+      verified: true,
+      name: {
+        firstName: "London",
+        lastName: "Herzog"
+      }
+    },
+    createdAt: "12 Jan 2020",
+    slug: "the-monthly-guide-to-cleaning-your-home",
+    comments: 14
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "amount": 152.25,
+    "stock": "00",
+    "product": "Samsung Glaxy-M1"
+  },
+  {
+    "amount": 125.25,
+    "stock": "00",
+    "product": "Nike Shoes"
+  },
+  {
+    "amount": 115.25,
+    "stock": "00",
+    "product": "Premium Shirt For Men"
+  },
+  {
+    "amount": 97.25,
+    "stock": "00",
+    "product": "Polo T-shirt"
+  },
+  {
+    "amount": 255.25,
+    "stock": "00",
+    "product": "Jeans Pant"
+  }
+]

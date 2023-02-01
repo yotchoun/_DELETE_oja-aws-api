@@ -1,0 +1,20 @@
+[
+  {
+    id: "742fb40b-c820-4caa-a23d-3bbc0216e1f7",
+    icon: "Truck",
+    title: "Delivery quality gift",
+    description: "information on its origins"
+  },
+  {
+    id: "28dc4b33-7b26-4f1c-bcac-5feda1825ce4",
+    icon: "PickUpBox",
+    title: "Gift for all Occession",
+    description: "information on its origins"
+  },
+  {
+    id: "381051cc-cadb-4aa8-9a2b-befd34419564",
+    icon: "OnlineService",
+    title: "Happy Service",
+    description: "information on its origins"
+  }
+]
