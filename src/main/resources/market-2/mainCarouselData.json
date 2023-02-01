@@ -4,19 +4,19 @@
     "title": "Lifestyle collection",
     "category": "Men",
     "discount": 30,
-    imgUrl: "/assets/images/banners/banner-15.jpg",
-    description: "Get Free Shipping on orders over $99.00",
-    buttonText: "Shop Now",
-    buttonLink: "#"
+    "imgUrl": "/assets/images/banners/banner-15.jpg",
+    "description": "Get Free Shipping on orders over $99.00",
+    "buttonText": "Shop Now",
+    "buttonLink": "#"
   },
   {
     "id": 2,
     "title": "Lifestyle collection",
     "category": "Women",
     "discount": 35,
-    imgUrl: "/assets/images/banners/banner-25.jpg",
-    description: "Get Free Shipping on orders over $99.00",
-    buttonText: "Shop Now",
-    buttonLink: "#"
+    "imgUrl": "/assets/images/banners/banner-25.jpg",
+    "description": "Get Free Shipping on orders over $99.00",
+    "buttonText": "Shop Now",
+    "buttonLink": "#"
   }
 ]

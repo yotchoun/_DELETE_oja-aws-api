@@ -2,7 +2,7 @@
   {
     "id": "20a83049-bc4b-41cc-9a29-0b2b69a7fd08",
     "title": "30% Off Coupon for Black Friday",
-    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.…",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.…",
     "thumbnail": "/assets/images/blogs/blog-1.jpg",
     "shop": {
       "id": "e7c5030b-0504-4b4c-81dc-1627302bc1a4",
@@ -47,13 +47,13 @@
         "lastname": "Pagac"
       }
     },
-    createdAt: "21 SEP",
+    "createdAt": "21 SEP",
     "slug": "30percent-off-coupon-for-black-friday"
   },
   {
     "id": "108015ad-897b-4c90-a90f-53b288ad162c",
     "title": "10% Discount for Cosmatics",
-    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.…",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.…",
     "thumbnail": "/assets/images/blogs/blog-2.jpg",
     "shop": {
       "id": "d32b469e-4ccc-43b4-8427-98eba478355f",
@@ -98,13 +98,13 @@
         "lastname": "Kuhn"
       }
     },
-    createdAt: "21 SEP",
+    "createdAt": "21 SEP",
     "slug": "10percent-discount-for-cosmatics"
   },
   {
     "id": "f3f920ba-3f3e-47cd-a109-9183a15479fa",
     "title": " Buy 2 get 1 free Offer",
-    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.…",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.…",
     "thumbnail": "/assets/images/blogs/blog-3.jpg",
     "shop": {
       "id": "e7c5030b-0504-4b4c-81dc-1627302bc1a4",
@@ -149,7 +149,7 @@
         "lastname": "Pagac"
       }
     },
-    createdAt: "21 SEP",
+    "createdAt": "21 SEP",
     "slug": "buy-2-get-1-free-offer"
   }
 ]

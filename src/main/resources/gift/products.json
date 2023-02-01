@@ -1,5 +1,4 @@
 [
-  // popular-items
   {
     "id": "33cb6269-901a-4fb9-bef8-cf4d7a37ab9a",
     "slug": "birthday-gift-for-girl",
@@ -330,7 +329,6 @@
       "type": "popular-items"
     }
   },
-  // top-saled-items
   {
     "id": "f549e523-42d5-4530-9746-b603104fc7de",
     "slug": "gold-wedding-ring",
@@ -661,7 +659,6 @@
       "type": "top-saled-items"
     }
   },
-  // all-products
   {
     "id": "57d0d4cf-ed19-40d4-901b-cd322026e1b5",
     "slug": "gold-wedding-ring",

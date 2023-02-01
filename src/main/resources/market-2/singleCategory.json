@@ -1,6 +1,6 @@
 {
   "title": "Electronic",
-  children: [
+  "children": [
     "Wireless Speaker",
     "Tablet",
     "Smartphone",
@@ -10,4 +10,4 @@
     "Drone",
     "Apple"
   ]
-}s
+}

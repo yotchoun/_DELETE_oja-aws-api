@@ -1,16 +1,16 @@
 [
   {
     "title": "Get groceries delivered within 40 minutes",
-    imgUrl: "/assets/images/Groceries Shop/banner-3.png",
-    description: null,
-    buttonText: "Shop Now",
-    buttonLink: "#"
+    "imgUrl": "/assets/images/Groceries Shop/banner-3.png",
+    "description": null,
+    "buttonText": "Shop Now",
+    "buttonLink": "#"
   },
   {
     "title": "Get groceries delivered within 40 minutes",
-    imgUrl: "/assets/images/Groceries Shop/banner-3.png",
-    description: null,
-    buttonText: "Shop Now",
-    buttonLink: "#"
+    "imgUrl": "/assets/images/Groceries Shop/banner-3.png",
+    "description": null,
+    "buttonText": "Shop Now",
+    "buttonLink": "#"
   }
 ]

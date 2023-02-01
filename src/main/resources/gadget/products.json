@@ -1,5 +1,4 @@
 [
-  // top-picks-products
   {
     "id": "c9b4f708-c060-485a-8d15-fdca75bb6ee9",
     "slug": "bluetooth-speaker",
@@ -318,7 +317,6 @@
       "type": "top-picks-products"
     }
   },
-  // most-viewed-products
   {
     "id": "82e8d147-9466-48dd-8c57-66b25050291d",
     "slug": "asus-rog-strix-g15",
@@ -849,7 +847,6 @@
       "type": "most-viewed-products"
     }
   },
-  // new-arrival-products
   {
     "id": "822dd28a-2d42-4358-97e2-e458e90e244a",
     "slug": "sunglass",

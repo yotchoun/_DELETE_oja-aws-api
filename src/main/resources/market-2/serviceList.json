@@ -3,24 +3,24 @@
     "id": "ee272e30-0309-4e8a-966c-f63410c58289",
     "icon": "Truck",
     "title": "Fast Delivery",
-    description: "Start from $10"
+    "description": "Start from $10"
   },
   {
     "id": "1f30c35b-5b76-42c0-822f-83ecbfb64869",
     "icon": "MoneyGuarantee",
     "title": "Money Guarantee",
-    description: "7 Days Back"
+    "description": "7 Days Back"
   },
   {
     "id": "a4c3968e-93ba-444b-a68f-2e6dd9a5eb1a",
     "icon": "AlarmClock",
     "title": "365 Days",
-    description: "For free return"
+    "description": "For free return"
   },
   {
     "id": "87379ae9-5e25-4d53-8d7d-7cc3f971dd67",
     "icon": "Payment",
     "title": "Payment",
-    description: "Secure system"
+    "description": "Secure system"
   }
-]s
+]

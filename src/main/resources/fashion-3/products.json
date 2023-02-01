@@ -1,5 +1,4 @@
 [
-  // featured-products
   {
     "id": "52b31bcd-84c1-4c1c-a8fc-2ccf8cbf93c3",
     "slug": "denim-classic-blue-jeans",
@@ -385,7 +384,6 @@
       "type": "featured-products"
     }
   },
-  //  best-selling-product
   {
     "id": "a13fb1ec-5fc7-4b22-83d8-2d454d91aa0a",
     "slug": "silver-high-neck-sweater",

@@ -6,7 +6,7 @@
       "name": "Jonathon Doe",
       "avatar": "/assets/images/faces/7.png"
     },
-    comment: "Satisfied by their professionalism ! Got my tea bags in time. Didn't have to pay any delivery charge. I can't believe that. Keep it up !"
+    "comment": "Satisfied by their professionalism ! Got my tea bags in time. Didn't have to pay any delivery charge. I can't believe that. Keep it up !"
   },
   {
     "rating": 5,
@@ -15,7 +15,7 @@
       "name": "Jonathon Doe",
       "avatar": "/assets/images/faces/7.png"
     },
-    comment: "Satisfied by their professionalism ! Got my tea bags in time. Didn't have to pay any delivery charge. I can't believe that. Keep it up !"
+    "comment": "Satisfied by their professionalism ! Got my tea bags in time. Didn't have to pay any delivery charge. I can't believe that. Keep it up !"
   },
   {
     "rating": 5,
@@ -24,6 +24,6 @@
       "name": "Jonathon Doe",
       "avatar": "/assets/images/faces/7.png"
     },
-    comment: "Satisfied by their professionalism ! Got my tea bags in time. Didn't have to pay any delivery charge. I can't believe that. Keep it up !"
+    "comment": "Satisfied by their professionalism ! Got my tea bags in time. Didn't have to pay any delivery charge. I can't believe that. Keep it up !"
   }
 ]

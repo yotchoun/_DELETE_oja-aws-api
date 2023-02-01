@@ -2,7 +2,7 @@
   {
     "id": "c8f24a5d-4337-4a35-b8a5-2f05dc3201ff",
     "title": "Art of Keeping Home Minimal & Organised.",
-    description: "Maecenas leo ante, gravida vel lectus ac, iaculis lobortis enim. Proin nec orci nec nisl consequat molestie quis sit amet elit. Ut venenatis dignissim diam in auctor.",
+    "description": "Maecenas leo ante, gravida vel lectus ac, iaculis lobortis enim. Proin nec orci nec nisl consequat molestie quis sit amet elit. Ut venenatis dignissim diam in auctor.",
     "thumbnail": "/assets/images/products/blog-1.png",
     "shop": {
       "id": "b5678cf6-28a2-4327-ac7c-53a48b583971",
@@ -47,14 +47,14 @@
         "lastname": "Herzog"
       }
     },
-    createdAt: "24 Feb 2020",
+    "createdAt": "24 Feb 2020",
     "slug": "art-of-keeping-home-minimal-and-organised.",
-    comments: 3
+    "comments": 3
   },
   {
     "id": "c0533881-5c5c-4041-8e40-3d74cd4d1f97",
     "title": "The Monthly Guide to Cleaning Your Home",
-    description: "Maecenas leo ante, gravida vel lectus ac, iaculis lobortis enim. Proin nec orci nec nisl consequat molestie quis sit amet elit. Ut venenatis dignissim diam in auctor.",
+    "description": "Maecenas leo ante, gravida vel lectus ac, iaculis lobortis enim. Proin nec orci nec nisl consequat molestie quis sit amet elit. Ut venenatis dignissim diam in auctor.",
     "thumbnail": "/assets/images/products/blog-2.png",
     "shop": {
       "id": "a1649fd1-f9ba-4065-b2b4-f5a0170757de",
@@ -99,8 +99,8 @@
         "lastname": "Herzog"
       }
     },
-    createdAt: "12 Jan 2020",
+    "createdAt": "12 Jan 2020",
     "slug": "the-monthly-guide-to-cleaning-your-home",
-    comments: 14
+    "comments": 14
   }
 ]

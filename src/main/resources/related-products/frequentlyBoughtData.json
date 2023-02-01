@@ -50,7 +50,7 @@
     "status": null,
     "reviews": [],
     "rating": 5,
-    unit: null
+    "unit": null
   },
   {
     "id": "9e70a7a2-d77c-4440-9777-4ff1634202e4",
@@ -103,7 +103,7 @@
     "status": null,
     "reviews": [],
     "rating": 5,
-    unit: null
+    "unit": null
   },
   {
     "id": "a3963585-61b2-4ca5-9d89-39b8ac816288",
@@ -156,7 +156,7 @@
     "status": null,
     "reviews": [],
     "rating": 5,
-    unit: null
+    "unit": null
   },
   {
     "id": "07ea2c9f-b331-47a3-95ff-42ee647f969e",
@@ -209,6 +209,6 @@
     "status": null,
     "reviews": [],
     "rating": 5,
-    unit: null
+    "unit": null
   }
 ]

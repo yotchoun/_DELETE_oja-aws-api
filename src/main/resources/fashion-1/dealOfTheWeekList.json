@@ -1,42 +1,42 @@
 [
   {
-    imgUrl: "/assets/images/products/sunglass.png",
+    "imgUrl": "/assets/images/products/sunglass.png",
     "brand": "Say Ban Sunglass",
-    off: 50
+    "off": 50
   },
   {
-    imgUrl: "/assets/images/products/nike.png",
+    "imgUrl": "/assets/images/products/nike.png",
     "brand": "Yike Shoe Air Max",
-    off: 30
+    "off": 30
   },
   {
-    imgUrl: "/assets/images/products/apple-watch.png",
+    "imgUrl": "/assets/images/products/apple-watch.png",
     "brand": "Air Jordan",
-    off: 40
+    "off": 40
   },
   {
-    imgUrl: "/assets/images/products/perfume.png",
+    "imgUrl": "/assets/images/products/perfume.png",
     "brand": "Perfume",
-    off: 20
+    "off": 20
   },
   {
-    imgUrl: "/assets/images/products/sunglass.png",
+    "imgUrl": "/assets/images/products/sunglass.png",
     "brand": "Say Ban Sunglass",
-    off: 50
+    "off": 50
   },
   {
-    imgUrl: "/assets/images/products/nike.png",
+    "imgUrl": "/assets/images/products/nike.png",
     "brand": "Yike Shoe Air Max",
-    off: 30
+    "off": 30
   },
   {
-    imgUrl: "/assets/images/products/apple-watch.png",
+    "imgUrl": "/assets/images/products/apple-watch.png",
     "brand": "Air Jordan",
-    off: 40
+    "off": 40
   },
   {
-    imgUrl: "/assets/images/products/perfume.png",
+    "imgUrl": "/assets/images/products/perfume.png",
     "brand": "Perfume",
-    off: 20
+    "off": 20
   }
 ]

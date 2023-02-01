@@ -2,7 +2,7 @@
   {
     "id": "f54ee5db-ff89-4d86-ade8-86d949db7b03",
     "title": "Repellendus accusamus occaecati.",
-    description: "Saepe praesentium saepe iste minus totam excepturi expedita. Illum deserunt suscipit rerum officiis consequatur dicta odio. Necessitatibus perferendis aspernatur eum. Saepe voluptatum beatae. Hic veritatis libero nisi excepturi omnis explicabo et.",
+    "description": "Saepe praesentium saepe iste minus totam excepturi expedita. Illum deserunt suscipit rerum officiis consequatur dicta odio. Necessitatibus perferendis aspernatur eum. Saepe voluptatum beatae. Hic veritatis libero nisi excepturi omnis explicabo et.",
     "thumbnail": "/assets/images/blogs/post-1.jpg",
     "shop": {
       "id": "c2a4ed2d-6708-4c1e-aa36-eddfd0496ce7",
@@ -47,13 +47,13 @@
         "lastname": "Breitenberg"
       }
     },
-    createdAt: "2022-11-08T07:15:55.897Z",
+    "createdAt": "2022-11-08T07:15:55.897Z",
     "slug": "repellendus-accusamus-occaecati."
   },
   {
     "id": "d27ab586-d42b-4389-8d30-252abcc66d71",
     "title": "Libero facere quaerat molestiae.",
-    description: "Vel laboriosam maiores molestias voluptatem. Facere dolores praesentium natus exercitationem dolore. Eos esse velit expedita ratione corporis sed quae. Odit minima libero sint. Placeat illo veritatis vitae sint laborum officia fugit. Dignissimos illo neque animi vero soluta earum velit beatae.",
+    "description": "Vel laboriosam maiores molestias voluptatem. Facere dolores praesentium natus exercitationem dolore. Eos esse velit expedita ratione corporis sed quae. Odit minima libero sint. Placeat illo veritatis vitae sint laborum officia fugit. Dignissimos illo neque animi vero soluta earum velit beatae.",
     "thumbnail": "/assets/images/blogs/post-2.jpg",
     "shop": {
       "id": "c2a4ed2d-6708-4c1e-aa36-eddfd0496ce7",
@@ -98,13 +98,13 @@
         "lastname": "Kuphal"
       }
     },
-    createdAt: "2022-11-08T02:43:37.445Z",
+    "createdAt": "2022-11-08T02:43:37.445Z",
     "slug": "libero-facere-quaerat-molestiae."
   },
   {
     "id": "3bc71b63-c646-4add-a199-46b617a827b6",
     "title": "Provident voluptate beatae nesciunt velit ducimus corrupti magnam ratione cupiditate.",
-    description: "Perspiciatis quos excepturi. Harum neque id voluptates corrupti natus enim dolore nesciunt. Placeat occaecati dolores quae aliquam quaerat rem accusantium. Qui iusto delectus consectetur deserunt debitis.",
+    "description": "Perspiciatis quos excepturi. Harum neque id voluptates corrupti natus enim dolore nesciunt. Placeat occaecati dolores quae aliquam quaerat rem accusantium. Qui iusto delectus consectetur deserunt debitis.",
     "thumbnail": "/assets/images/blogs/post-3.jpg",
     "shop": {
       "id": "3864a9a4-529b-4464-9271-6187450e7b95",
@@ -149,13 +149,13 @@
         "lastname": "Borer"
       }
     },
-    createdAt: "2022-11-07T21:42:34.912Z",
+    "createdAt": "2022-11-07T21:42:34.912Z",
     "slug": "provident-voluptate-beatae-nesciunt-velit-ducimus-corrupti-magnam-ratione-cupiditate."
   },
   {
     "id": "55a6dd5c-61cc-42d6-825f-bb43d8a7f341",
     "title": "Sed nulla ea cumque minima rem corrupti eligendi illo.",
-    description: "Libero repudiandae hic in enim cupiditate adipisci quasi. Dolore perferendis amet voluptate ut. Deserunt quod nobis est fugiat deleniti. Eaque dolorum maiores iste non consectetur deserunt. Voluptatem distinctio impedit.",
+    "description": "Libero repudiandae hic in enim cupiditate adipisci quasi. Dolore perferendis amet voluptate ut. Deserunt quod nobis est fugiat deleniti. Eaque dolorum maiores iste non consectetur deserunt. Voluptatem distinctio impedit.",
     "thumbnail": "/assets/images/blogs/post-4.jpg",
     "shop": {
       "id": "778ce3a0-096b-402e-823f-cbc56e138238",
@@ -200,13 +200,13 @@
         "lastname": "Borer"
       }
     },
-    createdAt: "2022-11-07T13:41:06.970Z",
+    "createdAt": "2022-11-07T13:41:06.970Z",
     "slug": "sed-nulla-ea-cumque-minima-rem-corrupti-eligendi-illo."
   },
   {
     "id": "4ec28f31-4d68-4f10-ae2e-bd36993d6307",
     "title": "Quidem quos aspernatur quos recusandae unde iure.",
-    description: "Id omnis fugit dolorem atque suscipit quasi dolores perspiciatis. Illo aut quisquam magni fuga earum atque a ducimus veritatis. Ducimus architecto laborum soluta facilis ea optio consectetur. Harum aliquid atque a incidunt ea sed a suscipit. Iusto expedita nulla quisquam vitae pariatur.",
+    "description": "Id omnis fugit dolorem atque suscipit quasi dolores perspiciatis. Illo aut quisquam magni fuga earum atque a ducimus veritatis. Ducimus architecto laborum soluta facilis ea optio consectetur. Harum aliquid atque a incidunt ea sed a suscipit. Iusto expedita nulla quisquam vitae pariatur.",
     "thumbnail": "/assets/images/blogs/post-5.jpg",
     "shop": {
       "id": "0e5c950e-0158-4368-bc77-2a589b85264e",
@@ -251,13 +251,13 @@
         "lastname": "Kuphal"
       }
     },
-    createdAt: "2022-11-07T15:36:52.848Z",
+    "createdAt": "2022-11-07T15:36:52.848Z",
     "slug": "quidem-quos-aspernatur-quos-recusandae-unde-iure."
   },
   {
     "id": "6d8688a5-165c-4313-8272-2bfd75cd3065",
     "title": "Pariatur recusandae sapiente adipisci velit.",
-    description: "Dignissimos tempore et. Ex perferendis hic ratione. Occaecati voluptatibus expedita harum voluptatibus occaecati qui unde quae harum. Molestias quisquam quaerat. Molestiae odit libero debitis quisquam iste expedita recusandae odit. Expedita soluta totam harum pariatur.",
+    "description": "Dignissimos tempore et. Ex perferendis hic ratione. Occaecati voluptatibus expedita harum voluptatibus occaecati qui unde quae harum. Molestias quisquam quaerat. Molestiae odit libero debitis quisquam iste expedita recusandae odit. Expedita soluta totam harum pariatur.",
     "thumbnail": "/assets/images/blogs/post-6.jpg",
     "shop": {
       "id": "778ce3a0-096b-402e-823f-cbc56e138238",
@@ -302,7 +302,7 @@
         "lastname": "Lebsack"
       }
     },
-    createdAt: "2022-11-07T14:54:24.645Z",
+    "createdAt": "2022-11-07T14:54:24.645Z",
     "slug": "pariatur-recusandae-sapiente-adipisci-velit."
   }
 ]

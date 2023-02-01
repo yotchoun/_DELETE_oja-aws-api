@@ -35,13 +35,13 @@
         "product_quantity": 4
       }
     ],
-    createdAt: "2022-11-10T10:35:02.079Z",
+    "createdAt": "2022-11-10T10:35:02.079Z",
     "discount": 0,
-    total"price": 350,
-    isDelivered: false,
-    shipping"address": "Kelly Williams 777 Brockton Avenue, Abington MA 2351",
+    "totalPrice": 350,
+    "isDelivered": false,
+    "shippingAddress": "Kelly Williams 777 Brockton Avenue, Abington MA 2351",
     "status": "Pending",
-    deliveredAt: null
+    "deliveredAt": null
   },
   {
     "users": {
@@ -79,13 +79,13 @@
         "product_quantity": 4
       }
     ],
-    createdAt: "2022-11-10T10:35:02.079Z",
+    "createdAt": "2022-11-10T10:35:02.079Z",
     "discount": 0,
-    total"price": 500,
-    isDelivered: false,
-    shipping"address": "Kelly Williams 777 Brockton Avenue, Abington MA 2351",
+    "totalPrice": 500,
+    "isDelivered": false,
+    "shippingAddress": "Kelly Williams 777 Brockton Avenue, Abington MA 2351",
     "status": "Processing",
-    deliveredAt: null
+    "deliveredAt": null
   },
   {
     "users": {
@@ -123,13 +123,13 @@
         "product_quantity": 4
       }
     ],
-    createdAt: "2020-12-22T18:00:00.000Z",
+    "createdAt": "2020-12-22T18:00:00.000Z",
     "discount": 0,
-    total"price": 700,
-    isDelivered: true,
-    shipping"address": "Kelly Williams 777 Brockton Avenue, Abington MA 2351",
+    "totalPrice": 700,
+    "isDelivered": true,
+    "shippingAddress": "Kelly Williams 777 Brockton Avenue, Abington MA 2351",
     "status": "Delivered",
-    deliveredAt: "2023-02-21T07:18:01.062Z"
+    "deliveredAt": "2023-02-21T07:18:01.062Z"
   },
   {
     "users": {
@@ -167,13 +167,13 @@
         "product_quantity": 4
       }
     ],
-    createdAt: "2020-11-20T18:00:00.000Z",
+    "createdAt": "2020-11-20T18:00:00.000Z",
     "discount": 0,
-    total"price": 700,
-    isDelivered: true,
-    shipping"address": "Kelly Williams 777 Brockton Avenue, Abington MA 2351",
+    "totalPrice": 700,
+    "isDelivered": true,
+    "shippingAddress": "Kelly Williams 777 Brockton Avenue, Abington MA 2351",
     "status": "Delivered",
-    deliveredAt: "2022-12-12T22:23:37.065Z"
+    "deliveredAt": "2022-12-12T22:23:37.065Z"
   },
   {
     "users": {
@@ -211,12 +211,12 @@
         "product_quantity": 4
       }
     ],
-    createdAt: "2020-12-14T18:00:00.000Z",
+    "createdAt": "2020-12-14T18:00:00.000Z",
     "discount": 0,
-    total"price": 300,
-    isDelivered: false,
-    shipping"address": "Kelly Williams 777 Brockton Avenue, Abington MA 2351",
+    "totalPrice": 300,
+    "isDelivered": false,
+    "shippingAddress": "Kelly Williams 777 Brockton Avenue, Abington MA 2351",
     "status": "Cancelled",
-    deliveredAt: null
+    "deliveredAt": null
   }
 ]

@@ -2,7 +2,7 @@
   {
     "id": "d2e7dc64-578f-4732-97f8-d9893f167e53",
     "rating": 5,
-    customer: {
+    "customer": {
       "id": "f4d769d6-a974-4d4f-aa29-6a3e8e2efcda",
       "email": "Iliana.Bergstrom@yahoo.com",
       "phone": "(803) 899-4000 x9513",
@@ -15,8 +15,8 @@
         "lastname": "Lehner"
       }
     },
-    comment: "“But I must explain to you how all this of denouncing pleasure.”",
-    product: {
+    "comment": "“But I must explain to you how all this of denouncing pleasure.”",
+    "product": {
       "id": "dd63f47a-51a0-45f2-b9af-44190b87824f",
       "slug": "smart-watch-black",
       "shop": {
@@ -65,14 +65,14 @@
       "status": null,
       "reviews": [],
       "rating": 4,
-      unit: null
+      "unit": null
     },
-    published: true
+    "published": true
   },
   {
     "id": "84bf3cf9-70d9-411a-856d-37a0763a71c3",
     "rating": 5,
-    customer: {
+    "customer": {
       "id": "17d9dffd-ad46-4582-a05b-e68801f61df3",
       "email": "Cecilia.Schimmel19@yahoo.com",
       "phone": "680.325.5879 x708",
@@ -85,8 +85,8 @@
         "lastname": "Runolfsson"
       }
     },
-    comment: "“But I must explain to you how all this of denouncing pleasure.”",
-    product: {
+    "comment": "“But I must explain to you how all this of denouncing pleasure.”",
+    "product": {
       "id": "d2baa1ce-968e-4bde-a073-f0bbf1cdb47b",
       "slug": "asus-rog-strix-g15",
       "shop": {
@@ -135,14 +135,14 @@
       "status": null,
       "reviews": [],
       "rating": 4,
-      unit: null
+      "unit": null
     },
-    published: true
+    "published": true
   },
   {
     "id": "877942d8-e05c-4999-9660-73872505023e",
     "rating": 5,
-    customer: {
+    "customer": {
       "id": "932bb26a-cf1d-4fbd-83aa-35324091bce1",
       "email": "Trinity.Heaney94@gmail.com",
       "phone": "1-251-928-6159",
@@ -155,8 +155,8 @@
         "lastname": "Herzog"
       }
     },
-    comment: "“But I must explain to you how all this of denouncing pleasure.”",
-    product: {
+    "comment": "“But I must explain to you how all this of denouncing pleasure.”",
+    "product": {
       "id": "ff1ef5ac-9019-4665-b452-bc246bac85cf",
       "slug": "cafe-torrefaction-fraiche",
       "shop": {
@@ -207,14 +207,14 @@
       "status": null,
       "reviews": [],
       "rating": 4,
-      unit: null
+      "unit": null
     },
-    published: false
+    "published": false
   },
   {
     "id": "5f0df38b-38d9-4ced-aa29-60ea132a9520",
     "rating": 5,
-    customer: {
+    "customer": {
       "id": "17d9dffd-ad46-4582-a05b-e68801f61df3",
       "email": "Cecilia.Schimmel19@yahoo.com",
       "phone": "680.325.5879 x708",
@@ -227,8 +227,8 @@
         "lastname": "Runolfsson"
       }
     },
-    comment: "“But I must explain to you how all this of denouncing pleasure.”",
-    product: {
+    "comment": "“But I must explain to you how all this of denouncing pleasure.”",
+    "product": {
       "id": "948f2ab6-73b3-46de-b2cd-f5ed554245ca",
       "slug": "indian-copper-earrings",
       "shop": {
@@ -279,14 +279,14 @@
       "status": null,
       "reviews": [],
       "rating": 5,
-      unit: null
+      "unit": null
     },
-    published: true
+    "published": true
   },
   {
     "id": "20a3bf95-6313-411d-a3c9-27c8dc34aae9",
     "rating": 5,
-    customer: {
+    "customer": {
       "id": "f4d769d6-a974-4d4f-aa29-6a3e8e2efcda",
       "email": "Iliana.Bergstrom@yahoo.com",
       "phone": "(803) 899-4000 x9513",
@@ -299,8 +299,8 @@
         "lastname": "Lehner"
       }
     },
-    comment: "“But I must explain to you how all this of denouncing pleasure.”",
-    product: {
+    "comment": "“But I must explain to you how all this of denouncing pleasure.”",
+    "product": {
       "id": "87639dfa-6513-4654-9efa-08746aa9398f",
       "slug": "poland-full-set-v-drums",
       "shop": {
@@ -351,14 +351,14 @@
       "status": null,
       "reviews": [],
       "rating": 3,
-      unit: null
+      "unit": null
     },
-    published: true
+    "published": true
   },
   {
     "id": "ebc52608-5bbb-4ce5-8e8e-1d50d0e5c30d",
     "rating": 5,
-    customer: {
+    "customer": {
       "id": "932bb26a-cf1d-4fbd-83aa-35324091bce1",
       "email": "Trinity.Heaney94@gmail.com",
       "phone": "1-251-928-6159",
@@ -371,8 +371,8 @@
         "lastname": "Herzog"
       }
     },
-    comment: "“But I must explain to you how all this of denouncing pleasure.”",
-    product: {
+    "comment": "“But I must explain to you how all this of denouncing pleasure.”",
+    "product": {
       "id": "d3538286-2d6d-4fb4-afe6-c5683844c140",
       "slug": "beat-sw3",
       "shop": {
@@ -423,14 +423,14 @@
       "status": null,
       "reviews": [],
       "rating": 4,
-      unit: null
+      "unit": null
     },
-    published: false
+    "published": false
   },
   {
     "id": "378d3b6c-39e6-4bf0-97c4-e5b63937ad62",
     "rating": 5,
-    customer: {
+    "customer": {
       "id": "8d7dd5f7-cd1d-4050-ae7e-2b2ba11a66b3",
       "email": "Lavon.Fadel@gmail.com",
       "phone": "(554) 755-7712 x04946",
@@ -443,8 +443,8 @@
         "lastname": "Champlin"
       }
     },
-    comment: "“But I must explain to you how all this of denouncing pleasure.”",
-    product: {
+    "comment": "“But I must explain to you how all this of denouncing pleasure.”",
+    "product": {
       "id": "dd63f47a-51a0-45f2-b9af-44190b87824f",
       "slug": "smart-watch-black",
       "shop": {
@@ -493,14 +493,14 @@
       "status": null,
       "reviews": [],
       "rating": 4,
-      unit: null
+      "unit": null
     },
-    published: true
+    "published": true
   },
   {
     "id": "e3ab0d7b-a57b-4db2-a253-a6e135d9e0b6",
     "rating": 5,
-    customer: {
+    "customer": {
       "id": "8d7dd5f7-cd1d-4050-ae7e-2b2ba11a66b3",
       "email": "Lavon.Fadel@gmail.com",
       "phone": "(554) 755-7712 x04946",
@@ -513,8 +513,8 @@
         "lastname": "Champlin"
       }
     },
-    comment: "“But I must explain to you how all this of denouncing pleasure.”",
-    product: {
+    "comment": "“But I must explain to you how all this of denouncing pleasure.”",
+    "product": {
       "id": "5f47f8f7-1b5a-4a07-93f8-8cc528ee283e",
       "slug": "lokia-android-one",
       "shop": {
@@ -565,8 +565,8 @@
       "status": null,
       "reviews": [],
       "rating": 4,
-      unit: null
+      "unit": null
     },
-    published: false
+    "published": false
   }
 ]

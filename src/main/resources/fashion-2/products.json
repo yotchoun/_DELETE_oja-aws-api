@@ -439,7 +439,6 @@
       "type": "best-selling-product"
     }
   },
-  //   feature products
   {
     "id": "5e82e187-c3bd-4589-ae13-e3e9d0d3bacb",
     "slug": "denim-classic-blue-jeans",
@@ -825,7 +824,6 @@
       "type": "featured-products"
     }
   },
-  //   sale products
   {
     "id": "b2c22e0a-7ef9-4412-8848-6c51c718ca11",
     "slug": "denim-classic-blue-jeans",
@@ -991,7 +989,6 @@
       "type": "sale-products"
     }
   },
-  //   latest products
   {
     "id": "c1134835-864c-4793-b8d8-9be904007143",
     "slug": "nike-red",
@@ -1157,7 +1154,6 @@
       "type": "latest-products"
     }
   },
-  //   best week products
   {
     "id": "c025ba1b-d2cd-4926-87f9-16c008e36ec4",
     "slug": "black-metal-ring",

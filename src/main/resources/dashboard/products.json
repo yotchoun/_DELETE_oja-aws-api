@@ -49,8 +49,8 @@
     "status": null,
     "reviews": [],
     "rating": 5,
-    unit: null,
-    published: true
+    "unit": null,
+    "published": true
   },
   {
     "id": "1dd02b91-e6db-4cfd-a101-9841e8fe344f",
@@ -102,8 +102,8 @@
     "status": null,
     "reviews": [],
     "rating": 5,
-    unit: null,
-    published: true
+    "unit": null,
+    "published": true
   },
   {
     "id": "efd10563-4215-4d25-ac35-ffbc3bf9b707",
@@ -155,8 +155,8 @@
     "status": null,
     "reviews": [],
     "rating": 5,
-    unit: null,
-    published: false
+    "unit": null,
+    "published": false
   },
   {
     "id": "e80e40ad-840f-426d-bb79-89edead89a96",
@@ -208,8 +208,8 @@
     "status": null,
     "reviews": [],
     "rating": 5,
-    unit: null,
-    published: true
+    "unit": null,
+    "published": true
   },
   {
     "id": "11881b89-b5b3-4663-8917-cdbc5b284b39",
@@ -261,8 +261,8 @@
     "status": null,
     "reviews": [],
     "rating": 5,
-    unit: null,
-    published: true
+    "unit": null,
+    "published": true
   },
   {
     "id": "5dc1404f-fbef-4efc-a647-05faca24cc55",
@@ -314,8 +314,8 @@
     "status": null,
     "reviews": [],
     "rating": 5,
-    unit: null,
-    published: false
+    "unit": null,
+    "published": false
   },
   {
     "id": "738942f0-5cc1-478d-bb0d-34163d8dcb4f",
@@ -367,8 +367,8 @@
     "status": null,
     "reviews": [],
     "rating": 5,
-    unit: null,
-    published: true
+    "unit": null,
+    "published": true
   },
   {
     "id": "b8711072-6d72-469e-853e-57b089a0b4cb",
@@ -420,7 +420,7 @@
     "status": null,
     "reviews": [],
     "rating": 5,
-    unit: null,
-    published: false
+    "unit": null,
+    "published": false
   }
 ]
