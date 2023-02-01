@@ -1,67 +1,67 @@
 [
   {
-    id: "6afcb0c1-6a80-4391-a8cd-cbdff6924609",
-    name: "CAMERA",
-    icon: null,
+    "id": "6afcb0c1-6a80-4391-a8cd-cbdff6924609",
+    "name": "CAMERA",
+    "icon": null,
     image: "/assets/images/products/camera.png",
-    slug: "camera",
+    "slug": "camera",
     parent: [],
     description: null,
-    for: {
-      demo: "gadget",
-      type: "featured-categories"
+    "for": {
+      "demo": "gadget",
+      "type": "featured-categories"
     }
   },
   {
-    id: "69dd00f4-a1ba-4691-96ef-dd99118410c3",
-    name: "GAMING",
-    icon: null,
+    "id": "69dd00f4-a1ba-4691-96ef-dd99118410c3",
+    "name": "GAMING",
+    "icon": null,
     image: "/assets/images/products/game-box.png",
-    slug: "gaming",
+    "slug": "gaming",
     parent: [],
     description: null,
-    for: {
-      demo: "gadget",
-      type: "featured-categories"
+    "for": {
+      "demo": "gadget",
+      "type": "featured-categories"
     }
   },
   {
-    id: "80356673-388e-47dd-96f3-c78197a38e64",
-    name: "WATCH",
-    icon: null,
+    "id": "80356673-388e-47dd-96f3-c78197a38e64",
+    "name": "WATCH",
+    "icon": null,
     image: "/assets/images/products/watch.png",
-    slug: "watch",
+    "slug": "watch",
     parent: [],
     description: null,
-    for: {
-      demo: "gadget",
-      type: "featured-categories"
+    "for": {
+      "demo": "gadget",
+      "type": "featured-categories"
     }
   },
   {
-    id: "6d8f247d-501b-4e83-97d8-744158c12a1f",
-    name: "DRONE",
-    icon: null,
+    "id": "6d8f247d-501b-4e83-97d8-744158c12a1f",
+    "name": "DRONE",
+    "icon": null,
     image: "/assets/images/products/drone.png",
-    slug: "drone",
+    "slug": "drone",
     parent: [],
     description: null,
-    for: {
-      demo: "gadget",
-      type: "featured-categories"
+    "for": {
+      "demo": "gadget",
+      "type": "featured-categories"
     }
   },
   {
-    id: "71d52e2c-7707-40a7-8149-c7373be25dcd",
-    name: "PHONE",
-    icon: null,
+    "id": "71d52e2c-7707-40a7-8149-c7373be25dcd",
+    "name": "PHONE",
+    "icon": null,
     image: "/assets/images/products/mobile-2.png",
-    slug: "phone",
+    "slug": "phone",
     parent: [],
     description: null,
-    for: {
-      demo: "gadget",
-      type: "featured-categories"
+    "for": {
+      "demo": "gadget",
+      "type": "featured-categories"
     }
   }
 ]

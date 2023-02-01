@@ -1,20 +1,20 @@
 [
   {
-    id: "ad6a361d-9048-49e5-9fa7-927737892857",
-    icon: "Truck",
-    title: "Fast Delivery",
+    "id": "ad6a361d-9048-49e5-9fa7-927737892857",
+    "icon": "Truck",
+    "title": "Fast Delivery",
     description: "Start from $10"
   },
   {
-    id: "2ba74d7d-dfeb-4337-9397-e849572a1244",
-    icon: "PickUpBox",
-    title: "Pick Up",
+    "id": "2ba74d7d-dfeb-4337-9397-e849572a1244",
+    "icon": "PickUpBox",
+    "title": "Pick Up",
     description: "Secure system"
   },
   {
-    id: "dcea23c6-e735-429c-ac35-5903a938f2f8",
-    icon: "OnlineService",
-    title: "Online Support",
+    "id": "dcea23c6-e735-429c-ac35-5903a938f2f8",
+    "icon": "OnlineService",
+    "title": "Online Support",
     description: "24/7 daily"
   }
 ]

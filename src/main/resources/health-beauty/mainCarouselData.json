@@ -1,16 +1,16 @@
 [
   {
-    id: 1,
+    "id": 1,
     buttonLink: "/",
     buttonText: "Shop",
     imgUrl: "/assets/images/Health Shop/Header 1.png",
-    title: "Delivering Medicine to your Doorstep Within 30 Minutes"
+    "title": "Delivering Medicine to your Doorstep Within 30 Minutes"
   },
   {
-    id: 2,
+    "id": 2,
     buttonLink: "/",
     buttonText: "Shop",
     imgUrl: "/assets/images/Health Shop/Header 1.png",
-    title: "Delivering Medicine to your Doorstep Within 30 Minutes"
+    "title": "Delivering Medicine to your Doorstep Within 30 Minutes"
   }
 ]

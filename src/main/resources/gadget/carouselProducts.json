@@ -1,149 +1,149 @@
 [
   {
-    id: "ac304aa4-ca31-4590-a698-e0985bd2d038",
-    slug: "introducing-new-winter-collection",
-    shop: {
-      id: "319e3a86-0f1a-4481-ade8-a27b49150734",
-      slug: "scroll-through",
-      user: {
-        id: "ab6d9f01-6465-4d0c-9544-edc061246713",
-        email: "Beau96@gmail.com",
-        phone: "(581) 792-8474 x800",
-        avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/961.jpg",
-        password: "_Mu_bFfGatgJZu5",
-        dateOfBirth: "1973-09-06T18:58:58.895Z",
-        verified: true,
-        name: {
-          firstName: "Mina",
-          lastName: "Sipes"
+    "id": "ac304aa4-ca31-4590-a698-e0985bd2d038",
+    "slug": "introducing-new-winter-collection",
+    "shop": {
+      "id": "319e3a86-0f1a-4481-ade8-a27b49150734",
+      "slug": "scroll-through",
+      "user": {
+        "id": "ab6d9f01-6465-4d0c-9544-edc061246713",
+        "email": "Beau96@gmail.com",
+        "phone": "(581) 792-8474 x800",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/961.jpg",
+        "password": "_Mu_bFfGatgJZu5",
+        "dateOfBirth": "1973-09-06T18:58:58.895Z",
+        "verified": true,
+        "name": {
+          "firstname": "Mina",
+          "lastname": "Sipes"
         }
       },
-      email: "Evangeline65@hotmail.com",
-      name: "Scroll Through",
-      phone: "(613) 343-9004",
-      address: "845 N. Stonybrook Ave. Tonawanda, NY 14210, Denmark",
-      verified: false,
-      coverPicture: "/assets/images/banners/banner.png",
-      profilePicture: "/assets/images/faces/propic(1).png",
-      socialLinks: {
-        facebook: null,
-        youtube: null,
-        twitter: null,
-        instagram: null
+      "email": "Evangeline65@hotmail.com",
+      "name": "Scroll Through",
+      "phone": "(613) 343-9004",
+      "address": "845 N. Stonybrook Ave. Tonawanda, NY 14210, Denmark",
+      "verified": false,
+      "coverPicture": "/assets/images/banners/banner.png",
+      "profilePicture": "/assets/images/faces/propic(1).png",
+      "socialLinks": {
+        "facebook": null,
+        "youtube": null,
+        "twitter": null,
+        "instagram": null
       }
     },
-    title: "Introducing New Winter Collection",
-    brand: null,
-    price: 87,
-    size: null,
-    colors: [],
-    discount: 30,
-    thumbnail: "/assets/images/products/chair-with-clothes.png",
-    images: [
+    "title": "Introducing New Winter Collection",
+    "brand": null,
+    "price": 87,
+    "size": null,
+    "colors": [],
+    "discount": 30,
+    "thumbnail": "/assets/images/products/chair-with-clothes.png",
+    "images": [
       "/assets/images/products/chair-with-clothes.png",
       "/assets/images/products/chair-with-clothes.png"
     ],
-    categories: [],
-    status: null,
-    reviews: [],
-    rating: 4
+    "categories": [],
+    "status": null,
+    "reviews": [],
+    "rating": 4
   },
   {
-    id: "d0dd59d8-0cb0-4f09-92a8-e3f5bd9498b2",
-    slug: "introducing-new-headphone-collection",
-    shop: {
-      id: "8d830aa1-c4e3-4071-b8fd-47302495fed7",
-      slug: "constant-shoppers",
-      user: {
-        id: "5868b128-877d-464b-8ddc-8f6aa587eab8",
-        email: "Kayden.Kling@yahoo.com",
-        phone: "(253) 970-1322 x63522",
-        avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/65.jpg",
-        password: "KEjhI36IAhDyS2z",
-        dateOfBirth: "1969-08-10T16:37:56.266Z",
-        verified: true,
-        name: {
-          firstName: "Hilma",
-          lastName: "Bayer"
+    "id": "d0dd59d8-0cb0-4f09-92a8-e3f5bd9498b2",
+    "slug": "introducing-new-headphone-collection",
+    "shop": {
+      "id": "8d830aa1-c4e3-4071-b8fd-47302495fed7",
+      "slug": "constant-shoppers",
+      "user": {
+        "id": "5868b128-877d-464b-8ddc-8f6aa587eab8",
+        "email": "Kayden.Kling@yahoo.com",
+        "phone": "(253) 970-1322 x63522",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/65.jpg",
+        "password": "KEjhI36IAhDyS2z",
+        "dateOfBirth": "1969-08-10T16:37:56.266Z",
+        "verified": true,
+        "name": {
+          "firstname": "Hilma",
+          "lastname": "Bayer"
         }
       },
-      email: "Thalia.Schmeler62@gmail.com",
-      name: "Constant Shoppers",
-      phone: "(613) 343-9004",
-      address: "845 N. Stonybrook Ave. Tonawanda, NY 14210, Denmark",
-      verified: false,
-      coverPicture: "/assets/images/banners/banner-4.png",
-      profilePicture: "/assets/images/faces/propic(3).png",
-      socialLinks: {
-        facebook: null,
-        youtube: null,
-        twitter: null,
-        instagram: null
+      "email": "Thalia.Schmeler62@gmail.com",
+      "name": "Constant Shoppers",
+      "phone": "(613) 343-9004",
+      "address": "845 N. Stonybrook Ave. Tonawanda, NY 14210, Denmark",
+      "verified": false,
+      "coverPicture": "/assets/images/banners/banner-4.png",
+      "profilePicture": "/assets/images/faces/propic(3).png",
+      "socialLinks": {
+        "facebook": null,
+        "youtube": null,
+        "twitter": null,
+        "instagram": null
       }
     },
-    title: "Introducing New Headphone Collection",
-    brand: null,
-    price: 39,
-    size: null,
-    colors: [],
-    discount: 40,
-    thumbnail: "/assets/images/products/headphone.png",
-    images: [
+    "title": "Introducing New Headphone Collection",
+    "brand": null,
+    "price": 39,
+    "size": null,
+    "colors": [],
+    "discount": 40,
+    "thumbnail": "/assets/images/products/headphone.png",
+    "images": [
       "/assets/images/products/headphone.png",
       "/assets/images/products/headphone.png"
     ],
-    categories: [],
-    status: null,
-    reviews: [],
-    rating: 5
+    "categories": [],
+    "status": null,
+    "reviews": [],
+    "rating": 5
   },
   {
-    id: "160be9b1-67d0-43c1-82b4-3a1c247ec4a5",
-    slug: "introducing-gaming-gear-collection",
-    shop: {
-      id: "b62876ce-3749-4d7e-8971-c8c9ab4bcea0",
-      slug: "anytime-buys",
-      user: {
-        id: "35ac0881-8742-43a5-8ea2-cef3906677e1",
-        email: "Ashleigh.Ondricka81@yahoo.com",
-        phone: "933-304-5807 x375",
-        avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/103.jpg",
-        password: "GcDWvU_Xds3ha83",
-        dateOfBirth: "1942-03-08T18:08:28.103Z",
-        verified: true,
-        name: {
-          firstName: "Antone",
-          lastName: "Gerhold"
+    "id": "160be9b1-67d0-43c1-82b4-3a1c247ec4a5",
+    "slug": "introducing-gaming-gear-collection",
+    "shop": {
+      "id": "b62876ce-3749-4d7e-8971-c8c9ab4bcea0",
+      "slug": "anytime-buys",
+      "user": {
+        "id": "35ac0881-8742-43a5-8ea2-cef3906677e1",
+        "email": "Ashleigh.Ondricka81@yahoo.com",
+        "phone": "933-304-5807 x375",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/103.jpg",
+        "password": "GcDWvU_Xds3ha83",
+        "dateOfBirth": "1942-03-08T18:08:28.103Z",
+        "verified": true,
+        "name": {
+          "firstname": "Antone",
+          "lastname": "Gerhold"
         }
       },
-      email: "Howell61@hotmail.com",
-      name: "Anytime Buys",
-      phone: "(613) 343-9004",
-      address: "845 N. Stonybrook Ave. Tonawanda, NY 14210, Denmark",
-      verified: false,
-      coverPicture: "/assets/images/banners/banner-6.png",
-      profilePicture: "/assets/images/faces/propic(5).png",
-      socialLinks: {
-        facebook: null,
-        youtube: null,
-        twitter: null,
-        instagram: null
+      "email": "Howell61@hotmail.com",
+      "name": "Anytime Buys",
+      "phone": "(613) 343-9004",
+      "address": "845 N. Stonybrook Ave. Tonawanda, NY 14210, Denmark",
+      "verified": false,
+      "coverPicture": "/assets/images/banners/banner-6.png",
+      "profilePicture": "/assets/images/faces/propic(5).png",
+      "socialLinks": {
+        "facebook": null,
+        "youtube": null,
+        "twitter": null,
+        "instagram": null
       }
     },
-    title: "Introducing Gaming Gear Collection",
-    brand: null,
-    price: 99,
-    size: null,
-    colors: [],
-    discount: 60,
-    thumbnail: "/assets/images/products/gaming-gear.png",
-    images: [
+    "title": "Introducing Gaming Gear Collection",
+    "brand": null,
+    "price": 99,
+    "size": null,
+    "colors": [],
+    "discount": 60,
+    "thumbnail": "/assets/images/products/gaming-gear.png",
+    "images": [
       "/assets/images/products/gaming-gear.png",
       "/assets/images/products/gaming-gear.png"
     ],
-    categories: [],
-    status: null,
-    reviews: [],
-    rating: 4
+    "categories": [],
+    "status": null,
+    "reviews": [],
+    "rating": 4
   }
 ]

@@ -1,133 +1,133 @@
 [
   {
-    category: "Top Categories",
-    categoryItem: [
+    "category": "Top Categories",
+    "categoryItem": [
       {
-        icon: "Home",
-        title: "Home",
-        href: "/product/search/Dariry & Eggs"
+        "icon": "Home",
+        "title": "Home",
+        "href": "/product/search/Dariry & Eggs"
       },
       {
-        icon: "Popular",
-        title: "Popular Products",
-        href: "/product/search/Breakfast"
+        "icon": "Popular",
+        "title": "Popular Products",
+        "href": "/product/search/Breakfast"
       },
       {
-        icon: "Trending",
-        title: "Trending Products",
-        href: "/product/search/Frozen"
+        "icon": "Trending",
+        "title": "Trending Products",
+        "href": "/product/search/Frozen"
       },
       {
-        icon: "Products",
-        title: "All Products",
-        href: "/product/search/vegetables"
+        "icon": "Products",
+        "title": "All Products",
+        "href": "/product/search/vegetables"
       }
     ]
   },
   {
-    category: "Top Categories",
-    categoryItem: [
+    "category": "Top Categories",
+    "categoryItem": [
       {
-        icon: "BirthdayCake",
-        title: "Birthday",
-        href: "/product/search/vegetables",
-        child: [
+        "icon": "BirthdayCake",
+        "title": "Birthday",
+        "href": "/product/search/vegetables",
+        "child": [
           {
-            title: "Pears, apples, quinces",
-            href: "/product/search/Pears, apples, quinces"
+            "title": "Pears, apples, quinces",
+            "href": "/product/search/Pears, apples, quinces"
           },
           {
-            title: "Peaches, plums, apricots",
-            href: "/product/search/Peaches, plums, apricots"
+            "title": "Peaches, plums, apricots",
+            "href": "/product/search/Peaches, plums, apricots"
           },
           {
-            title: "Grapes",
-            href: "/product/search/Grapes"
+            "title": "Grapes",
+            "href": "/product/search/Grapes"
           }
         ]
       },
       {
-        icon: "Children",
-        title: "Children's",
-        href: "/product/search/Fruits & Vegetables",
-        child: [
+        "icon": "Children",
+        "title": "Children's",
+        "href": "/product/search/Fruits & Vegetables",
+        "child": [
           {
-            title: "Onion",
-            href: "/product/search/Onion"
+            "title": "Onion",
+            "href": "/product/search/Onion"
           },
           {
-            title: "Potato",
-            href: "/product/search/Potato"
+            "title": "Potato",
+            "href": "/product/search/Potato"
           },
           {
-            title: "Vegetable Pack",
-            href: "/product/search/Vegetable Pack"
+            "title": "Vegetable Pack",
+            "href": "/product/search/Vegetable Pack"
           }
         ]
       },
       {
-        icon: "Chirstmas",
-        title: "Christmas Gifts",
-        href: "/product/search/Dariry & Eggs",
-        child: [
+        "icon": "Chirstmas",
+        "title": "Christmas Gifts",
+        "href": "/product/search/Dariry & Eggs",
+        "child": [
           {
-            title: "Pears, apples, quinces",
-            href: "/product/search/Pears, apples, quinces"
+            "title": "Pears, apples, quinces",
+            "href": "/product/search/Pears, apples, quinces"
           },
           {
-            title: "Peaches, plums, apricots",
-            href: "/product/search/Peaches, plums, apricots"
+            "title": "Peaches, plums, apricots",
+            "href": "/product/search/Peaches, plums, apricots"
           },
           {
-            title: "Grapes",
-            href: "/product/search/Grapes"
+            "title": "Grapes",
+            "href": "/product/search/Grapes"
           }
         ]
       },
       {
-        icon: "Flower",
-        title: "Flower",
-        href: "/product/search/Dariry & Eggs"
+        "icon": "Flower",
+        "title": "Flower",
+        "href": "/product/search/Dariry & Eggs"
       },
       {
-        icon: "TeddyBear",
-        title: "Teddy Bears",
-        href: "/product/search/Breakfast"
+        "icon": "TeddyBear",
+        "title": "Teddy Bears",
+        "href": "/product/search/Breakfast"
       },
       {
-        icon: "ValentineGift",
-        title: "Valentine Gifts",
-        href: "/product/search/Frozen"
+        "icon": "ValentineGift",
+        "title": "Valentine Gifts",
+        "href": "/product/search/Frozen"
       },
       {
-        icon: "WeddingGift",
-        title: "Wedding Gifts",
-        href: "/product/search/Organic"
+        "icon": "WeddingGift",
+        "title": "Wedding Gifts",
+        "href": "/product/search/Organic"
       },
       {
-        icon: "NewYearGift",
-        title: "New Year Gift",
-        href: "/product/search/Canned Food"
+        "icon": "NewYearGift",
+        "title": "New Year Gift",
+        "href": "/product/search/Canned Food"
       },
       {
-        icon: "Toys",
-        title: "Toys",
-        href: "/product/search/Coffee & Snacks"
+        "icon": "Toys",
+        "title": "Toys",
+        "href": "/product/search/Coffee & Snacks"
       },
       {
-        icon: "Football",
-        title: "Ball",
-        href: "/product/search/Sauces & Jems"
+        "icon": "Football",
+        "title": "Ball",
+        "href": "/product/search/Sauces & Jems"
       },
       {
-        icon: "BabyToys",
-        title: "Baby Toys",
-        href: "/product/search/Sauces & Jems"
+        "icon": "BabyToys",
+        "title": "Baby Toys",
+        "href": "/product/search/Sauces & Jems"
       },
       {
-        icon: "Robot",
-        title: "Robot",
-        href: "/product/search/Sauces & Jems"
+        "icon": "Robot",
+        "title": "Robot",
+        "href": "/product/search/Sauces & Jems"
       }
     ]
   }

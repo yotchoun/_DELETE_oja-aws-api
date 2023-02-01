@@ -3,63 +3,63 @@
     no: 1,
     amount: 1200,
     date: "20-04-2022",
-    status: "Accepted",
+    "status": "Accepted",
     message: "I am requested to payout this amount of money."
   },
   {
     no: 2,
     amount: 250,
     date: "19-04-2022",
-    status: "Pending",
+    "status": "Pending",
     message: "I am requested to payout this amount of money."
   },
   {
     no: 3,
     amount: 9300,
     date: "17-04-2022",
-    status: "Processing",
+    "status": "Processing",
     message: "I am requested to payout this amount of money."
   },
   {
     no: 4,
     amount: 2200,
     date: "14-04-2022",
-    status: "Pending",
+    "status": "Pending",
     message: "I am requested to payout this amount of money."
   },
   {
     no: 5,
     amount: 700,
     date: "08-04-2022",
-    status: "Accepted",
+    "status": "Accepted",
     message: "I am requested to payout this amount of money."
   },
   {
     no: 6,
     amount: 930,
     date: "01-04-2022",
-    status: "Pending",
+    "status": "Pending",
     message: "I am requested to payout this amount of money."
   },
   {
     no: 7,
     amount: 450,
     date: "26-03-2022",
-    status: "Processing",
+    "status": "Processing",
     message: "I am requested to payout this amount of money."
   },
   {
     no: 8,
     amount: 360,
     date: "16-03-2022",
-    status: "Accepted",
+    "status": "Accepted",
     message: "I am requested to payout this amount of money."
   },
   {
     no: 9,
     amount: 120,
     date: "12-03-2022",
-    status: "Pending",
+    "status": "Pending",
     message: "I am requested to payout this amount of money."
   }
 ]

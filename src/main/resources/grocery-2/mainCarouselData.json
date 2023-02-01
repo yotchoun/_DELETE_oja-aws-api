@@ -1,15 +1,15 @@
 [
   {
-    id: 1,
-    title: "Get Your Grocery Within 40 Minutes",
+    "id": 1,
+    "title": "Get Your Grocery Within 40 Minutes",
     imgUrl: "/assets/images/products/garlic.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed pellentesque nibh tortor.",
     playStoreLink: "/",
     appStoreLink: "/"
   },
   {
-    id: 2,
-    title: "Get Your Grocery Within 40 Minutes",
+    "id": 2,
+    "title": "Get Your Grocery Within 40 Minutes",
     imgUrl: "/assets/images/products/garlic.png",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed pellentesque nibh tortor.",
     playStoreLink: "/",
