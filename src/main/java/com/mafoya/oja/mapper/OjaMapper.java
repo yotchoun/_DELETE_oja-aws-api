@@ -1,7 +1,7 @@
 package com.mafoya.oja.mapper;
 
-import com.mafoya.oja.dto.EmployeeDto;
-import com.mafoya.oja.model.Employee;
+import com.mafoya.oja.dto.NavigationDto;
+import com.mafoya.oja.model.Navigation;
 import org.slf4j.Logger;
 import org.springframework.beans.BeanUtils;
 
@@ -11,15 +11,15 @@ public class OjaMapper {
 
     private static final Logger LOGGER = getLogger(OjaMapper.class);
 
-    public static EmployeeDto mapEmployeeToDto(Employee employeeDo) {
-        EmployeeDto employeeDto = new EmployeeDto();
-        BeanUtils.copyProperties(employeeDo, employeeDto);
-        return employeeDto;
+    public static NavigationDto mapNavigationToDto(Navigation NavigationDo) {
+        NavigationDto NavigationDto = new NavigationDto();
+        BeanUtils.copyProperties(NavigationDo, NavigationDto);
+        return NavigationDto;
     }
 
-    public static Employee mapEmployeeToDo(EmployeeDto employeeDto) {
-        Employee employeeDo = new Employee();
-        BeanUtils.copyProperties(employeeDto, employeeDo);
-        return employeeDo;
+    public static Navigation mapNavigationToDo(NavigationDto NavigationDto) {
+        Navigation NavigationDo = new Navigation();
+        BeanUtils.copyProperties(NavigationDto, NavigationDo);
+        return NavigationDo;
     }
 }

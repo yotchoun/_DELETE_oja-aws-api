@@ -2,7 +2,7 @@ package com.mafoya.oja.config;
 
 import com.mafoya.oja.repository.BrandRepository;
 import com.mafoya.oja.repository.CustomerRepository;
-import com.mafoya.oja.repository.EmployeeRepository;
+import com.mafoya.oja.repository.NavigationRepository;
 import com.mafoya.oja.repository.OrderRepository;
 import com.mafoya.oja.service.*;
 import org.springframework.context.annotation.Bean;
@@ -17,8 +17,8 @@ public class BusinessConfig {
     }
 
     @Bean
-    EmployeeService employeeService(EmployeeRepository employeeRepository) {
-        return new EmployeeServiceImpl(employeeRepository);
+    NavigationService NavigationService(NavigationRepository NavigationRepository) {
+        return new NavigationServiceImpl(NavigationRepository);
     }
 
     @Bean

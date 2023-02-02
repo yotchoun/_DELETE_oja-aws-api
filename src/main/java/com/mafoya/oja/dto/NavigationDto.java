@@ -5,7 +5,7 @@ import lombok.ToString;
 
 @Data
 @ToString
-public class EmployeeDto {
+public class NavigationDto {
 
     private String id;
 
