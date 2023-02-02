@@ -11,21 +11,21 @@ import java.util.Optional;
 
 public class NavigationServiceImpl implements NavigationService {
 
-    private final NavigationRepository NavigationRepository;
+    private final NavigationRepository navigationRepository;
 
-    public NavigationServiceImpl(NavigationRepository NavigationRepository) {
-        this.NavigationRepository = NavigationRepository;
+    public NavigationServiceImpl(NavigationRepository navigationRepository) {
+        this.navigationRepository = navigationRepository;
     }
 
     @Override
     public Navigation create(String authorization, NavigationDto NavigationDto) {
-        return NavigationRepository.save(OjaMapper.mapNavigationToDo(NavigationDto));
+        return navigationRepository.save(OjaMapper.mapNavigationToDo(NavigationDto));
     }
 
     @Override
     public Navigation update(String authorization, Navigation Navigation, String id) {
 
-        Optional<Navigation> NavigationOptional = NavigationRepository.findById(id);
+        Optional<Navigation> NavigationOptional = navigationRepository.findById(id);
         if (NavigationOptional.isPresent()) {
             NavigationOptional.get().setFirstName(Navigation.getFirstName());
             NavigationOptional.get().setLastName(Navigation.getLastName());
@@ -33,24 +33,24 @@ public class NavigationServiceImpl implements NavigationService {
             NavigationOptional.get().setNumber(Navigation.getNumber());
             NavigationOptional.get().setDepartment(Navigation.getDepartment());
 
-            return NavigationRepository.save(NavigationOptional.get());
+            return navigationRepository.save(NavigationOptional.get());
         }
         throw new DataNotFoundException("Navigation Id not found");
     }
 
     @Override
     public Optional<Navigation> getById(String authorization, String id) {
-        return NavigationRepository.findById(id);
+        return navigationRepository.findById(id);
     }
 
     @Override
     public List<Navigation> getAll(String authorization) {
-        return (List<Navigation>) NavigationRepository.findAll();
+        return (List<Navigation>) navigationRepository.findAll();
     }
 
     @Override
     public void delete(String authorization, String id) {
-        NavigationRepository.deleteById(id);
+        navigationRepository.deleteById(id);
     }
 
 }

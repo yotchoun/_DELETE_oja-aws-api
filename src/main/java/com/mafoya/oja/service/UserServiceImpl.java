@@ -1,29 +1,29 @@
 package com.mafoya.oja.service;
 
 import com.mafoya.oja.exception.DataNotFoundException;
-import com.mafoya.oja.model.Customer;
-import com.mafoya.oja.repository.CustomerRepository;
+import com.mafoya.oja.model.User;
+import com.mafoya.oja.repository.UserRepository;
 
 import java.util.List;
 import java.util.Optional;
 
-public class CustomerServiceImpl implements CustomerService {
+public class UserServiceImpl implements UserService {
 
-    private final CustomerRepository customerRepository;
+    private final UserRepository customerRepository;
 
-    public CustomerServiceImpl(CustomerRepository customerRepository) {
+    public UserServiceImpl(UserRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
 
     @Override
-    public Customer create(String authorization, Customer customer) {
+    public User create(String authorization, User customer) {
         return customerRepository.save(customer);
     }
 
     @Override
-    public Customer update(String authorization, Customer customer, String id) {
+    public User update(String authorization, User customer, String id) {
 
-        Optional<Customer> customerOptional = customerRepository.findById(id);
+        Optional<User> customerOptional = customerRepository.findById(id);
         if (customerOptional.isPresent()) {
             customerOptional.get().setName(customer.getName());
             customerOptional.get().setCustomerID(customer.getCustomerID());
@@ -35,13 +35,13 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Optional<Customer> getById(String authorization, String id) {
+    public Optional<User> getById(String authorization, String id) {
         return customerRepository.findById(id);
     }
 
     @Override
-    public List<Customer> getAll(String authorization) {
-        return (List<Customer>) customerRepository.findAll();
+    public List<User> getAll(String authorization) {
+        return (List<User>) customerRepository.findAll();
     }
 
     @Override

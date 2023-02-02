@@ -1,7 +1,7 @@
 package com.mafoya.oja.config;
 
 import com.mafoya.oja.repository.BrandRepository;
-import com.mafoya.oja.repository.CustomerRepository;
+import com.mafoya.oja.repository.UserRepository;
 import com.mafoya.oja.repository.NavigationRepository;
 import com.mafoya.oja.repository.OrderRepository;
 import com.mafoya.oja.service.*;
@@ -17,8 +17,8 @@ public class BusinessConfig {
     }
 
     @Bean
-    NavigationService NavigationService(NavigationRepository NavigationRepository) {
-        return new NavigationServiceImpl(NavigationRepository);
+    NavigationService NavigationService(NavigationRepository navigationRepository) {
+        return new NavigationServiceImpl(navigationRepository);
     }
 
     @Bean
@@ -27,8 +27,8 @@ public class BusinessConfig {
     }
 
     @Bean
-    CustomerService customerService(CustomerRepository customerRepository) {
-        return new CustomerServiceImpl(customerRepository);
+    UserService customerService(UserRepository customerRepository) {
+        return new UserServiceImpl(customerRepository);
     }
 
 }

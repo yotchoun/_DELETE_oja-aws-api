@@ -19,33 +19,33 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 public class NavigationController {
 
     @Autowired
-    private NavigationService NavigationService;
+    private NavigationService navigationService;
 
-    @GetMapping("/Navigations/all")
+    @GetMapping("/navigations/all")
     public List<Navigation> findAll(@RequestHeader("authorization") String authorization) {
-        return this.NavigationService.getAll(authorization);
+        return this.navigationService.getAll(authorization);
     }
 
-    @GetMapping("/Navigations/{id}")
+    @GetMapping("/navigations/{id}")
     public Optional<Navigation> getNavigationById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
-        return this.NavigationService.getById(authorization, id);
+        return this.navigationService.getById(authorization, id);
 
     }
 
-    @PostMapping("/Navigations")
+    @PostMapping("/navigations")
     public Navigation createNavigation(@RequestBody @Valid NavigationDto NavigationDto, @RequestHeader("authorization") String authorization) {
-        return this.NavigationService.create(authorization, NavigationDto);
+        return this.navigationService.create(authorization, NavigationDto);
     }
 
-    @PutMapping("/Navigations/{id}")
+    @PutMapping("/navigations/{id}")
     public Navigation updateNavigation(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody Navigation Navigation) {
-        return this.NavigationService.update(authorization, Navigation, id);
+        return this.navigationService.update(authorization, Navigation, id);
 
 
     }
 
     @DeleteMapping("/Navigations/{id}")
     public void deleteNavigation(@RequestHeader("authorization") String authorization, @PathVariable String id) {
-        this.NavigationService.delete(authorization, id);
+        this.navigationService.delete(authorization, id);
     }
 }

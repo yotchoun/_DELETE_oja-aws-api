@@ -9,9 +9,9 @@ import java.util.Optional;
 
 public interface NavigationService {
 
-    Navigation create(String authorization, NavigationDto NavigationDto);
+    Navigation create(String authorization, NavigationDto navigationDto);
 
-    Navigation update(String authorization, Navigation Navigation, String id);
+    Navigation update(String authorization, Navigation navigation, String id);
 
     Optional<Navigation> getById(String authorization, String id);
 

@@ -1,7 +1,7 @@
 package com.mafoya.oja.controller;
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.Customer;
-import com.mafoya.oja.service.CustomerService;
+import com.mafoya.oja.model.User;
+import com.mafoya.oja.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,29 +13,29 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @RestController
 @RequestMapping(value = OjaConstant.BASE_PATH, produces = APPLICATION_JSON_VALUE)
 @CrossOrigin(origins = "*")
-public class CustomerController {
+public class UserController {
 
     @Autowired
-    private CustomerService customerService;
+    private UserService customerService;
 
     @GetMapping("/customers/all")
-    public List<Customer> findAll(@RequestHeader("authorization") String authorization) {
+    public List<User> findAll(@RequestHeader("authorization") String authorization) {
         return this.customerService.getAll(authorization);
     }
 
     @GetMapping("/customers/{id}")
-    public Optional<Customer> getCustomerById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+    public Optional<User> getCustomerById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.customerService.getById(authorization, id);
 
     }
 
     @PostMapping("/customers")
-    public Customer createCustomer(@RequestHeader("authorization") String authorization, @RequestBody Customer customer) {
+    public User createCustomer(@RequestHeader("authorization") String authorization, @RequestBody User customer) {
         return this.customerService.create(authorization, customer);
     }
 
     @PutMapping("/customers/{id}")
-    public Customer updateCustomer(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody Customer customer) {
+    public User updateCustomer(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody User customer) {
         return this.customerService.update(authorization, customer, id);
 
 
