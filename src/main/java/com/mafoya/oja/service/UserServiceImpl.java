@@ -26,8 +26,8 @@ public class UserServiceImpl implements UserService {
         Optional<User> customerOptional = customerRepository.findById(id);
         if (customerOptional.isPresent()) {
             customerOptional.get().setName(customer.getName());
-            customerOptional.get().setCustomerID(customer.getCustomerID());
-            customerOptional.get().setEmail(customer.getEmail());
+//            customerOptional.get().setCustomerID(customer.getCustomerID());
+//            customerOptional.get().setEmail(customer.getEmail());
 
             return customerRepository.save(customerOptional.get());
         }

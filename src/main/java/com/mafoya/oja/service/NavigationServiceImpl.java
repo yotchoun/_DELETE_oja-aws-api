@@ -27,11 +27,11 @@ public class NavigationServiceImpl implements NavigationService {
 
         Optional<Navigation> NavigationOptional = navigationRepository.findById(id);
         if (NavigationOptional.isPresent()) {
-            NavigationOptional.get().setFirstName(Navigation.getFirstName());
-            NavigationOptional.get().setLastName(Navigation.getLastName());
-            NavigationOptional.get().setEmail(Navigation.getEmail());
-            NavigationOptional.get().setNumber(Navigation.getNumber());
-            NavigationOptional.get().setDepartment(Navigation.getDepartment());
+//            NavigationOptional.get().setFirstName(Navigation.getFirstName());
+//            NavigationOptional.get().setLastName(Navigation.getLastName());
+//            NavigationOptional.get().setEmail(Navigation.getEmail());
+//            NavigationOptional.get().setNumber(Navigation.getNumber());
+//            NavigationOptional.get().setDepartment(Navigation.getDepartment());
 
             return navigationRepository.save(NavigationOptional.get());
         }
