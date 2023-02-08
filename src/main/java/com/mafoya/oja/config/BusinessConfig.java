@@ -2,7 +2,7 @@ package com.mafoya.oja.config;
 
 import com.mafoya.oja.repository.BrandRepository;
 import com.mafoya.oja.repository.UserRepository;
-import com.mafoya.oja.repository.NavigationRepository;
+import com.mafoya.oja.repository.CategoryNavigationRepository;
 import com.mafoya.oja.repository.OrderRepository;
 import com.mafoya.oja.service.*;
 import org.springframework.context.annotation.Bean;
@@ -17,8 +17,8 @@ public class BusinessConfig {
     }
 
     @Bean
-    NavigationService NavigationService(NavigationRepository navigationRepository) {
-        return new NavigationServiceImpl(navigationRepository);
+    CategoryNavigationService categoryNavigationService(CategoryNavigationRepository navigationRepository) {
+        return new CategoryNavigationServiceImpl(navigationRepository);
     }
 
     @Bean

@@ -14,13 +14,16 @@ import org.springframework.data.annotation.Id;
 import java.time.Instant;
 
 @Data
-@DynamoDBTable(tableName = "OjaOrder-dev")
+@DynamoDBTable(tableName = "OjaOrder-hvlboaadvrhhpi7zd6mqvplo6e-dev")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Order {
     @Id
     private OrderID orderID;
+
+    @DynamoDBAttribute(attributeName = "createdAt")
+    private Instant createdAt;
     @DynamoDBHashKey(attributeName = "customerID")
     private String customerID;
 

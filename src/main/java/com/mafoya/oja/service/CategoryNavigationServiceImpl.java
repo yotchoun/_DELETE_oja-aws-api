@@ -1,31 +1,32 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.dto.NavigationDto;
+
+import com.mafoya.oja.dto.CategoryNavigationDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.mapper.OjaMapper;
-import com.mafoya.oja.model.Navigation;
-import com.mafoya.oja.repository.NavigationRepository;
+import com.mafoya.oja.model.CategoryNavigation;
+import com.mafoya.oja.repository.CategoryNavigationRepository;
 
 import java.util.List;
 import java.util.Optional;
 
-public class NavigationServiceImpl implements NavigationService {
+public class CategoryNavigationServiceImpl implements CategoryNavigationService {
 
-    private final NavigationRepository navigationRepository;
+    private final CategoryNavigationRepository navigationRepository;
 
-    public NavigationServiceImpl(NavigationRepository navigationRepository) {
+    public CategoryNavigationServiceImpl(CategoryNavigationRepository navigationRepository) {
         this.navigationRepository = navigationRepository;
     }
 
     @Override
-    public Navigation create(String authorization, NavigationDto NavigationDto) {
-        return navigationRepository.save(OjaMapper.mapNavigationToDo(NavigationDto));
+    public CategoryNavigation create(String authorization, CategoryNavigationDto NavigationDto) {
+        return navigationRepository.save(OjaMapper.mapCategoryNavigationToDo(NavigationDto));
     }
 
     @Override
-    public Navigation update(String authorization, Navigation Navigation, String id) {
+    public CategoryNavigation update(String authorization, CategoryNavigation Navigation, String id) {
 
-        Optional<Navigation> NavigationOptional = navigationRepository.findById(id);
+        Optional<CategoryNavigation> NavigationOptional = navigationRepository.findById(id);
         if (NavigationOptional.isPresent()) {
 //            NavigationOptional.get().setFirstName(Navigation.getFirstName());
 //            NavigationOptional.get().setLastName(Navigation.getLastName());
@@ -39,13 +40,13 @@ public class NavigationServiceImpl implements NavigationService {
     }
 
     @Override
-    public Optional<Navigation> getById(String authorization, String id) {
+    public Optional<CategoryNavigation> getById(String authorization, String id) {
         return navigationRepository.findById(id);
     }
 
     @Override
-    public List<Navigation> getAll(String authorization) {
-        return (List<Navigation>) navigationRepository.findAll();
+    public List<CategoryNavigation> getAll(String authorization) {
+        return (List<CategoryNavigation>) navigationRepository.findAll();
     }
 
     @Override

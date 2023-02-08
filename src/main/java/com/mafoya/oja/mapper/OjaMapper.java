@@ -1,7 +1,7 @@
 package com.mafoya.oja.mapper;
 
-import com.mafoya.oja.dto.NavigationDto;
-import com.mafoya.oja.model.Navigation;
+import com.mafoya.oja.dto.CategoryNavigationDto;
+import com.mafoya.oja.model.CategoryNavigation;
 import org.slf4j.Logger;
 import org.springframework.beans.BeanUtils;
 
@@ -11,14 +11,14 @@ public class OjaMapper {
 
     private static final Logger LOGGER = getLogger(OjaMapper.class);
 
-    public static NavigationDto mapNavigationToDto(Navigation NavigationDo) {
-        NavigationDto NavigationDto = new NavigationDto();
+    public static CategoryNavigationDto mapNavigationToDto(CategoryNavigation NavigationDo) {
+        CategoryNavigationDto NavigationDto = new CategoryNavigationDto();
         BeanUtils.copyProperties(NavigationDo, NavigationDto);
         return NavigationDto;
     }
 
-    public static Navigation mapNavigationToDo(NavigationDto NavigationDto) {
-        Navigation NavigationDo = new Navigation();
+    public static CategoryNavigation mapCategoryNavigationToDo(CategoryNavigationDto NavigationDto) {
+        CategoryNavigation NavigationDo = new CategoryNavigation();
         BeanUtils.copyProperties(NavigationDto, NavigationDo);
         return NavigationDo;
     }
