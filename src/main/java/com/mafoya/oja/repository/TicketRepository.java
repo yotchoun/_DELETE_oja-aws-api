@@ -1,4 +1,11 @@
 package com.mafoya.oja.repository;
 
-public class TicketRepository {
+import com.mafoya.oja.model.Ticket;
+import org.socialsignin.spring.data.dynamodb.repository.EnableScan;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@EnableScan
+@Repository
+public interface TicketRepository  extends CrudRepository<Ticket, String> {
 }

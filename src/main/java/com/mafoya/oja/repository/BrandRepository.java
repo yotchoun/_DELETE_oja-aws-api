@@ -8,6 +8,4 @@ import org.springframework.stereotype.Repository;
 @EnableScan
 @Repository
 public interface BrandRepository extends CrudRepository<Brand, String> {
-
-
 }

@@ -1,4 +1,11 @@
 package com.mafoya.oja.repository;
 
-public class ShopRepository {
+import com.mafoya.oja.model.Shop;
+import org.socialsignin.spring.data.dynamodb.repository.EnableScan;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@EnableScan
+@Repository
+public interface ShopRepository  extends CrudRepository<Shop, String> {
 }
