@@ -21,23 +21,23 @@ public class CategoryNavigationController {
     @Autowired
     private CategoryNavigationService navigationService;
 
-    @GetMapping("/navigations/all")
+    @GetMapping("/categoryNavigations/all")
     public List<CategoryNavigation> findAll(@RequestHeader("authorization") String authorization) {
         return this.navigationService.getAll(authorization);
     }
 
-    @GetMapping("/navigations/{id}")
+    @GetMapping("/categoryNavigations/{id}")
     public Optional<CategoryNavigation> getCategoryNavigationById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.navigationService.getById(authorization, id);
 
     }
 
-    @PostMapping("/navigations")
+    @PostMapping("/categoryNavigations")
     public CategoryNavigation createCategoryNavigation(@RequestBody @Valid CategoryNavigationDto CategoryNavigationDto, @RequestHeader("authorization") String authorization) {
         return this.navigationService.create(authorization, CategoryNavigationDto);
     }
 
-    @PutMapping("/navigations/{id}")
+    @PutMapping("/categoryNavigations/{id}")
     public CategoryNavigation updateCategoryNavigation(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody CategoryNavigation CategoryNavigation) {
         return this.navigationService.update(authorization, CategoryNavigation, id);
 

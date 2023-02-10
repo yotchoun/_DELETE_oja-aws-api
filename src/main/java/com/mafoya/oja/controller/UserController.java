@@ -16,33 +16,33 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 public class UserController {
 
     @Autowired
-    private UserService customerService;
+    private UserService userService;
 
-    @GetMapping("/customers/all")
+    @GetMapping("/users/all")
     public List<User> findAll(@RequestHeader("authorization") String authorization) {
-        return this.customerService.getAll(authorization);
+        return this.userService.getAll(authorization);
     }
 
-    @GetMapping("/customers/{id}")
+    @GetMapping("/users/{id}")
     public Optional<User> getCustomerById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
-        return this.customerService.getById(authorization, id);
+        return this.userService.getById(authorization, id);
 
     }
 
-    @PostMapping("/customers")
-    public User createCustomer(@RequestHeader("authorization") String authorization, @RequestBody User customer) {
-        return this.customerService.create(authorization, customer);
+    @PostMapping("/users")
+    public User createCustomer(@RequestHeader("authorization") String authorization, @RequestBody User user) {
+        return this.userService.create(authorization, user);
     }
 
-    @PutMapping("/customers/{id}")
-    public User updateCustomer(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody User customer) {
-        return this.customerService.update(authorization, customer, id);
+    @PutMapping("/users/{id}")
+    public User updateCustomer(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody User user) {
+        return this.userService.update(authorization, user, id);
 
 
     }
 
-    @DeleteMapping("/customers/{id}")
+    @DeleteMapping("/users/{id}")
     public void deleteCustomer(@RequestHeader("authorization") String authorization, @PathVariable String id) {
-        this.customerService.delete(authorization, id);
+        this.userService.delete(authorization, id);
     }
 }

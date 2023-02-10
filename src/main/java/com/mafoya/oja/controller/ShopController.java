@@ -1,8 +1,8 @@
 package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.Brand;
-import com.mafoya.oja.service.BrandService;
+import com.mafoya.oja.model.ShopService;
+import com.mafoya.oja.service.ShopServiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,34 +18,34 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 public class ShopController{
 
     @Autowired
-    private BrandService brandService;
+    private ShopServiceService shopServiceService;
 
-    @GetMapping("/brands/all")
-    public List<Brand> findAll(@RequestHeader("authorization") String authorization) {
-        return this.brandService.getAll(authorization);
+    @GetMapping("/shops/all")
+    public List<ShopService> findAll(@RequestHeader("authorization") String authorization) {
+        return this.shopServiceService.getAll(authorization);
     }
 
-    @GetMapping("/brands/{id}")
-    public Optional<Brand> getBrandById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
-        return this.brandService.getById(authorization, id);
-
-    }
-
-    @PostMapping("/brands")
-    public Brand createBrand(@RequestBody @Valid Brand brandDto, @RequestHeader("authorization") String authorization) {
-        return this.brandService.create(authorization, brandDto);
-    }
-
-    @PutMapping("/brands/{id}")
-    public Brand updateBrand(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody Brand brand) {
-        return this.brandService.update(authorization, brand, id);
-
+    @GetMapping("/shops/{id}")
+    public Optional<ShopService> getShopById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+        return this.shopServiceService.getById(authorization, id);
 
     }
 
-    @DeleteMapping("/brands/{id}")
-    public void deleteBrand(@RequestHeader("authorization") String authorization, @PathVariable String id) {
-        this.brandService.delete(authorization, id);
+    @PostMapping("/shops")
+    public ShopService createShop(@RequestBody @Valid ShopService shopDto, @RequestHeader("authorization") String authorization) {
+        return this.shopServiceService.create(authorization, shopDto);
+    }
+
+    @PutMapping("/shops/{id}")
+    public ShopService updateShop(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody ShopService shop) {
+        return this.shopServiceService.update(authorization, shop, id);
+
+
+    }
+
+    @DeleteMapping("/shops/{id}")
+    public void deleteShop(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+        this.shopServiceService.delete(authorization, id);
     }
 }
 

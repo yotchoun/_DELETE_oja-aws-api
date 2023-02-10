@@ -20,30 +20,30 @@ public class ForController{
     @Autowired
     private ForService forSerService;
 
-    @GetMapping("/forSers/all")
+    @GetMapping("/for/all")
     public List<For> findAll(@RequestHeader("authorization") String authorization) {
         return this.forSerService.getAll(authorization);
     }
 
-    @GetMapping("/forSers/{id}")
+    @GetMapping("/for/{id}")
     public Optional<For> getForById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.forSerService.getById(authorization, id);
 
     }
 
-    @PostMapping("/forSers")
+    @PostMapping("/for")
     public For createFor(@RequestBody @Valid For forSerDto, @RequestHeader("authorization") String authorization) {
         return this.forSerService.create(authorization, forSerDto);
     }
 
-    @PutMapping("/forSers/{id}")
+    @PutMapping("/for/{id}")
     public For updateFor(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody For forSer) {
         return this.forSerService.update(authorization, forSer, id);
 
 
     }
 
-    @DeleteMapping("/forSers/{id}")
+    @DeleteMapping("/for/{id}")
     public void deleteFor(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         this.forSerService.delete(authorization, id);
     }
