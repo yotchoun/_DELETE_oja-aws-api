@@ -1,8 +1,13 @@
 package com.mafoya.oja.service;
 
 import com.mafoya.oja.model.Order;
+import com.mafoya.oja.model.Order;
+import com.mafoya.oja.repository.OrderRepository;
 import com.mafoya.oja.repository.OrderRepository;
 import software.amazon.awssdk.enhanced.dynamodb.model.PageIterable;
+
+import java.util.List;
+import java.util.Optional;
 
 public class OrderServiceImpl implements OrderService {
 
@@ -13,23 +18,28 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void create(String authorization, Order order) {
-         orderRepository.save(order);
+    public Order create(String authorization, Order order) {
+        return orderRepository.save(order);
     }
 
     @Override
-    public Order getById(String authorization, String customerID, final String orderID) {
-        return orderRepository.getOrder(customerID, orderID);
+    public Order update(String authorization, Order order, String id) {
+        return orderRepository.save(order);
     }
 
     @Override
-    public PageIterable<Order> getAll(String authorization, String customerID, final String orderID) {
-        return orderRepository.scanOrders(customerID, orderID);
+    public Optional<Order> getById(String authorization, String id) {
+        return orderRepository.findById(id);
     }
 
     @Override
-    public void delete(String authorization, String customerID, final String orderID) {
-        orderRepository.deleteOrder(customerID, orderID);
+    public List<Order> getAll(String authorization) {
+        return (List<Order>) orderRepository.findAll();
     }
 
+    @Override
+    public void delete(String authorization, String id) {
+        orderRepository.deleteById(id);
+    }
 }
+
