@@ -1,7 +1,7 @@
 package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.ShopService;
+import com.mafoya.oja.model.ShopServiceObject;
 import com.mafoya.oja.service.ShopServiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,23 +21,23 @@ public class ShopController{
     private ShopServiceService shopServiceService;
 
     @GetMapping("/shops/all")
-    public List<ShopService> findAll(@RequestHeader("authorization") String authorization) {
+    public List<ShopServiceObject> findAll(@RequestHeader("authorization") String authorization) {
         return this.shopServiceService.getAll(authorization);
     }
 
     @GetMapping("/shops/{id}")
-    public Optional<ShopService> getShopById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+    public Optional<ShopServiceObject> getShopById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.shopServiceService.getById(authorization, id);
 
     }
 
     @PostMapping("/shops")
-    public ShopService createShop(@RequestBody @Valid ShopService shopDto, @RequestHeader("authorization") String authorization) {
+    public ShopServiceObject createShop(@RequestBody @Valid ShopServiceObject shopDto, @RequestHeader("authorization") String authorization) {
         return this.shopServiceService.create(authorization, shopDto);
     }
 
     @PutMapping("/shops/{id}")
-    public ShopService updateShop(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody ShopService shop) {
+    public ShopServiceObject updateShop(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody ShopServiceObject shop) {
         return this.shopServiceService.update(authorization, shop, id);
 
 
