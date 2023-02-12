@@ -1,26 +1,39 @@
 [
   {
+    "id": "1",
     "category": "Top Categories",
     "categoryItem": [
       {
         "icon": "Milk",
         "title": "Dariry & Eggs",
-        "href": "/product/search/Dariry & Eggs"
+        "href": "/product/search/Dariry & Eggs",
+        "categoryItemId": "1",
+        "categoryNavigationId": "1",
+        "id": "1"
       },
       {
         "icon": "Breakfast",
         "title": "Breakfast",
-        "href": "/product/search/Breakfast"
+        "href": "/product/search/Breakfast",
+        "categoryItemId": "1",
+        "categoryNavigationId": "1",
+        "id": "2"
       },
       {
         "icon": "Yogurt",
         "title": "Frozen",
-        "href": "/product/search/Frozen"
+        "href": "/product/search/Frozen",
+        "categoryItemId": "1",
+        "categoryNavigationId": "1",
+        "id": "3"
       },
       {
         "icon": "Carrot",
         "title": "Vegetables",
         "href": "/product/search/vegetables",
+        "categoryItemId": "1",
+        "categoryNavigationId": "1",
+        "id": "1",
         "child": [
           {
             "title": "Pears, apples, quinces",
@@ -40,6 +53,9 @@
         "icon": "Apple",
         "title": "Fruits & Vegetables",
         "href": "/product/search/Fruits & Vegetables",
+        "categoryItemId": "1",
+        "categoryNavigationId": "1",
+        "id": "1",
         "child": [
           {
             "title": "Onion",
@@ -59,6 +75,9 @@
         "icon": "Milk",
         "title": "Dariry & Eggs",
         "href": "/product/search/Dariry & Eggs",
+        "categoryItemId": "1",
+        "categoryNavigationId": "1",
+        "id": "1",
         "child": [
           {
             "title": "Pears, apples, quinces",

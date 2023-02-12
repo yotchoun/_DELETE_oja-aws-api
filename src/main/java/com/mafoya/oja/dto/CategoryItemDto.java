@@ -11,21 +11,12 @@ import java.util.Set;
 public class CategoryItemDto {
 
     private String id;
-
-
     private Instant createdAt;
-
     private String icon;
-
     private String title;
-
     private String href;
-
     private String categoryItemId;
-
     private String categoryNavigationId;
-
-
     private Set<CategoryItemDto> child;
 }
 
