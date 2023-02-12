@@ -7,51 +7,68 @@ import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.CategoryNavigation;
 import com.mafoya.oja.repository.CategoryNavigationRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.atomic.AtomicReference;
 
-public class CategoryNavigationServiceImpl implements CategoryNavigationService {
+public class CategoryNavigationDtoServiceImpl implements CategoryNavigationService {
 
-    private final CategoryNavigationRepository navigationRepository;
+    private final CategoryNavigationRepository categoryNavigationRepository;
 
-    public CategoryNavigationServiceImpl(CategoryNavigationRepository navigationRepository) {
-        this.navigationRepository = navigationRepository;
+    public CategoryNavigationDtoServiceImpl(CategoryNavigationRepository categoryNavigationRepository) {
+        this.categoryNavigationRepository = categoryNavigationRepository;
     }
 
     @Override
-    public CategoryNavigation create(String authorization, CategoryNavigationDto NavigationDto) {
-        return navigationRepository.save(OjaMapper.mapCategoryNavigationToDo(NavigationDto));
+    public CategoryNavigationDto create(String authorization, CategoryNavigationDto categoryNavigationDto) {
+
+        CategoryNavigation categoryNavigationDo = OjaMapper.mapCategoryNavigationDo(categoryNavigationDto);
+        categoryNavigationRepository.save(categoryNavigationDo);
+        return categoryNavigationDto;
     }
 
     @Override
-    public CategoryNavigation update(String authorization, CategoryNavigation Navigation, String id) {
+    public CategoryNavigationDto update(String authorization, CategoryNavigationDto categoryNavigationDto, String id) {
 
-        Optional<CategoryNavigation> NavigationOptional = navigationRepository.findById(id);
-        if (NavigationOptional.isPresent()) {
-//            NavigationOptional.get().setFirstName(Navigation.getFirstName());
-//            NavigationOptional.get().setLastName(Navigation.getLastName());
-//            NavigationOptional.get().setEmail(Navigation.getEmail());
-//            NavigationOptional.get().setNumber(Navigation.getNumber());
-//            NavigationOptional.get().setDepartment(Navigation.getDepartment());
-
-            return navigationRepository.save(NavigationOptional.get());
+        Optional<CategoryNavigation> categoryNavigationOptional = categoryNavigationRepository.findById(id);
+        if (categoryNavigationOptional.isPresent()) {
+            CategoryNavigation categoryNavigationDo = OjaMapper.mapCategoryNavigationDo(categoryNavigationDto);
+            categoryNavigationDo.setId(id);
+            categoryNavigationRepository.save(categoryNavigationDo);
+            return categoryNavigationDto;
         }
-        throw new DataNotFoundException("Navigation Id not found");
+        throw new DataNotFoundException("Id not found for  " + id);
     }
 
     @Override
-    public Optional<CategoryNavigation> getById(String authorization, String id) {
-        return navigationRepository.findById(id);
+    public CategoryNavigationDto getById(String authorization, String id) {
+
+        Optional<CategoryNavigation> categoryNavigationOptional = categoryNavigationRepository.findById(id);
+        if (categoryNavigationOptional.isPresent()) {
+            return OjaMapper.mapCategoryNavigationDto(categoryNavigationOptional.get());
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
     }
 
     @Override
-    public List<CategoryNavigation> getAll(String authorization) {
-        return (List<CategoryNavigation>) navigationRepository.findAll();
+    public List<CategoryNavigationDto> getAll(String authorization) {
+
+        List<AtomicReference<CategoryNavigationDto>> dtoList = new ArrayList<>();
+        AtomicReference<CategoryNavigationDto> categoryNavigationDto = null;
+
+        List<CategoryNavigation> doList = (List<CategoryNavigation>) categoryNavigationRepository.findAll();
+
+        doList.stream().map(categoryNavigation -> {
+            categoryNavigationDto.set(OjaMapper.mapCategoryNavigationDto(categoryNavigation));
+            dtoList.add(categoryNavigationDto);
+        }).;
+
     }
 
     @Override
     public void delete(String authorization, String id) {
-        navigationRepository.deleteById(id);
+        categoryNavigationRepository.deleteById(id);
     }
 
 }

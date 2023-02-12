@@ -1,10 +1,7 @@
 package com.mafoya.oja.service;
 
 import com.mafoya.oja.model.Order;
-import com.mafoya.oja.model.Order;
 import com.mafoya.oja.repository.OrderRepository;
-import com.mafoya.oja.repository.OrderRepository;
-import software.amazon.awssdk.enhanced.dynamodb.model.PageIterable;
 
 import java.util.List;
 import java.util.Optional;

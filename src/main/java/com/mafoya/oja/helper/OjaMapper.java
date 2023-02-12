@@ -11,15 +11,15 @@ public class OjaMapper {
 
     private static final Logger LOGGER = getLogger(OjaMapper.class);
 
-    public static CategoryNavigationDto mapNavigationToDto(CategoryNavigation NavigationDo) {
-        CategoryNavigationDto NavigationDto = new CategoryNavigationDto();
-        BeanUtils.copyProperties(NavigationDo, NavigationDto);
-        return NavigationDto;
+    public static CategoryNavigationDto mapCategoryNavigationDto(CategoryNavigation categoryNavigation) {
+        CategoryNavigationDto categoryNavigationDto = new CategoryNavigationDto();
+        BeanUtils.copyProperties(categoryNavigation, categoryNavigationDto);
+        return categoryNavigationDto;
     }
 
-    public static CategoryNavigation mapCategoryNavigationToDo(CategoryNavigationDto NavigationDto) {
-        CategoryNavigation NavigationDo = new CategoryNavigation();
-        BeanUtils.copyProperties(NavigationDto, NavigationDo);
-        return NavigationDo;
+    public static CategoryNavigation mapCategoryNavigationDo(CategoryNavigationDto categoryNavigationDto) {
+        CategoryNavigation categoryNavigationDo = new CategoryNavigation();
+        BeanUtils.copyProperties(categoryNavigationDto, categoryNavigationDo);
+        return categoryNavigationDo;
     }
 }

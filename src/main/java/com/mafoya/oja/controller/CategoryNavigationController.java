@@ -2,7 +2,6 @@ package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
 import com.mafoya.oja.dto.CategoryNavigationDto;
-import com.mafoya.oja.model.CategoryNavigation;
 import com.mafoya.oja.service.CategoryNavigationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -22,24 +21,24 @@ public class CategoryNavigationController {
     private CategoryNavigationService navigationService;
 
     @GetMapping("/categoryNavigations/all")
-    public List<CategoryNavigation> findAll(@RequestHeader("authorization") String authorization) {
+    public List<CategoryNavigationDto> findAll(@RequestHeader("authorization") String authorization) {
         return this.navigationService.getAll(authorization);
     }
 
     @GetMapping("/categoryNavigations/{id}")
-    public Optional<CategoryNavigation> getCategoryNavigationById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+    public CategoryNavigationDto getCategoryNavigationById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.navigationService.getById(authorization, id);
 
     }
 
     @PostMapping("/categoryNavigations")
-    public CategoryNavigation createCategoryNavigation(@RequestBody @Valid CategoryNavigationDto CategoryNavigationDto, @RequestHeader("authorization") String authorization) {
+    public CategoryNavigationDto createCategoryNavigation(@RequestBody @Valid CategoryNavigationDto CategoryNavigationDto, @RequestHeader("authorization") String authorization) {
         return this.navigationService.create(authorization, CategoryNavigationDto);
     }
 
     @PutMapping("/categoryNavigations/{id}")
-    public CategoryNavigation updateCategoryNavigation(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody CategoryNavigation CategoryNavigation) {
-        return this.navigationService.update(authorization, CategoryNavigation, id);
+    public CategoryNavigationDto updateCategoryNavigation(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody CategoryNavigationDto categoryNavigationDto) {
+        return this.navigationService.update(authorization, categoryNavigationDto, id);
 
 
     }

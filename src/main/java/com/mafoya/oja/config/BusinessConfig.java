@@ -1,6 +1,5 @@
 package com.mafoya.oja.config;
 
-import com.mafoya.oja.model.ShopServiceObject;
 import com.mafoya.oja.repository.*;
 import com.mafoya.oja.service.*;
 import org.springframework.context.annotation.Bean;

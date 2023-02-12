@@ -2,12 +2,9 @@ package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
 import com.mafoya.oja.model.Order;
-import com.mafoya.oja.model.Order;
-import com.mafoya.oja.service.OrderService;
 import com.mafoya.oja.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import software.amazon.awssdk.enhanced.dynamodb.model.PageIterable;
 
 import javax.validation.Valid;
 import java.util.List;

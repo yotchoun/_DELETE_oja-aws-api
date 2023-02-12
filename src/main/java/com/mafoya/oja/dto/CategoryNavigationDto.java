@@ -3,6 +3,8 @@ package com.mafoya.oja.dto;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.Set;
+
 @Data
 @ToString
 public class CategoryNavigationDto {
@@ -26,4 +28,6 @@ public class CategoryNavigationDto {
 
 
     private double salary;
+
+    private Set<CategoryItemDto> categoryItem;
 }

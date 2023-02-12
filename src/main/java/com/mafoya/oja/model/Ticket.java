@@ -39,6 +39,6 @@ public class Ticket {
     @DynamoDBAttribute(attributeName = "type")
     private String type;
 
-    @DynamoDBAttribute(attributeName = "for")
-    private For displayFor;
+//    @DynamoDBAttribute(attributeName = "for")
+//    private For displayFor;
 }

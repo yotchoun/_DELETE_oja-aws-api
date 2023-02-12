@@ -10,7 +10,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.Instant;
-import java.util.Set;
 
 @Data
 @DynamoDBTable(tableName = "OjaCategory-hvlboaadvrhhpi7zd6mqvplo6e-dev")
@@ -44,8 +43,8 @@ public class Category {
     @DynamoDBAttribute(attributeName = "for")
     private For displayFor;
 
-    @DynamoDBAttribute(attributeName = "parent")
-    private Set<Category> parent;
+//    @DynamoDBAttribute(attributeName = "parent")
+//    private Set<Category> parent;
 
 
 }
