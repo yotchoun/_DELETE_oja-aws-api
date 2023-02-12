@@ -1,10 +1,16 @@
 package com.mafoya.oja.service;
 
+import com.mafoya.oja.dto.ArticleDto;
+import com.mafoya.oja.exception.DataNotFoundException;
+import com.mafoya.oja.helper.OjaMapper;
+import com.mafoya.oja.model.Article;
 import com.mafoya.oja.model.SocialLink;
 import com.mafoya.oja.repository.SocialLinkRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class SocialLinkServiceImpl  implements SocialLinkService {
 
@@ -15,27 +21,46 @@ public class SocialLinkServiceImpl  implements SocialLinkService {
     }
 
     @Override
-    public SocialLink create(String authorization, SocialLink socialLink) {
-        return socialLinkRepository.save(socialLink);
+    public ArticleDto getById(String authorization, String id) {
+        ArticleDto articleDto;
+        Optional<Article> articleOptional = articleRepository.findById(id);
+        if (articleOptional.isPresent()) {
+            articleDto = OjaMapper.mapArticleDto(articleOptional.get());
+            return articleDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
+    }
+
+
+    @Override
+    public ArticleDto create(String authorization, ArticleDto articleDto) {
+        Article article = OjaMapper.mapArticleDo(articleDto);
+        articleRepository.save(article);
+        return articleDto;
     }
 
     @Override
-    public SocialLink update(String authorization, SocialLink socialLink, String id) {
-        return socialLinkRepository.save(socialLink);
+    public ArticleDto update(String authorization, ArticleDto articleDto, String id) {
+        Optional<Article> articleOptional = articleRepository.findById(id);
+        if (articleOptional.isPresent()) {
+            Article article = OjaMapper.mapArticleDo(articleDto);
+            article.setId(id);
+            articleRepository.save(article);
+            return articleDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
     }
 
-    @Override
-    public Optional<SocialLink> getById(String authorization, String id) {
-        return socialLinkRepository.findById(id);
-    }
 
     @Override
-    public List<SocialLink> getAll(String authorization) {
-        return (List<SocialLink>) socialLinkRepository.findAll();
+    public List<ArticleDto> getAll(String authorization) {
+        List<Article> doList = (List<Article>) articleRepository.findAll();
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
     public void delete(String authorization, String id) {
-        socialLinkRepository.deleteById(id);
+        articleRepository.deleteById(id);
     }
 }

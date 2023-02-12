@@ -1,10 +1,16 @@
 package com.mafoya.oja.service;
 
+import com.mafoya.oja.dto.ArticleDto;
+import com.mafoya.oja.exception.DataNotFoundException;
+import com.mafoya.oja.helper.OjaMapper;
+import com.mafoya.oja.model.Article;
 import com.mafoya.oja.model.Visitor;
 import com.mafoya.oja.repository.VisitorRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class VisitorServiceImpl  implements VisitorService {
 
@@ -14,29 +20,49 @@ public class VisitorServiceImpl  implements VisitorService {
         this.visitorRepository = visitorRepository;
     }
 
+
     @Override
-    public Visitor create(String authorization, Visitor visitor) {
-        return visitorRepository.save(visitor);
+    public ArticleDto getById(String authorization, String id) {
+        ArticleDto articleDto;
+        Optional<Article> articleOptional = articleRepository.findById(id);
+        if (articleOptional.isPresent()) {
+            articleDto = OjaMapper.mapArticleDto(articleOptional.get());
+            return articleDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
+    }
+
+
+    @Override
+    public ArticleDto create(String authorization, ArticleDto articleDto) {
+        Article article = OjaMapper.mapArticleDo(articleDto);
+        articleRepository.save(article);
+        return articleDto;
     }
 
     @Override
-    public Visitor update(String authorization, Visitor visitor, String id) {
-        return visitorRepository.save(visitor);
+    public ArticleDto update(String authorization, ArticleDto articleDto, String id) {
+        Optional<Article> articleOptional = articleRepository.findById(id);
+        if (articleOptional.isPresent()) {
+            Article article = OjaMapper.mapArticleDo(articleDto);
+            article.setId(id);
+            articleRepository.save(article);
+            return articleDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
     }
 
-    @Override
-    public Optional<Visitor> getById(String authorization, String id) {
-        return visitorRepository.findById(id);
-    }
 
     @Override
-    public List<Visitor> getAll(String authorization) {
-        return (List<Visitor>) visitorRepository.findAll();
+    public List<ArticleDto> getAll(String authorization) {
+        List<Article> doList = (List<Article>) articleRepository.findAll();
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
     public void delete(String authorization, String id) {
-        visitorRepository.deleteById(id);
+        articleRepository.deleteById(id);
     }
 }
 

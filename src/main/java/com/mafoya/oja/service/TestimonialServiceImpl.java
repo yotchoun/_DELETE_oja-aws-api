@@ -1,10 +1,16 @@
 package com.mafoya.oja.service;
 
+import com.mafoya.oja.dto.ArticleDto;
+import com.mafoya.oja.exception.DataNotFoundException;
+import com.mafoya.oja.helper.OjaMapper;
+import com.mafoya.oja.model.Article;
 import com.mafoya.oja.model.Testimonial;
 import com.mafoya.oja.repository.TestimonialRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class TestimonialServiceImpl  implements TestimonialService {
 
@@ -15,28 +21,47 @@ public class TestimonialServiceImpl  implements TestimonialService {
     }
 
     @Override
-    public Testimonial create(String authorization, Testimonial testimonial) {
-        return testimonialRepository.save(testimonial);
+    public ArticleDto getById(String authorization, String id) {
+        ArticleDto articleDto;
+        Optional<Article> articleOptional = articleRepository.findById(id);
+        if (articleOptional.isPresent()) {
+            articleDto = OjaMapper.mapArticleDto(articleOptional.get());
+            return articleDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
+    }
+
+
+    @Override
+    public ArticleDto create(String authorization, ArticleDto articleDto) {
+        Article article = OjaMapper.mapArticleDo(articleDto);
+        articleRepository.save(article);
+        return articleDto;
     }
 
     @Override
-    public Testimonial update(String authorization, Testimonial testimonial, String id) {
-        return testimonialRepository.save(testimonial);
+    public ArticleDto update(String authorization, ArticleDto articleDto, String id) {
+        Optional<Article> articleOptional = articleRepository.findById(id);
+        if (articleOptional.isPresent()) {
+            Article article = OjaMapper.mapArticleDo(articleDto);
+            article.setId(id);
+            articleRepository.save(article);
+            return articleDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
     }
 
-    @Override
-    public Optional<Testimonial> getById(String authorization, String id) {
-        return testimonialRepository.findById(id);
-    }
 
     @Override
-    public List<Testimonial> getAll(String authorization) {
-        return (List<Testimonial>) testimonialRepository.findAll();
+    public List<ArticleDto> getAll(String authorization) {
+        List<Article> doList = (List<Article>) articleRepository.findAll();
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
     public void delete(String authorization, String id) {
-        testimonialRepository.deleteById(id);
+        articleRepository.deleteById(id);
     }
 }
 

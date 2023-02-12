@@ -1,10 +1,16 @@
 package com.mafoya.oja.service;
 
+import com.mafoya.oja.dto.BrandDto;
+import com.mafoya.oja.exception.DataNotFoundException;
+import com.mafoya.oja.helper.OjaMapper;
+import com.mafoya.oja.model.Brand;
 import com.mafoya.oja.model.Brand;
 import com.mafoya.oja.repository.BrandRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class BrandServiceImpl implements BrandService {
 
@@ -15,23 +21,42 @@ public class BrandServiceImpl implements BrandService {
     }
 
     @Override
-    public Brand create(String authorization, Brand brand) {
-        return brandRepository.save(brand);
+    public BrandDto getById(String authorization, String id) {
+        BrandDto brandDto;
+        Optional<Brand> brandOptional = brandRepository.findById(id);
+        if (brandOptional.isPresent()) {
+            brandDto = OjaMapper.mapBrandDto(brandOptional.get());
+            return brandDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
+    }
+
+
+    @Override
+    public BrandDto create(String authorization, BrandDto brandDto) {
+        Brand brand = OjaMapper.mapBrandDo(brandDto);
+        brandRepository.save(brand);
+        return brandDto;
     }
 
     @Override
-    public Brand update(String authorization, Brand brand, String id) {
-        return brandRepository.save(brand);
+    public BrandDto update(String authorization, BrandDto brandDto, String id) {
+        Optional<Brand> brandOptional = brandRepository.findById(id);
+        if (brandOptional.isPresent()) {
+            Brand brand = OjaMapper.mapBrandDo(brandDto);
+            brand.setId(id);
+            brandRepository.save(brand);
+            return brandDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
     }
 
-    @Override
-    public Optional<Brand> getById(String authorization, String id) {
-        return brandRepository.findById(id);
-    }
 
     @Override
-    public List<Brand> getAll(String authorization) {
-        return (List<Brand>) brandRepository.findAll();
+    public List<BrandDto> getAll(String authorization) {
+        List<Brand> doList = (List<Brand>) brandRepository.findAll();
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override

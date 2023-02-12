@@ -1,10 +1,16 @@
 package com.mafoya.oja.service;
 
+import com.mafoya.oja.dto.EarningDto;
+import com.mafoya.oja.exception.DataNotFoundException;
+import com.mafoya.oja.helper.OjaMapper;
+import com.mafoya.oja.model.Earning;
 import com.mafoya.oja.model.Earning;
 import com.mafoya.oja.repository.EarningRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class EarningServiceImpl  implements EarningService {
 
@@ -15,23 +21,42 @@ public class EarningServiceImpl  implements EarningService {
     }
 
     @Override
-    public Earning create(String authorization, Earning earning) {
-        return earningRepository.save(earning);
+    public EarningDto getById(String authorization, String id) {
+        EarningDto earningDto;
+        Optional<Earning> earningOptional = earningRepository.findById(id);
+        if (earningOptional.isPresent()) {
+            earningDto = OjaMapper.mapEarningDto(earningOptional.get());
+            return earningDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
+    }
+
+
+    @Override
+    public EarningDto create(String authorization, EarningDto earningDto) {
+        Earning earning = OjaMapper.mapEarningDo(earningDto);
+        earningRepository.save(earning);
+        return earningDto;
     }
 
     @Override
-    public Earning update(String authorization, Earning earning, String id) {
-        return earningRepository.save(earning);
+    public EarningDto update(String authorization, EarningDto earningDto, String id) {
+        Optional<Earning> earningOptional = earningRepository.findById(id);
+        if (earningOptional.isPresent()) {
+            Earning earning = OjaMapper.mapEarningDo(earningDto);
+            earning.setId(id);
+            earningRepository.save(earning);
+            return earningDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
     }
 
-    @Override
-    public Optional<Earning> getById(String authorization, String id) {
-        return earningRepository.findById(id);
-    }
 
     @Override
-    public List<Earning> getAll(String authorization) {
-        return (List<Earning>) earningRepository.findAll();
+    public List<EarningDto> getAll(String authorization) {
+        List<Earning> doList = (List<Earning>) earningRepository.findAll();
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override

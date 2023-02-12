@@ -1,10 +1,16 @@
 package com.mafoya.oja.service;
 
+import com.mafoya.oja.dto.DiscountCardDto;
+import com.mafoya.oja.exception.DataNotFoundException;
+import com.mafoya.oja.helper.OjaMapper;
+import com.mafoya.oja.model.DiscountCard;
 import com.mafoya.oja.model.DiscountCard;
 import com.mafoya.oja.repository.DiscountCardRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class DiscountCardServiceImpl  implements DiscountCardService {
 
@@ -15,23 +21,42 @@ public class DiscountCardServiceImpl  implements DiscountCardService {
     }
 
     @Override
-    public DiscountCard create(String authorization, DiscountCard discountCard) {
-        return discountCardRepository.save(discountCard);
+    public DiscountCardDto getById(String authorization, String id) {
+        DiscountCardDto discountCardDto;
+        Optional<DiscountCard> discountCardOptional = discountCardRepository.findById(id);
+        if (discountCardOptional.isPresent()) {
+            discountCardDto = OjaMapper.mapDiscountCardDto(discountCardOptional.get());
+            return discountCardDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
+    }
+
+
+    @Override
+    public DiscountCardDto create(String authorization, DiscountCardDto discountCardDto) {
+        DiscountCard discountCard = OjaMapper.mapDiscountCardDo(discountCardDto);
+        discountCardRepository.save(discountCard);
+        return discountCardDto;
     }
 
     @Override
-    public DiscountCard update(String authorization, DiscountCard discountCard, String id) {
-        return discountCardRepository.save(discountCard);
+    public DiscountCardDto update(String authorization, DiscountCardDto discountCardDto, String id) {
+        Optional<DiscountCard> discountCardOptional = discountCardRepository.findById(id);
+        if (discountCardOptional.isPresent()) {
+            DiscountCard discountCard = OjaMapper.mapDiscountCardDo(discountCardDto);
+            discountCard.setId(id);
+            discountCardRepository.save(discountCard);
+            return discountCardDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
     }
 
-    @Override
-    public Optional<DiscountCard> getById(String authorization, String id) {
-        return discountCardRepository.findById(id);
-    }
 
     @Override
-    public List<DiscountCard> getAll(String authorization) {
-        return (List<DiscountCard>) discountCardRepository.findAll();
+    public List<DiscountCardDto> getAll(String authorization) {
+        List<DiscountCard> doList = (List<DiscountCard>) discountCardRepository.findAll();
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override

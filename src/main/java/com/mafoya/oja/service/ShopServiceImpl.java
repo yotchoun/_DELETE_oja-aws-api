@@ -1,10 +1,16 @@
 package com.mafoya.oja.service;
 
+import com.mafoya.oja.dto.ArticleDto;
+import com.mafoya.oja.exception.DataNotFoundException;
+import com.mafoya.oja.helper.OjaMapper;
+import com.mafoya.oja.model.Article;
 import com.mafoya.oja.model.Shop;
 import com.mafoya.oja.repository.ShopRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class ShopServiceImpl implements ShopService{
 
@@ -15,28 +21,47 @@ public class ShopServiceImpl implements ShopService{
     }
 
     @Override
-    public Shop create(String authorization, Shop shop) {
-        return shopRepository.save(shop);
+    public ArticleDto getById(String authorization, String id) {
+        ArticleDto articleDto;
+        Optional<Article> articleOptional = articleRepository.findById(id);
+        if (articleOptional.isPresent()) {
+            articleDto = OjaMapper.mapArticleDto(articleOptional.get());
+            return articleDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
+    }
+
+
+    @Override
+    public ArticleDto create(String authorization, ArticleDto articleDto) {
+        Article article = OjaMapper.mapArticleDo(articleDto);
+        articleRepository.save(article);
+        return articleDto;
     }
 
     @Override
-    public Shop update(String authorization, Shop shop, String id) {
-        return shopRepository.save(shop);
+    public ArticleDto update(String authorization, ArticleDto articleDto, String id) {
+        Optional<Article> articleOptional = articleRepository.findById(id);
+        if (articleOptional.isPresent()) {
+            Article article = OjaMapper.mapArticleDo(articleDto);
+            article.setId(id);
+            articleRepository.save(article);
+            return articleDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
     }
 
-    @Override
-    public Optional<Shop> getById(String authorization, String id) {
-        return shopRepository.findById(id);
-    }
 
     @Override
-    public List<Shop> getAll(String authorization) {
-        return (List<Shop>) shopRepository.findAll();
+    public List<ArticleDto> getAll(String authorization) {
+        List<Article> doList = (List<Article>) articleRepository.findAll();
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
     public void delete(String authorization, String id) {
-        shopRepository.deleteById(id);
+        articleRepository.deleteById(id);
     }
 }
 

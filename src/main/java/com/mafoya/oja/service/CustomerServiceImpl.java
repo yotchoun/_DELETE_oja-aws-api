@@ -1,10 +1,16 @@
 package com.mafoya.oja.service;
 
+import com.mafoya.oja.dto.CustomerDto;
+import com.mafoya.oja.exception.DataNotFoundException;
+import com.mafoya.oja.helper.OjaMapper;
+import com.mafoya.oja.model.Customer;
 import com.mafoya.oja.model.Customer;
 import com.mafoya.oja.repository.CustomerRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class CustomerServiceImpl  implements CustomerService {
 
@@ -15,23 +21,42 @@ public class CustomerServiceImpl  implements CustomerService {
     }
 
     @Override
-    public Customer create(String authorization, Customer customer) {
-        return customerRepository.save(customer);
+    public CustomerDto getById(String authorization, String id) {
+        CustomerDto customerDto;
+        Optional<Customer> customerOptional = customerRepository.findById(id);
+        if (customerOptional.isPresent()) {
+            customerDto = OjaMapper.mapCustomerDto(customerOptional.get());
+            return customerDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
+    }
+
+
+    @Override
+    public CustomerDto create(String authorization, CustomerDto customerDto) {
+        Customer customer = OjaMapper.mapCustomerDo(customerDto);
+        customerRepository.save(customer);
+        return customerDto;
     }
 
     @Override
-    public Customer update(String authorization, Customer customer, String id) {
-        return customerRepository.save(customer);
+    public CustomerDto update(String authorization, CustomerDto customerDto, String id) {
+        Optional<Customer> customerOptional = customerRepository.findById(id);
+        if (customerOptional.isPresent()) {
+            Customer customer = OjaMapper.mapCustomerDo(customerDto);
+            customer.setId(id);
+            customerRepository.save(customer);
+            return customerDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
     }
 
-    @Override
-    public Optional<Customer> getById(String authorization, String id) {
-        return customerRepository.findById(id);
-    }
 
     @Override
-    public List<Customer> getAll(String authorization) {
-        return (List<Customer>) customerRepository.findAll();
+    public List<CustomerDto> getAll(String authorization) {
+        List<Customer> doList = (List<Customer>) customerRepository.findAll();
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override

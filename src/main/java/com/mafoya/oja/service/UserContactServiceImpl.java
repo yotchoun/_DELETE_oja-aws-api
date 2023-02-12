@@ -1,10 +1,16 @@
 package com.mafoya.oja.service;
 
+import com.mafoya.oja.dto.ArticleDto;
+import com.mafoya.oja.exception.DataNotFoundException;
+import com.mafoya.oja.helper.OjaMapper;
+import com.mafoya.oja.model.Article;
 import com.mafoya.oja.model.UserContact;
 import com.mafoya.oja.repository.UserContactRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class UserContactServiceImpl  implements UserContactService {
 
@@ -15,28 +21,47 @@ public class UserContactServiceImpl  implements UserContactService {
     }
 
     @Override
-    public UserContact create(String authorization, UserContact userContact) {
-        return userContactRepository.save(userContact);
+    public ArticleDto getById(String authorization, String id) {
+        ArticleDto articleDto;
+        Optional<Article> articleOptional = articleRepository.findById(id);
+        if (articleOptional.isPresent()) {
+            articleDto = OjaMapper.mapArticleDto(articleOptional.get());
+            return articleDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
+    }
+
+
+    @Override
+    public ArticleDto create(String authorization, ArticleDto articleDto) {
+        Article article = OjaMapper.mapArticleDo(articleDto);
+        articleRepository.save(article);
+        return articleDto;
     }
 
     @Override
-    public UserContact update(String authorization, UserContact userContact, String id) {
-        return userContactRepository.save(userContact);
+    public ArticleDto update(String authorization, ArticleDto articleDto, String id) {
+        Optional<Article> articleOptional = articleRepository.findById(id);
+        if (articleOptional.isPresent()) {
+            Article article = OjaMapper.mapArticleDo(articleDto);
+            article.setId(id);
+            articleRepository.save(article);
+            return articleDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
     }
 
-    @Override
-    public Optional<UserContact> getById(String authorization, String id) {
-        return userContactRepository.findById(id);
-    }
 
     @Override
-    public List<UserContact> getAll(String authorization) {
-        return (List<UserContact>) userContactRepository.findAll();
+    public List<ArticleDto> getAll(String authorization) {
+        List<Article> doList = (List<Article>) articleRepository.findAll();
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
     public void delete(String authorization, String id) {
-        userContactRepository.deleteById(id);
+        articleRepository.deleteById(id);
     }
 }
 

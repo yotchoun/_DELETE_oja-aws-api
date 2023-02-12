@@ -1,10 +1,16 @@
 package com.mafoya.oja.service;
 
+import com.mafoya.oja.dto.PaymentPackageDto;
+import com.mafoya.oja.exception.DataNotFoundException;
+import com.mafoya.oja.helper.OjaMapper;
+import com.mafoya.oja.model.PaymentPackage;
 import com.mafoya.oja.model.PaymentPackage;
 import com.mafoya.oja.repository.PaymentPackageRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class PaymentPackageServiceImpl  implements PaymentPackageService {
 
@@ -15,23 +21,42 @@ public class PaymentPackageServiceImpl  implements PaymentPackageService {
     }
 
     @Override
-    public PaymentPackage create(String authorization, PaymentPackage paymentPackage) {
-        return paymentPackageRepository.save(paymentPackage);
+    public PaymentPackageDto getById(String authorization, String id) {
+        PaymentPackageDto paymentPackageDto;
+        Optional<PaymentPackage> paymentPackageOptional = paymentPackageRepository.findById(id);
+        if (paymentPackageOptional.isPresent()) {
+            paymentPackageDto = OjaMapper.mapPaymentPackageDto(paymentPackageOptional.get());
+            return paymentPackageDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
+    }
+
+
+    @Override
+    public PaymentPackageDto create(String authorization, PaymentPackageDto paymentPackageDto) {
+        PaymentPackage paymentPackage = OjaMapper.mapPaymentPackageDo(paymentPackageDto);
+        paymentPackageRepository.save(paymentPackage);
+        return paymentPackageDto;
     }
 
     @Override
-    public PaymentPackage update(String authorization, PaymentPackage paymentPackage, String id) {
-        return paymentPackageRepository.save(paymentPackage);
+    public PaymentPackageDto update(String authorization, PaymentPackageDto paymentPackageDto, String id) {
+        Optional<PaymentPackage> paymentPackageOptional = paymentPackageRepository.findById(id);
+        if (paymentPackageOptional.isPresent()) {
+            PaymentPackage paymentPackage = OjaMapper.mapPaymentPackageDo(paymentPackageDto);
+            paymentPackage.setId(id);
+            paymentPackageRepository.save(paymentPackage);
+            return paymentPackageDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
     }
 
-    @Override
-    public Optional<PaymentPackage> getById(String authorization, String id) {
-        return paymentPackageRepository.findById(id);
-    }
 
     @Override
-    public List<PaymentPackage> getAll(String authorization) {
-        return (List<PaymentPackage>) paymentPackageRepository.findAll();
+    public List<PaymentPackageDto> getAll(String authorization) {
+        List<PaymentPackage> doList = (List<PaymentPackage>) paymentPackageRepository.findAll();
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override

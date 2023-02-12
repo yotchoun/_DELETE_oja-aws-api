@@ -1,10 +1,16 @@
 package com.mafoya.oja.service;
 
+import com.mafoya.oja.dto.PayoutDto;
+import com.mafoya.oja.exception.DataNotFoundException;
+import com.mafoya.oja.helper.OjaMapper;
+import com.mafoya.oja.model.Payout;
 import com.mafoya.oja.model.Payout;
 import com.mafoya.oja.repository.PayoutRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class PayoutServiceImpl  implements PayoutService {
 
@@ -15,23 +21,42 @@ public class PayoutServiceImpl  implements PayoutService {
     }
 
     @Override
-    public Payout create(String authorization, Payout payout) {
-        return payoutRepository.save(payout);
+    public PayoutDto getById(String authorization, String id) {
+        PayoutDto payoutDto;
+        Optional<Payout> payoutOptional = payoutRepository.findById(id);
+        if (payoutOptional.isPresent()) {
+            payoutDto = OjaMapper.mapPayoutDto(payoutOptional.get());
+            return payoutDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
+    }
+
+
+    @Override
+    public PayoutDto create(String authorization, PayoutDto payoutDto) {
+        Payout payout = OjaMapper.mapPayoutDo(payoutDto);
+        payoutRepository.save(payout);
+        return payoutDto;
     }
 
     @Override
-    public Payout update(String authorization, Payout payout, String id) {
-        return payoutRepository.save(payout);
+    public PayoutDto update(String authorization, PayoutDto payoutDto, String id) {
+        Optional<Payout> payoutOptional = payoutRepository.findById(id);
+        if (payoutOptional.isPresent()) {
+            Payout payout = OjaMapper.mapPayoutDo(payoutDto);
+            payout.setId(id);
+            payoutRepository.save(payout);
+            return payoutDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
     }
 
-    @Override
-    public Optional<Payout> getById(String authorization, String id) {
-        return payoutRepository.findById(id);
-    }
 
     @Override
-    public List<Payout> getAll(String authorization) {
-        return (List<Payout>) payoutRepository.findAll();
+    public List<PayoutDto> getAll(String authorization) {
+        List<Payout> doList = (List<Payout>) payoutRepository.findAll();
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
