@@ -1,9 +1,9 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.dto.ArticleDto;
+import com.mafoya.oja.dto.ShopServiceObjectDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
-import com.mafoya.oja.model.Article;
+import com.mafoya.oja.model.ShopServiceObject;
 import com.mafoya.oja.model.ShopServiceObject;
 import com.mafoya.oja.repository.ShopServiceRepository;
 
@@ -21,46 +21,46 @@ public class ShopServiceServiceImpl implements ShopServiceService {
     }
 
     @Override
-    public ArticleDto getById(String authorization, String id) {
-        ArticleDto articleDto;
-        Optional<Article> articleOptional = articleRepository.findById(id);
-        if (articleOptional.isPresent()) {
-            articleDto = OjaMapper.mapArticleDto(articleOptional.get());
-            return articleDto;
+    public ShopServiceObjectDto getById(String authorization, String id) {
+        ShopServiceObjectDto shopServiceObjectDto;
+        Optional<ShopServiceObject> shopServiceObjectOptional = shopServiceRepository.findById(id);
+        if (shopServiceObjectOptional.isPresent()) {
+            shopServiceObjectDto = OjaMapper.mapShopServiceObjectDto(shopServiceObjectOptional.get());
+            return shopServiceObjectDto;
         }
         throw new DataNotFoundException("Id not found for  " + id);
     }
 
 
     @Override
-    public ArticleDto create(String authorization, ArticleDto articleDto) {
-        Article article = OjaMapper.mapArticleDo(articleDto);
-        articleRepository.save(article);
-        return articleDto;
+    public ShopServiceObjectDto create(String authorization, ShopServiceObjectDto shopServiceObjectDto) {
+        ShopServiceObject shopServiceObject = OjaMapper.mapShopServiceObjectDo(shopServiceObjectDto);
+        shopServiceRepository.save(shopServiceObject);
+        return shopServiceObjectDto;
     }
 
     @Override
-    public ArticleDto update(String authorization, ArticleDto articleDto, String id) {
-        Optional<Article> articleOptional = articleRepository.findById(id);
-        if (articleOptional.isPresent()) {
-            Article article = OjaMapper.mapArticleDo(articleDto);
-            article.setId(id);
-            articleRepository.save(article);
-            return articleDto;
+    public ShopServiceObjectDto update(String authorization, ShopServiceObjectDto shopServiceObjectDto, String id) {
+        Optional<ShopServiceObject> shopServiceObjectOptional = shopServiceRepository.findById(id);
+        if (shopServiceObjectOptional.isPresent()) {
+            ShopServiceObject shopServiceObject = OjaMapper.mapShopServiceObjectDo(shopServiceObjectDto);
+            shopServiceObject.setId(id);
+            shopServiceRepository.save(shopServiceObject);
+            return shopServiceObjectDto;
         }
         throw new DataNotFoundException("Id not found for  " + id);
     }
 
 
     @Override
-    public List<ArticleDto> getAll(String authorization) {
-        List<Article> doList = (List<Article>) articleRepository.findAll();
+    public List<ShopServiceObjectDto> getAll(String authorization) {
+        List<ShopServiceObject> doList = (List<ShopServiceObject>) shopServiceRepository.findAll();
         return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
                 .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
     public void delete(String authorization, String id) {
-        articleRepository.deleteById(id);
+        shopServiceRepository.deleteById(id);
     }
 }

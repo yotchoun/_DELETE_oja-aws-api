@@ -1,9 +1,9 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.dto.ArticleDto;
+import com.mafoya.oja.dto.SocialLinkDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
-import com.mafoya.oja.model.Article;
+import com.mafoya.oja.model.SocialLink;
 import com.mafoya.oja.model.SocialLink;
 import com.mafoya.oja.repository.SocialLinkRepository;
 
@@ -21,46 +21,46 @@ public class SocialLinkServiceImpl  implements SocialLinkService {
     }
 
     @Override
-    public ArticleDto getById(String authorization, String id) {
-        ArticleDto articleDto;
-        Optional<Article> articleOptional = articleRepository.findById(id);
-        if (articleOptional.isPresent()) {
-            articleDto = OjaMapper.mapArticleDto(articleOptional.get());
-            return articleDto;
+    public SocialLinkDto getById(String authorization, String id) {
+        SocialLinkDto socialLinkDto;
+        Optional<SocialLink> socialLinkOptional = socialLinkRepository.findById(id);
+        if (socialLinkOptional.isPresent()) {
+            socialLinkDto = OjaMapper.mapSocialLinkDto(socialLinkOptional.get());
+            return socialLinkDto;
         }
         throw new DataNotFoundException("Id not found for  " + id);
     }
 
 
     @Override
-    public ArticleDto create(String authorization, ArticleDto articleDto) {
-        Article article = OjaMapper.mapArticleDo(articleDto);
-        articleRepository.save(article);
-        return articleDto;
+    public SocialLinkDto create(String authorization, SocialLinkDto socialLinkDto) {
+        SocialLink socialLink = OjaMapper.mapSocialLinkDo(socialLinkDto);
+        socialLinkRepository.save(socialLink);
+        return socialLinkDto;
     }
 
     @Override
-    public ArticleDto update(String authorization, ArticleDto articleDto, String id) {
-        Optional<Article> articleOptional = articleRepository.findById(id);
-        if (articleOptional.isPresent()) {
-            Article article = OjaMapper.mapArticleDo(articleDto);
-            article.setId(id);
-            articleRepository.save(article);
-            return articleDto;
+    public SocialLinkDto update(String authorization, SocialLinkDto socialLinkDto, String id) {
+        Optional<SocialLink> socialLinkOptional = socialLinkRepository.findById(id);
+        if (socialLinkOptional.isPresent()) {
+            SocialLink socialLink = OjaMapper.mapSocialLinkDo(socialLinkDto);
+            socialLink.setId(id);
+            socialLinkRepository.save(socialLink);
+            return socialLinkDto;
         }
         throw new DataNotFoundException("Id not found for  " + id);
     }
 
 
     @Override
-    public List<ArticleDto> getAll(String authorization) {
-        List<Article> doList = (List<Article>) articleRepository.findAll();
+    public List<SocialLinkDto> getAll(String authorization) {
+        List<SocialLink> doList = (List<SocialLink>) socialLinkRepository.findAll();
         return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
                 .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
     public void delete(String authorization, String id) {
-        articleRepository.deleteById(id);
+        socialLinkRepository.deleteById(id);
     }
 }

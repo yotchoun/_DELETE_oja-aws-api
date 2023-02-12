@@ -221,4 +221,58 @@ public class OjaMapper {
 
     public static SellerDto mapSellerDto(Seller seller) {
     }
+
+    public static Shop mapShopDo(ShopDto shopDto) {
+    }
+
+    public static ShopDto mapShopDto(Shop shop) {
+    }
+
+    public static ShopServiceObject mapShopServiceObjectDo(ShopServiceObjectDto shopServiceObjectDto) {
+    }
+
+    public static ShopServiceObjectDto mapShopServiceObjectDto(ShopServiceObject shopServiceObject) {
+    }
+
+    public static SocialLink mapSocialLinkDo(SocialLinkDto socialLinkDto) {
+    }
+
+    public static SocialLinkDto mapSocialLinkDto(SocialLink socialLink) {
+    }
+
+    public static Testimonial mapTestimonialDo(TestimonialDto testimonialDto) {
+    }
+
+    public static TestimonialDto mapTestimonialDto(Testimonial testimonial) {
+    }
+
+    public static Ticket mapTicketDo(TicketDto ticketDto) {
+    }
+
+    public static TicketDto mapTicketDto(Ticket ticket) {
+    }
+
+    public static UserAddress mapUserAddressDo(UserAddressDto userAddressDto) {
+    }
+
+    public static UserAddressDto mapUserAddressDto(UserAddress userAddress) {
+    }
+
+    public static UserContact mapUserContactDo(UserContactDto userContactDto) {
+    }
+
+    public static UserContactDto mapUserContactDto(UserContact userContact) {
+    }
+
+    public static User mapUserDo(UserDto userDto) {
+    }
+
+    public static UserDto mapUserDto(User user) {
+    }
+
+    public static Visitor mapVisitorDo(VisitorDto visitorDto) {
+    }
+
+    public static VisitorDto mapVisitorDto(Visitor visitor) {
+    }
 }

@@ -1,9 +1,9 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.dto.ArticleDto;
+import com.mafoya.oja.dto.TestimonialDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
-import com.mafoya.oja.model.Article;
+import com.mafoya.oja.model.Testimonial;
 import com.mafoya.oja.model.Testimonial;
 import com.mafoya.oja.repository.TestimonialRepository;
 
@@ -21,47 +21,47 @@ public class TestimonialServiceImpl  implements TestimonialService {
     }
 
     @Override
-    public ArticleDto getById(String authorization, String id) {
-        ArticleDto articleDto;
-        Optional<Article> articleOptional = articleRepository.findById(id);
-        if (articleOptional.isPresent()) {
-            articleDto = OjaMapper.mapArticleDto(articleOptional.get());
-            return articleDto;
+    public TestimonialDto getById(String authorization, String id) {
+        TestimonialDto testimonialDto;
+        Optional<Testimonial> testimonialOptional = testimonialRepository.findById(id);
+        if (testimonialOptional.isPresent()) {
+            testimonialDto = OjaMapper.mapTestimonialDto(testimonialOptional.get());
+            return testimonialDto;
         }
         throw new DataNotFoundException("Id not found for  " + id);
     }
 
 
     @Override
-    public ArticleDto create(String authorization, ArticleDto articleDto) {
-        Article article = OjaMapper.mapArticleDo(articleDto);
-        articleRepository.save(article);
-        return articleDto;
+    public TestimonialDto create(String authorization, TestimonialDto testimonialDto) {
+        Testimonial testimonial = OjaMapper.mapTestimonialDo(testimonialDto);
+        testimonialRepository.save(testimonial);
+        return testimonialDto;
     }
 
     @Override
-    public ArticleDto update(String authorization, ArticleDto articleDto, String id) {
-        Optional<Article> articleOptional = articleRepository.findById(id);
-        if (articleOptional.isPresent()) {
-            Article article = OjaMapper.mapArticleDo(articleDto);
-            article.setId(id);
-            articleRepository.save(article);
-            return articleDto;
+    public TestimonialDto update(String authorization, TestimonialDto testimonialDto, String id) {
+        Optional<Testimonial> testimonialOptional = testimonialRepository.findById(id);
+        if (testimonialOptional.isPresent()) {
+            Testimonial testimonial = OjaMapper.mapTestimonialDo(testimonialDto);
+            testimonial.setId(id);
+            testimonialRepository.save(testimonial);
+            return testimonialDto;
         }
         throw new DataNotFoundException("Id not found for  " + id);
     }
 
 
     @Override
-    public List<ArticleDto> getAll(String authorization) {
-        List<Article> doList = (List<Article>) articleRepository.findAll();
+    public List<TestimonialDto> getAll(String authorization) {
+        List<Testimonial> doList = (List<Testimonial>) testimonialRepository.findAll();
         return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
                 .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
     public void delete(String authorization, String id) {
-        articleRepository.deleteById(id);
+        testimonialRepository.deleteById(id);
     }
 }
 

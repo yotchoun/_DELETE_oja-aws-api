@@ -1,9 +1,9 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.dto.ArticleDto;
+import com.mafoya.oja.dto.UserAddressDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
-import com.mafoya.oja.model.Article;
+import com.mafoya.oja.model.UserAddress;
 import com.mafoya.oja.model.UserAddress;
 import com.mafoya.oja.repository.UserAddressRepository;
 
@@ -21,47 +21,47 @@ public class UserAddressServiceImpl  implements UserAddressService {
     }
 
     @Override
-    public ArticleDto getById(String authorization, String id) {
-        ArticleDto articleDto;
-        Optional<Article> articleOptional = articleRepository.findById(id);
-        if (articleOptional.isPresent()) {
-            articleDto = OjaMapper.mapArticleDto(articleOptional.get());
-            return articleDto;
+    public UserAddressDto getById(String authorization, String id) {
+        UserAddressDto userAddressDto;
+        Optional<UserAddress> userAddressOptional = userAddressRepository.findById(id);
+        if (userAddressOptional.isPresent()) {
+            userAddressDto = OjaMapper.mapUserAddressDto(userAddressOptional.get());
+            return userAddressDto;
         }
         throw new DataNotFoundException("Id not found for  " + id);
     }
 
 
     @Override
-    public ArticleDto create(String authorization, ArticleDto articleDto) {
-        Article article = OjaMapper.mapArticleDo(articleDto);
-        articleRepository.save(article);
-        return articleDto;
+    public UserAddressDto create(String authorization, UserAddressDto userAddressDto) {
+        UserAddress userAddress = OjaMapper.mapUserAddressDo(userAddressDto);
+        userAddressRepository.save(userAddress);
+        return userAddressDto;
     }
 
     @Override
-    public ArticleDto update(String authorization, ArticleDto articleDto, String id) {
-        Optional<Article> articleOptional = articleRepository.findById(id);
-        if (articleOptional.isPresent()) {
-            Article article = OjaMapper.mapArticleDo(articleDto);
-            article.setId(id);
-            articleRepository.save(article);
-            return articleDto;
+    public UserAddressDto update(String authorization, UserAddressDto userAddressDto, String id) {
+        Optional<UserAddress> userAddressOptional = userAddressRepository.findById(id);
+        if (userAddressOptional.isPresent()) {
+            UserAddress userAddress = OjaMapper.mapUserAddressDo(userAddressDto);
+            userAddress.setId(id);
+            userAddressRepository.save(userAddress);
+            return userAddressDto;
         }
         throw new DataNotFoundException("Id not found for  " + id);
     }
 
 
     @Override
-    public List<ArticleDto> getAll(String authorization) {
-        List<Article> doList = (List<Article>) articleRepository.findAll();
+    public List<UserAddressDto> getAll(String authorization) {
+        List<UserAddress> doList = (List<UserAddress>) userAddressRepository.findAll();
         return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
                 .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
     public void delete(String authorization, String id) {
-        articleRepository.deleteById(id);
+        userAddressRepository.deleteById(id);
     }
 }
 
