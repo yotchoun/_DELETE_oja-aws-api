@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.Ticket;
+import com.mafoya.oja.dto.TicketDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface TicketService {
-    Ticket create(String authorization, Ticket ticket);
+    TicketDto create(String authorization, TicketDto ticketDto);
 
-    Ticket update(String authorization, Ticket ticket, String id);
+    TicketDto update(String authorization, TicketDto ticketDto, String id);
 
-    Optional<Ticket> getById(String authorization, String id);
+    TicketDto getById(String authorization, String id);
 
-    List<Ticket> getAll(String authorization);
+    List<TicketDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

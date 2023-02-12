@@ -1,18 +1,18 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.Article;
+
+import com.mafoya.oja.dto.ArticleDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ArticleService {
-    Article create(String authorization, Article article);
+    ArticleDto create(String authorization, ArticleDto articleDto);
 
-    Article update(String authorization, Article article, String id);
+    ArticleDto update(String authorization, ArticleDto articleDto, String id);
 
-    Optional<Article> getById(String authorization, String id);
+    ArticleDto getById(String authorization, String id);
 
-    List<Article> getAll(String authorization);
+    List<ArticleDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

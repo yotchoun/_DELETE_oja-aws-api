@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.Blog;
+import com.mafoya.oja.dto.BlogDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface BlogService {
-    Blog create(String authorization, Blog blog);
+    BlogDto create(String authorization, BlogDto blogDto);
 
-    Blog update(String authorization, Blog blog, String id);
+    BlogDto update(String authorization, BlogDto blogDto, String id);
 
-    Optional<Blog> getById(String authorization, String id);
+    BlogDto getById(String authorization, String id);
 
-    List<Blog> getAll(String authorization);
+    List<BlogDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.DealOfTheWeek;
+import com.mafoya.oja.dto.DealOfTheWeekDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface DealOfTheWeekService {
-    DealOfTheWeek create(String authorization, DealOfTheWeek dealOfTheWeek);
+    DealOfTheWeekDto create(String authorization, DealOfTheWeekDto dealOfTheWeekDto);
 
-    DealOfTheWeek update(String authorization, DealOfTheWeek dealOfTheWeek, String id);
+    DealOfTheWeekDto update(String authorization, DealOfTheWeekDto dealOfTheWeekDto, String id);
 
-    Optional<DealOfTheWeek> getById(String authorization, String id);
+    DealOfTheWeekDto getById(String authorization, String id);
 
-    List<DealOfTheWeek> getAll(String authorization);
+    List<DealOfTheWeekDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

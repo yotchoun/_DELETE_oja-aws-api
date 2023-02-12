@@ -1,14 +1,13 @@
 package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.Customer;
+import com.mafoya.oja.dto.CustomerDto;
 import com.mafoya.oja.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -21,24 +20,24 @@ public class CustomerController {
     private CustomerService customerService;
 
     @GetMapping("/customers/all")
-    public List<Customer> findAll(@RequestHeader("authorization") String authorization) {
+    public List<CustomerDto> findAll(@RequestHeader("authorization") String authorization) {
         return this.customerService.getAll(authorization);
     }
 
     @GetMapping("/customers/{id}")
-    public Optional<Customer> getCustomerById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+    public CustomerDto getCustomerById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.customerService.getById(authorization, id);
 
     }
 
     @PostMapping("/customers")
-    public Customer createCustomer(@RequestBody @Valid Customer customerDto, @RequestHeader("authorization") String authorization) {
+    public CustomerDto createCustomer(@RequestBody @Valid CustomerDto customerDto, @RequestHeader("authorization") String authorization) {
         return this.customerService.create(authorization, customerDto);
     }
 
     @PutMapping("/customers/{id}")
-    public Customer updateCustomer(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody Customer customer) {
-        return this.customerService.update(authorization, customer, id);
+    public CustomerDto updateCustomer(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody CustomerDto customerDto) {
+        return this.customerService.update(authorization, customerDto, id);
 
 
     }

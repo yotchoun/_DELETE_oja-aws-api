@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.Product;
+import com.mafoya.oja.dto.ProductDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ProductService {
-    Product create(String authorization, Product product);
+    ProductDto create(String authorization, ProductDto productDto);
 
-    Product update(String authorization, Product product, String id);
+    ProductDto update(String authorization, ProductDto productDto, String id);
 
-    Optional<Product> getById(String authorization, String id);
+    ProductDto getById(String authorization, String id);
 
-    List<Product> getAll(String authorization);
+    List<ProductDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

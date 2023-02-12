@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.DiscountOffer;
+import com.mafoya.oja.dto.DiscountOfferDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface DiscountOfferService {
-    DiscountOffer create(String authorization, DiscountOffer discountOffer);
+    DiscountOfferDto create(String authorization, DiscountOfferDto discountOfferDto);
 
-    DiscountOffer update(String authorization, DiscountOffer discountOffer, String id);
+    DiscountOfferDto update(String authorization, DiscountOfferDto discountOfferDto, String id);
 
-    Optional<DiscountOffer> getById(String authorization, String id);
+    DiscountOfferDto getById(String authorization, String id);
 
-    List<DiscountOffer> getAll(String authorization);
+    List<DiscountOfferDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

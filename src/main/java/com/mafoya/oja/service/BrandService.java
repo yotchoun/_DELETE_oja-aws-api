@@ -1,19 +1,18 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.Brand;
+import com.mafoya.oja.dto.BrandDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface BrandService {
 
-    Brand create(String authorization, Brand brand);
+    BrandDto create(String authorization, BrandDto brandDto);
 
-    Brand update(String authorization, Brand brand, String id);
+    BrandDto update(String authorization, BrandDto brandDto, String id);
 
-    Optional<Brand> getById(String authorization, String id);
+    BrandDto getById(String authorization, String id);
 
-    List<Brand> getAll(String authorization);
+    List<BrandDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

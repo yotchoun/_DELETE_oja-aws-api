@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.Review;
+import com.mafoya.oja.dto.ReviewDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ReviewService {
-    Review create(String authorization, Review review);
+    ReviewDto create(String authorization, ReviewDto reviewDto);
 
-    Review update(String authorization, Review review, String id);
+    ReviewDto update(String authorization, ReviewDto reviewDto, String id);
 
-    Optional<Review> getById(String authorization, String id);
+    ReviewDto getById(String authorization, String id);
 
-    List<Review> getAll(String authorization);
+    List<ReviewDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

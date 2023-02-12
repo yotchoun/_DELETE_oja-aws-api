@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.Message;
+import com.mafoya.oja.dto.MessageDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface MessageService {
-    Message create(String authorization, Message message);
+    MessageDto create(String authorization, MessageDto messageDto);
 
-    Message update(String authorization, Message message, String id);
+    MessageDto update(String authorization, MessageDto messageDto, String id);
 
-    Optional<Message> getById(String authorization, String id);
+    MessageDto getById(String authorization, String id);
 
-    List<Message> getAll(String authorization);
+    List<MessageDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

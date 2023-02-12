@@ -1,14 +1,13 @@
 package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.RefundRequest;
+import com.mafoya.oja.dto.RefundRequestDto;
 import com.mafoya.oja.service.RefundRequestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -21,24 +20,24 @@ public class RefundRequestController {
     private RefundRequestService refundRequestService;
 
     @GetMapping("/refundRequests/all")
-    public List<RefundRequest> findAll(@RequestHeader("authorization") String authorization) {
+    public List<RefundRequestDto> findAll(@RequestHeader("authorization") String authorization) {
         return this.refundRequestService.getAll(authorization);
     }
 
     @GetMapping("/refundRequests/{id}")
-    public Optional<RefundRequest> getRefundRequestById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+    public RefundRequestDto getRefundRequestById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.refundRequestService.getById(authorization, id);
 
     }
 
     @PostMapping("/refundRequests")
-    public RefundRequest createRefundRequest(@RequestBody @Valid RefundRequest refundRequestDto, @RequestHeader("authorization") String authorization) {
+    public RefundRequestDto createRefundRequest(@RequestBody @Valid RefundRequestDto refundRequestDto, @RequestHeader("authorization") String authorization) {
         return this.refundRequestService.create(authorization, refundRequestDto);
     }
 
     @PutMapping("/refundRequests/{id}")
-    public RefundRequest updateRefundRequest(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody RefundRequest refundRequest) {
-        return this.refundRequestService.update(authorization, refundRequest, id);
+    public RefundRequestDto updateRefundRequest(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody RefundRequestDto refundRequestDto) {
+        return this.refundRequestService.update(authorization, refundRequestDto, id);
 
 
     }

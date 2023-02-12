@@ -1,14 +1,13 @@
 package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.Carousel;
+import com.mafoya.oja.dto.CarouselDto;
 import com.mafoya.oja.service.CarouselService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -21,24 +20,24 @@ public class CarouselController {
     private CarouselService carouselService;
 
     @GetMapping("/carousels/all")
-    public List<Carousel> findAll(@RequestHeader("authorization") String authorization) {
+    public List<CarouselDto> findAll(@RequestHeader("authorization") String authorization) {
         return this.carouselService.getAll(authorization);
     }
 
     @GetMapping("/carousels/{id}")
-    public Optional<Carousel> getCarouselById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+    public CarouselDto getCarouselById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.carouselService.getById(authorization, id);
 
     }
 
     @PostMapping("/carousels")
-    public Carousel createCarousel(@RequestBody @Valid Carousel carouselDto, @RequestHeader("authorization") String authorization) {
+    public CarouselDto createCarousel(@RequestBody @Valid CarouselDto carouselDto, @RequestHeader("authorization") String authorization) {
         return this.carouselService.create(authorization, carouselDto);
     }
 
     @PutMapping("/carousels/{id}")
-    public Carousel updateCarousel(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody Carousel carousel) {
-        return this.carouselService.update(authorization, carousel, id);
+    public CarouselDto updateCarousel(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody CarouselDto carouselDto) {
+        return this.carouselService.update(authorization, carouselDto, id);
 
 
     }

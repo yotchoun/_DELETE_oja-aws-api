@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.SocialLink;
+import com.mafoya.oja.dto.SocialLinkDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface SocialLinkService {
-    SocialLink create(String authorization, SocialLink socialLink);
+    SocialLinkDto create(String authorization, SocialLinkDto socialLinkDto);
 
-    SocialLink update(String authorization, SocialLink socialLink, String id);
+    SocialLinkDto update(String authorization, SocialLinkDto socialLinkDto, String id);
 
-    Optional<SocialLink> getById(String authorization, String id);
+    SocialLinkDto getById(String authorization, String id);
 
-    List<SocialLink> getAll(String authorization);
+    List<SocialLinkDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

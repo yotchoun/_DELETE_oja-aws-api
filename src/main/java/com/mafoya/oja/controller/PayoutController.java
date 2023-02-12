@@ -1,14 +1,13 @@
 package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.Payout;
+import com.mafoya.oja.dto.PayoutDto;
 import com.mafoya.oja.service.PayoutService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -21,24 +20,24 @@ public class PayoutController {
     private PayoutService payoutService;
 
     @GetMapping("/payouts/all")
-    public List<Payout> findAll(@RequestHeader("authorization") String authorization) {
+    public List<PayoutDto> findAll(@RequestHeader("authorization") String authorization) {
         return this.payoutService.getAll(authorization);
     }
 
     @GetMapping("/payouts/{id}")
-    public Optional<Payout> getPayoutById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+    public PayoutDto getPayoutById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.payoutService.getById(authorization, id);
 
     }
 
     @PostMapping("/payouts")
-    public Payout createPayout(@RequestBody @Valid Payout payoutDto, @RequestHeader("authorization") String authorization) {
+    public PayoutDto createPayout(@RequestBody @Valid PayoutDto payoutDto, @RequestHeader("authorization") String authorization) {
         return this.payoutService.create(authorization, payoutDto);
     }
 
     @PutMapping("/payouts/{id}")
-    public Payout updatePayout(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody Payout payout) {
-        return this.payoutService.update(authorization, payout, id);
+    public PayoutDto updatePayout(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody PayoutDto payoutDto) {
+        return this.payoutService.update(authorization, payoutDto, id);
 
 
     }

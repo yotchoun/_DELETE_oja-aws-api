@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.DealHot;
+import com.mafoya.oja.dto.DealHotDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface DealHotService {
-    DealHot create(String authorization, DealHot dealHot);
+    DealHotDto create(String authorization, DealHotDto dealHotDto);
 
-    DealHot update(String authorization, DealHot dealHot, String id);
+    DealHotDto update(String authorization, DealHotDto dealHotDto, String id);
 
-    Optional<DealHot> getById(String authorization, String id);
+    DealHotDto getById(String authorization, String id);
 
-    List<DealHot> getAll(String authorization);
+    List<DealHotDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

@@ -1,14 +1,13 @@
 package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.ProductStockOut;
+import com.mafoya.oja.dto.ProductStockOutDto;
 import com.mafoya.oja.service.ProductStockOutService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -21,24 +20,24 @@ public class ProductStockOutController {
     private ProductStockOutService productStockOutService;
 
     @GetMapping("/productStockOuts/all")
-    public List<ProductStockOut> findAll(@RequestHeader("authorization") String authorization) {
+    public List<ProductStockOutDto> findAll(@RequestHeader("authorization") String authorization) {
         return this.productStockOutService.getAll(authorization);
     }
 
     @GetMapping("/productStockOuts/{id}")
-    public Optional<ProductStockOut> getProductStockOutById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+    public ProductStockOutDto getProductStockOutById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.productStockOutService.getById(authorization, id);
 
     }
 
     @PostMapping("/productStockOuts")
-    public ProductStockOut createProductStockOut(@RequestBody @Valid ProductStockOut productStockOutDto, @RequestHeader("authorization") String authorization) {
+    public ProductStockOutDto createProductStockOut(@RequestBody @Valid ProductStockOutDto productStockOutDto, @RequestHeader("authorization") String authorization) {
         return this.productStockOutService.create(authorization, productStockOutDto);
     }
 
     @PutMapping("/productStockOuts/{id}")
-    public ProductStockOut updateProductStockOut(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody ProductStockOut productStockOut) {
-        return this.productStockOutService.update(authorization, productStockOut, id);
+    public ProductStockOutDto updateProductStockOut(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody ProductStockOutDto productStockOutDto) {
+        return this.productStockOutService.update(authorization, productStockOutDto, id);
 
 
     }

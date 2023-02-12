@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.RecentPurchase;
+import com.mafoya.oja.dto.RecentPurchaseDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface RecentPurchaseService {
-    RecentPurchase create(String authorization, RecentPurchase recentPurchase);
+    RecentPurchaseDto create(String authorization, RecentPurchaseDto recentPurchaseDto);
 
-    RecentPurchase update(String authorization, RecentPurchase recentPurchase, String id);
+    RecentPurchaseDto update(String authorization, RecentPurchaseDto recentPurchaseDto, String id);
 
-    Optional<RecentPurchase> getById(String authorization, String id);
+    RecentPurchaseDto getById(String authorization, String id);
 
-    List<RecentPurchase> getAll(String authorization);
+    List<RecentPurchaseDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

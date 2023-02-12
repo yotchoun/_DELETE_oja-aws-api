@@ -1,18 +1,18 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.Visitor;
+import com.mafoya.oja.dto.VisitorDto;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface VisitorService {
-    Visitor create(String authorization, Visitor visitor);
+    VisitorDto create(String authorization, VisitorDto visitorDto);
 
-    Visitor update(String authorization, Visitor visitor, String id);
+    VisitorDto update(String authorization, VisitorDto visitorDto, String id);
 
-    Optional<Visitor> getById(String autohrization, String id);
+    VisitorDto getById(String authorization, String id);
 
-    List<Visitor> getAll(String authorization);
+    List<VisitorDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.ProductStockOut;
+import com.mafoya.oja.dto.ProductStockOutDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ProductStockOutService {
-    ProductStockOut create(String authorization, ProductStockOut productStockOut);
+    ProductStockOutDto create(String authorization, ProductStockOutDto productStockOutDto);
 
-    ProductStockOut update(String authorization, ProductStockOut productStockOut, String id);
+    ProductStockOutDto update(String authorization, ProductStockOutDto productStockOutDto, String id);
 
-    Optional<ProductStockOut> getById(String authorization, String id);
+    ProductStockOutDto getById(String authorization, String id);
 
-    List<ProductStockOut> getAll(String authorization);
+    List<ProductStockOutDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

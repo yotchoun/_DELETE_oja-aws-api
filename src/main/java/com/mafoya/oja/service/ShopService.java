@@ -1,19 +1,18 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.Shop;
+import com.mafoya.oja.dto.ShopDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ShopService {
 
-    Shop create(String authorization, Shop shop);
+    ShopDto create(String authorization, ShopDto shopDto);
 
-    Shop update(String authorization, Shop shop, String id);
+    ShopDto update(String authorization, ShopDto shopDto, String id);
 
-    Optional<Shop> getById(String authorization, String id);
+    ShopDto getById(String authorization, String id);
 
-    List<Shop> getAll(String authorization);
+    List<ShopDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

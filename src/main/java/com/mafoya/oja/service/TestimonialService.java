@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.Testimonial;
+import com.mafoya.oja.dto.TestimonialDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface TestimonialService {
-    Testimonial create(String authorization, Testimonial testimonial);
+    TestimonialDto create(String authorization, TestimonialDto testimonialDto);
 
-    Testimonial update(String authorization, Testimonial testimonial, String id);
+    TestimonialDto update(String authorization, TestimonialDto testimonialDto, String id);
 
-    Optional<Testimonial> getById(String authorization, String id);
+    TestimonialDto getById(String authorization, String id);
 
-    List<Testimonial> getAll(String authorization);
+    List<TestimonialDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

@@ -1,14 +1,14 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.User;
+import com.mafoya.oja.dto.UserDto;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface UserService {
-    User create(String authorization, User customer);
-    User update(String authorization, User customer, String id);
-    Optional<User> getById(String authorization, String id);
-    List<User> getAll(String authorization);
+    UserDto create(String authorization, UserDto userDto);
+    UserDto update(String authorization, UserDto userDto, String id);
+    UserDto getById(String authorization, String id);
+    List<UserDto> getAll(String authorization);
     void delete(String authorization,String id);
 }

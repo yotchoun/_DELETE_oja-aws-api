@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.Color;
+import com.mafoya.oja.dto.ColorDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ColorService {
-    Color create(String authorization, Color color);
+    ColorDto create(String authorization, ColorDto colorDto);
 
-    Color update(String authorization, Color color, String id);
+    ColorDto update(String authorization, ColorDto colorDto, String id);
 
-    Optional<Color> getById(String authorization, String id);
+    ColorDto getById(String authorization, String id);
 
-    List<Color> getAll(String authorization);
+    List<ColorDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

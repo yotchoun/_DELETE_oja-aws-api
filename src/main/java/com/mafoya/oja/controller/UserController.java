@@ -1,12 +1,12 @@
 package com.mafoya.oja.controller;
+
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.User;
+import com.mafoya.oja.dto.UserDto;
 import com.mafoya.oja.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -19,24 +19,24 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/users/all")
-    public List<User> findAll(@RequestHeader("authorization") String authorization) {
+    public List<UserDto> findAll(@RequestHeader("authorization") String authorization) {
         return this.userService.getAll(authorization);
     }
 
     @GetMapping("/users/{id}")
-    public Optional<User> getCustomerById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+    public UserDto getCustomerById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.userService.getById(authorization, id);
 
     }
 
     @PostMapping("/users")
-    public User createCustomer(@RequestHeader("authorization") String authorization, @RequestBody User user) {
-        return this.userService.create(authorization, user);
+    public UserDto createCustomer(@RequestHeader("authorization") String authorization, @RequestBody UserDto userDto) {
+        return this.userService.create(authorization, userDto);
     }
 
     @PutMapping("/users/{id}")
-    public User updateCustomer(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody User user) {
-        return this.userService.update(authorization, user, id);
+    public UserDto updateCustomer(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody UserDto userDto) {
+        return this.userService.update(authorization, userDto, id);
 
 
     }

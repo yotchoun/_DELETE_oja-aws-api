@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.OrderItem;
+import com.mafoya.oja.dto.OrderItemDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface OrderItemService {
-    OrderItem create(String authorization, OrderItem orderItem);
+    OrderItemDto create(String authorization, OrderItemDto orderItemDto);
 
-    OrderItem update(String authorization, OrderItem orderItem, String id);
+    OrderItemDto update(String authorization, OrderItemDto orderItemDto, String id);
 
-    Optional<OrderItem> getById(String authorization, String id);
+    OrderItemDto getById(String authorization, String id);
 
-    List<OrderItem> getAll(String authorization);
+    List<OrderItemDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

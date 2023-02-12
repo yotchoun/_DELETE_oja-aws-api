@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.UserAddress;
+import com.mafoya.oja.dto.UserAddressDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface UserAddressService {
-    UserAddress create(String authorization, UserAddress userAddress);
+    UserAddressDto create(String authorization, UserAddressDto userAddressDto);
 
-    UserAddress update(String authorization, UserAddress userAddress, String id);
+    UserAddressDto update(String authorization, UserAddressDto userAddressDto, String id);
 
-    Optional<UserAddress> getById(String authorization, String id);
+    UserAddressDto getById(String authorization, String id);
 
-    List<UserAddress> getAll(String authorization);
+    List<UserAddressDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

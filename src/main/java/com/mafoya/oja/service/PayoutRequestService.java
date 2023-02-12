@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.PayoutRequest;
+import com.mafoya.oja.dto.PayoutRequestDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface PayoutRequestService {
-    PayoutRequest create(String authorization, PayoutRequest payoutRequest);
+    PayoutRequestDto create(String authorization, PayoutRequestDto payoutRequestDto);
 
-    PayoutRequest update(String authorization, PayoutRequest payoutRequest, String id);
+    PayoutRequestDto update(String authorization, PayoutRequestDto payoutRequestDto, String id);
 
-    Optional<PayoutRequest> getById(String authorization, String id);
+    PayoutRequestDto getById(String authorization, String id);
 
-    List<PayoutRequest> getAll(String authorization);
+    List<PayoutRequestDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

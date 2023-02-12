@@ -1,14 +1,13 @@
 package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.ShopServiceObject;
-import com.mafoya.oja.service.ShopServiceService;
+import com.mafoya.oja.dto.ShopDto;
+import com.mafoya.oja.service.ShopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -18,34 +17,34 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 public class ShopController{
 
     @Autowired
-    private ShopServiceService shopServiceService;
+    private ShopService shopService;
 
     @GetMapping("/shops/all")
-    public List<ShopServiceObject> findAll(@RequestHeader("authorization") String authorization) {
-        return this.shopServiceService.getAll(authorization);
+    public List<ShopDto> findAll(@RequestHeader("authorization") String authorization) {
+        return this.shopService.getAll(authorization);
     }
 
     @GetMapping("/shops/{id}")
-    public Optional<ShopServiceObject> getShopById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
-        return this.shopServiceService.getById(authorization, id);
+    public ShopDto getShopById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+        return this.shopService.getById(authorization, id);
 
     }
 
     @PostMapping("/shops")
-    public ShopServiceObject createShop(@RequestBody @Valid ShopServiceObject shopDto, @RequestHeader("authorization") String authorization) {
-        return this.shopServiceService.create(authorization, shopDto);
+    public ShopDto createShop(@RequestBody @Valid ShopDto shopDto, @RequestHeader("authorization") String authorization) {
+        return this.shopService.create(authorization, shopDto);
     }
 
     @PutMapping("/shops/{id}")
-    public ShopServiceObject updateShop(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody ShopServiceObject shop) {
-        return this.shopServiceService.update(authorization, shop, id);
+    public ShopDto updateShop(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody ShopDto shop) {
+        return this.shopService.update(authorization, shop, id);
 
 
     }
 
     @DeleteMapping("/shops/{id}")
     public void deleteShop(@RequestHeader("authorization") String authorization, @PathVariable String id) {
-        this.shopServiceService.delete(authorization, id);
+        this.shopService.delete(authorization, id);
     }
 }
 

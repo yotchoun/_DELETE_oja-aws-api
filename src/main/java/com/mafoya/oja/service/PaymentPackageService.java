@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.PaymentPackage;
+import com.mafoya.oja.dto.PaymentPackageDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface PaymentPackageService {
-    PaymentPackage create(String authorization, PaymentPackage paymentPackage);
+    PaymentPackageDto create(String authorization, PaymentPackageDto paymentPackageDto);
 
-    PaymentPackage update(String authorization, PaymentPackage paymentPackage, String id);
+    PaymentPackageDto update(String authorization, PaymentPackageDto paymentPackageDto, String id);
 
-    Optional<PaymentPackage> getById(String authorization, String id);
+    PaymentPackageDto getById(String authorization, String id);
 
-    List<PaymentPackage> getAll(String authorization);
+    List<PaymentPackageDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

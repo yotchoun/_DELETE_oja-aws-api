@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.Card;
+import com.mafoya.oja.dto.CardDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface CardService {
-    Card create(String authorization, Card card);
+    CardDto create(String authorization, CardDto cardDto);
 
-    Card update(String authorization, Card card, String id);
+    CardDto update(String authorization, CardDto cardDto, String id);
 
-    Optional<Card> getById(String authorization, String id);
+    CardDto getById(String authorization, String id);
 
-    List<Card> getAll(String authorization);
+    List<CardDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

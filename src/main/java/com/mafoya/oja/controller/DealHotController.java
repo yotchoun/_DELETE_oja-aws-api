@@ -1,14 +1,13 @@
 package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.DealHot;
+import com.mafoya.oja.dto.DealHotDto;
 import com.mafoya.oja.service.DealHotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -21,24 +20,24 @@ public class DealHotController {
     private DealHotService dealHotService;
 
     @GetMapping("/dealHots/all")
-    public List<DealHot> findAll(@RequestHeader("authorization") String authorization) {
+    public List<DealHotDto> findAll(@RequestHeader("authorization") String authorization) {
         return this.dealHotService.getAll(authorization);
     }
 
     @GetMapping("/dealHots/{id}")
-    public Optional<DealHot> getDealHotById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+    public DealHotDto getDealHotById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.dealHotService.getById(authorization, id);
 
     }
 
     @PostMapping("/dealHots")
-    public DealHot createDealHot(@RequestBody @Valid DealHot dealHotDto, @RequestHeader("authorization") String authorization) {
+    public DealHotDto createDealHot(@RequestBody @Valid DealHotDto dealHotDto, @RequestHeader("authorization") String authorization) {
         return this.dealHotService.create(authorization, dealHotDto);
     }
 
     @PutMapping("/dealHots/{id}")
-    public DealHot updateDealHot(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody DealHot dealHot) {
-        return this.dealHotService.update(authorization, dealHot, id);
+    public DealHotDto updateDealHot(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody DealHotDto dealHotDto) {
+        return this.dealHotService.update(authorization, dealHotDto, id);
 
 
     }

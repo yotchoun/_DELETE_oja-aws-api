@@ -1,14 +1,13 @@
 package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.Earning;
+import com.mafoya.oja.dto.EarningDto;
 import com.mafoya.oja.service.EarningService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -21,24 +20,24 @@ public class EarningController {
     private EarningService earningService;
 
     @GetMapping("/earnings/all")
-    public List<Earning> findAll(@RequestHeader("authorization") String authorization) {
+    public List<EarningDto> findAll(@RequestHeader("authorization") String authorization) {
         return this.earningService.getAll(authorization);
     }
 
     @GetMapping("/earnings/{id}")
-    public Optional<Earning> getEarningById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+    public EarningDto getEarningById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.earningService.getById(authorization, id);
 
     }
 
     @PostMapping("/earnings")
-    public Earning createEarning(@RequestBody @Valid Earning earningDto, @RequestHeader("authorization") String authorization) {
+    public EarningDto createEarning(@RequestBody @Valid EarningDto earningDto, @RequestHeader("authorization") String authorization) {
         return this.earningService.create(authorization, earningDto);
     }
 
     @PutMapping("/earnings/{id}")
-    public Earning updateEarning(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody Earning earning) {
-        return this.earningService.update(authorization, earning, id);
+    public EarningDto updateEarning(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody EarningDto earningDto) {
+        return this.earningService.update(authorization, earningDto, id);
 
 
     }

@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.Earning;
+import com.mafoya.oja.dto.EarningDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface EarningService {
-    Earning create(String authorization, Earning earning);
+    EarningDto create(String authorization, EarningDto earningDto);
 
-    Earning update(String authorization, Earning earning, String id);
+    EarningDto update(String authorization, EarningDto earningDto, String id);
 
-    Optional<Earning> getById(String authorization, String id);
+    EarningDto getById(String authorization, String id);
 
-    List<Earning> getAll(String authorization);
+    List<EarningDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

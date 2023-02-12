@@ -4,7 +4,6 @@ package com.mafoya.oja.service;
 import com.mafoya.oja.dto.CategoryNavigationDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface CategoryNavigationService {
 

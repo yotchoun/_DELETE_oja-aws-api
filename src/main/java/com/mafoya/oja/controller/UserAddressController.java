@@ -1,14 +1,13 @@
 package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.UserAddress;
+import com.mafoya.oja.dto.UserAddressDto;
 import com.mafoya.oja.service.UserAddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -21,23 +20,23 @@ public class UserAddressController {
     private UserAddressService userAddressService;
 
     @GetMapping("/userAddresss/all")
-    public List<UserAddress> findAll(@RequestHeader("authorization") String authorization) {
+    public List<UserAddressDto> findAll(@RequestHeader("authorization") String authorization) {
         return this.userAddressService.getAll(authorization);
     }
 
     @GetMapping("/userAddresss/{id}")
-    public Optional<UserAddress> getUserAddressById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+    public UserAddressDto getUserAddressById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.userAddressService.getById(authorization, id);
 
     }
 
     @PostMapping("/userAddresss")
-    public UserAddress createUserAddress(@RequestBody @Valid UserAddress userAddressDto, @RequestHeader("authorization") String authorization) {
+    public UserAddressDto createUserAddress(@RequestBody @Valid UserAddressDto userAddressDto, @RequestHeader("authorization") String authorization) {
         return this.userAddressService.create(authorization, userAddressDto);
     }
 
     @PutMapping("/userAddresss/{id}")
-    public UserAddress updateUserAddress(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody UserAddress userAddress) {
+    public UserAddressDto updateUserAddress(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody UserAddressDto userAddress) {
         return this.userAddressService.update(authorization, userAddress, id);
 
 

@@ -1,14 +1,13 @@
 package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.PayoutRequest;
+import com.mafoya.oja.dto.PayoutRequestDto;
 import com.mafoya.oja.service.PayoutRequestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -21,24 +20,24 @@ public class PayoutRequestController {
     private PayoutRequestService payoutRequestService;
 
     @GetMapping("/payoutRequests/all")
-    public List<PayoutRequest> findAll(@RequestHeader("authorization") String authorization) {
+    public List<PayoutRequestDto> findAll(@RequestHeader("authorization") String authorization) {
         return this.payoutRequestService.getAll(authorization);
     }
 
     @GetMapping("/payoutRequests/{id}")
-    public Optional<PayoutRequest> getPayoutRequestById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+    public PayoutRequestDto getPayoutRequestById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.payoutRequestService.getById(authorization, id);
 
     }
 
     @PostMapping("/payoutRequests")
-    public PayoutRequest createPayoutRequest(@RequestBody @Valid PayoutRequest payoutRequestDto, @RequestHeader("authorization") String authorization) {
+    public PayoutRequestDto createPayoutRequest(@RequestBody @Valid PayoutRequestDto payoutRequestDto, @RequestHeader("authorization") String authorization) {
         return this.payoutRequestService.create(authorization, payoutRequestDto);
     }
 
     @PutMapping("/payoutRequests/{id}")
-    public PayoutRequest updatePayoutRequest(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody PayoutRequest payoutRequest) {
-        return this.payoutRequestService.update(authorization, payoutRequest, id);
+    public PayoutRequestDto updatePayoutRequest(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody PayoutRequestDto payoutRequestDto) {
+        return this.payoutRequestService.update(authorization, payoutRequestDto, id);
 
 
     }

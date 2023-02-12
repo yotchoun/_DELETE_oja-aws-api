@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.CategoryItem;
+import com.mafoya.oja.dto.CategoryItemDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface CategoryItemService {
-    CategoryItem create(String authorization, CategoryItem categoryItem);
+    CategoryItemDto create(String authorization, CategoryItemDto categoryItemDto);
 
-    CategoryItem update(String authorization, CategoryItem categoryItem, String id);
+    CategoryItemDto update(String authorization, CategoryItemDto categoryItemDto, String id);
 
-    Optional<CategoryItem> getById(String authorization, String id);
+    CategoryItemDto getById(String authorization, String id);
 
-    List<CategoryItem> getAll(String authorization);
+    List<CategoryItemDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

@@ -1,14 +1,13 @@
 package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.Order;
+import com.mafoya.oja.dto.OrderDto;
 import com.mafoya.oja.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -21,24 +20,24 @@ public class OrderController {
     private OrderService orderService;
 
     @GetMapping("/orders/all")
-    public List<Order> findAll(@RequestHeader("authorization") String authorization) {
+    public List<OrderDto> findAll(@RequestHeader("authorization") String authorization) {
         return this.orderService.getAll(authorization);
     }
 
     @GetMapping("/orders/{id}")
-    public Optional<Order> getOrderById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+    public OrderDto getOrderById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.orderService.getById(authorization, id);
 
     }
 
     @PostMapping("/orders")
-    public Order createOrder(@RequestBody @Valid Order orderDto, @RequestHeader("authorization") String authorization) {
+    public OrderDto createOrder(@RequestBody @Valid OrderDto orderDto, @RequestHeader("authorization") String authorization) {
         return this.orderService.create(authorization, orderDto);
     }
 
     @PutMapping("/orders/{id}")
-    public Order updateOrder(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody Order order) {
-        return this.orderService.update(authorization, order, id);
+    public OrderDto updateOrder(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody OrderDto orderDto) {
+        return this.orderService.update(authorization, orderDto, id);
 
 
     }

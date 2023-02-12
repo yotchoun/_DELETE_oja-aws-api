@@ -1,14 +1,13 @@
 package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.Card;
+import com.mafoya.oja.dto.CardDto;
 import com.mafoya.oja.service.CardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -21,24 +20,24 @@ public class CardController {
     private CardService cardService;
 
     @GetMapping("/cards/all")
-    public List<Card> findAll(@RequestHeader("authorization") String authorization) {
+    public List<CardDto> findAll(@RequestHeader("authorization") String authorization) {
         return this.cardService.getAll(authorization);
     }
 
     @GetMapping("/cards/{id}")
-    public Optional<Card> getCardById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+    public CardDto getCardById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.cardService.getById(authorization, id);
 
     }
 
     @PostMapping("/cards")
-    public Card createCard(@RequestBody @Valid Card cardDto, @RequestHeader("authorization") String authorization) {
+    public CardDto createCard(@RequestBody @Valid CardDto cardDto, @RequestHeader("authorization") String authorization) {
         return this.cardService.create(authorization, cardDto);
     }
 
     @PutMapping("/cards/{id}")
-    public Card updateCard(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody Card card) {
-        return this.cardService.update(authorization, card, id);
+    public CardDto updateCard(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody CardDto cardDto) {
+        return this.cardService.update(authorization, cardDto, id);
 
 
     }

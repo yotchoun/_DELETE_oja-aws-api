@@ -1,18 +1,18 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.Image;
+import com.mafoya.oja.dto.ImageDto;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface ImageService {
-    Image create(String authorization, Image image);
+    ImageDto create(String authorization, ImageDto imageDto);
 
-    Image update(String authorization, Image image, String id);
+    ImageDto update(String authorization, ImageDto imageDto, String id);
 
-    Optional<Image> getById(String authorization, String id);
+    ImageDto getById(String authorization, String id);
 
-    List<Image> getAll(String authorization);
+    List<ImageDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

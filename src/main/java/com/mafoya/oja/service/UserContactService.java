@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.UserContact;
+import com.mafoya.oja.dto.UserContactDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface UserContactService {
-    UserContact create(String authorization, UserContact userContact);
+    UserContactDto create(String authorization, UserContactDto userContactDto);
 
-    UserContact update(String authorization, UserContact userContact, String id);
+    UserContactDto update(String authorization, UserContactDto userContactDto, String id);
 
-    Optional<UserContact> getById(String authorization, String id);
+    UserContactDto getById(String authorization, String id);
 
-    List<UserContact> getAll(String authorization);
+    List<UserContactDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }

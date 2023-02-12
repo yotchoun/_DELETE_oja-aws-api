@@ -1,14 +1,13 @@
 package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.Blog;
+import com.mafoya.oja.dto.BlogDto;
 import com.mafoya.oja.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -21,24 +20,24 @@ public class BlogController {
     private BlogService blogService;
 
     @GetMapping("/blogs/all")
-    public List<Blog> findAll(@RequestHeader("authorization") String authorization) {
+    public List<BlogDto> findAll(@RequestHeader("authorization") String authorization) {
         return this.blogService.getAll(authorization);
     }
 
     @GetMapping("/blogs/{id}")
-    public Optional<Blog> getBlogById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+    public BlogDto getBlogById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.blogService.getById(authorization, id);
 
     }
 
     @PostMapping("/blogs")
-    public Blog createBlog(@RequestBody @Valid Blog blogDto, @RequestHeader("authorization") String authorization) {
+    public BlogDto createBlog(@RequestBody @Valid BlogDto blogDto, @RequestHeader("authorization") String authorization) {
         return this.blogService.create(authorization, blogDto);
     }
 
     @PutMapping("/blogs/{id}")
-    public Blog updateBlog(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody Blog blog) {
-        return this.blogService.update(authorization, blog, id);
+    public BlogDto updateBlog(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody BlogDto blogDto) {
+        return this.blogService.update(authorization, blogDto, id);
 
 
     }

@@ -1,14 +1,13 @@
 package com.mafoya.oja.controller;
 
 import com.mafoya.oja.constant.OjaConstant;
-import com.mafoya.oja.model.Article;
+import com.mafoya.oja.dto.ArticleDto;
 import com.mafoya.oja.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -21,24 +20,24 @@ public class ArticleController {
     private ArticleService articleService;
 
     @GetMapping("/articles/all")
-    public List<Article> findAll(@RequestHeader("authorization") String authorization) {
+    public List<ArticleDto> findAll(@RequestHeader("authorization") String authorization) {
         return this.articleService.getAll(authorization);
     }
 
     @GetMapping("/articles/{id}")
-    public Optional<Article> getArticleById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
+    public ArticleDto getArticleById(@RequestHeader("authorization") String authorization, @PathVariable String id) {
         return this.articleService.getById(authorization, id);
 
     }
 
     @PostMapping("/articles")
-    public Article createArticle(@RequestBody @Valid Article articleDto, @RequestHeader("authorization") String authorization) {
+    public ArticleDto createArticle(@RequestBody @Valid ArticleDto articleDto, @RequestHeader("authorization") String authorization) {
         return this.articleService.create(authorization, articleDto);
     }
 
     @PutMapping("/articles/{id}")
-    public Article updateArticle(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody Article article) {
-        return this.articleService.update(authorization, article, id);
+    public ArticleDto updateArticle(@PathVariable String id, @RequestHeader("authorization") String authorization, @RequestBody ArticleDto articleDto) {
+        return this.articleService.update(authorization, articleDto, id);
 
 
     }

@@ -1,18 +1,17 @@
 package com.mafoya.oja.service;
 
-import com.mafoya.oja.model.Carousel;
+import com.mafoya.oja.dto.CarouselDto;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface CarouselService {
-    Carousel create(String authorization, Carousel carousel);
+    CarouselDto create(String authorization, CarouselDto carouselDto);
 
-    Carousel update(String authorization, Carousel carousel, String id);
+    CarouselDto update(String authorization, CarouselDto carouselDto, String id);
 
-    Optional<Carousel> getById(String authorization, String id);
+    CarouselDto getById(String authorization, String id);
 
-    List<Carousel> getAll(String authorization);
+    List<CarouselDto> getAll(String authorization);
 
     void delete(String authorization, String id);
 }
