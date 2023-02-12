@@ -25,7 +25,7 @@ public class CategoryNavigation {
 
     @DynamoDBAttribute(attributeName = "createdAt")
     private Instant createdAt;
-    @DynamoDBAttribute(attributeName = "name")
+    @DynamoDBAttribute(attributeName = "category")
     private String category;
 
     @DynamoDBAttribute(attributeName = "categoryItem")

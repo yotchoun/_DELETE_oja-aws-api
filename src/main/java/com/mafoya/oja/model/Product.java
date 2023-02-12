@@ -9,6 +9,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.Instant;
 
 @Data
@@ -24,23 +25,34 @@ public class Product {
 
     @DynamoDBAttribute(attributeName = "createdAt")
     private Instant createdAt;
-    @DynamoDBAttribute(attributeName = "firstName")
-    private String firstName;
+    @DynamoDBAttribute(attributeName = "size")
+    private Integer size;
 
-    @DynamoDBAttribute(attributeName = "lastName")
-    private String lastName;
+    @DynamoDBAttribute(attributeName = "brand")
+    private String brand;
 
-    @DynamoDBAttribute(attributeName = "number")
-    private String number;
+    @DynamoDBAttribute(attributeName = "title")
+    private String title;
 
-    @DynamoDBAttribute(attributeName = "email")
-    private String email;
+    @DynamoDBAttribute(attributeName = "slug")
+    private String slug;
 
-    @DynamoDBAttribute(attributeName = "department")
-    private String department;
-
-    @DynamoDBAttribute(attributeName = "salary")
-    private double salary;
+    @DynamoDBAttribute(attributeName = "price")
+    private Float price;
+    @DynamoDBAttribute(attributeName = "discount")
+    private Float discount;
+    @DynamoDBAttribute(attributeName = "rating")
+    private Integer rating;
+    @DynamoDBAttribute(attributeName = "status")
+    private String status;
+    @DynamoDBAttribute(attributeName = "thumbnail")
+    private String thumbnail;
+    @DynamoDBAttribute(attributeName = "unit")
+    private Integer unit;
+    @DynamoDBAttribute(attributeName = "shopId")
+    private String shopId;
+    @DynamoDBAttribute(attributeName = "published")
+    private Boolean published;
 
 
 }
