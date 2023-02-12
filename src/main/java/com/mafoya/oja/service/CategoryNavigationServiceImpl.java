@@ -8,15 +8,17 @@ import com.mafoya.oja.model.CategoryNavigation;
 import com.mafoya.oja.repository.CategoryNavigationRepository;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.stream.Collectors;
 
-public class CategoryNavigationDtoServiceImpl implements CategoryNavigationService {
+public class CategoryNavigationServiceImpl implements CategoryNavigationService {
 
     private final CategoryNavigationRepository categoryNavigationRepository;
 
-    public CategoryNavigationDtoServiceImpl(CategoryNavigationRepository categoryNavigationRepository) {
+    public CategoryNavigationServiceImpl(CategoryNavigationRepository categoryNavigationRepository) {
         this.categoryNavigationRepository = categoryNavigationRepository;
     }
 
@@ -54,16 +56,9 @@ public class CategoryNavigationDtoServiceImpl implements CategoryNavigationServi
     @Override
     public List<CategoryNavigationDto> getAll(String authorization) {
 
-        List<AtomicReference<CategoryNavigationDto>> dtoList = new ArrayList<>();
-        AtomicReference<CategoryNavigationDto> categoryNavigationDto = null;
-
         List<CategoryNavigation> doList = (List<CategoryNavigation>) categoryNavigationRepository.findAll();
-
-        doList.stream().map(categoryNavigation -> {
-            categoryNavigationDto.set(OjaMapper.mapCategoryNavigationDto(categoryNavigation));
-            dtoList.add(categoryNavigationDto);
-        }).;
-
+        return doList.stream().map(categoryNavigation -> OjaMapper.mapCategoryNavigationDto(categoryNavigation))
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
