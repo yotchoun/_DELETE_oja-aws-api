@@ -44,8 +44,8 @@ public class CategoryNavigationServiceImpl implements CategoryNavigationService 
     @Override
     public CategoryNavigationDto create(String authorization, CategoryNavigationDto categoryNavigationDto) {
 
-        CategoryNavigation categoryNavigationDo = OjaMapper.mapCategoryNavigationDo(categoryNavigationDto);
-        categoryNavigationRepository.save(categoryNavigationDo);
+        CategoryNavigation categoryNavigation = OjaMapper.mapCategoryNavigationDo(categoryNavigationDto);
+        categoryNavigationRepository.save(categoryNavigation);
         return categoryNavigationDto;
     }
 
@@ -67,7 +67,7 @@ public class CategoryNavigationServiceImpl implements CategoryNavigationService 
     public List<CategoryNavigationDto> getAll(String authorization) {
 
         List<CategoryNavigation> doList = (List<CategoryNavigation>) categoryNavigationRepository.findAll();
-        return doList.stream().map(categoryNavigation -> getById(authorization, categoryNavigation.getId()))
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
                 .collect(Collectors.toCollection(ArrayList::new));
     }
 

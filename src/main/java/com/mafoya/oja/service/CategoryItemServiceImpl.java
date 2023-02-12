@@ -1,12 +1,20 @@
 package com.mafoya.oja.service;
 
+import com.mafoya.oja.dto.CategoryItemDto;
+import com.mafoya.oja.exception.DataNotFoundException;
+import com.mafoya.oja.helper.OjaMapper;
+import com.mafoya.oja.model.CategoryItem;
 import com.mafoya.oja.model.CategoryItem;
 import com.mafoya.oja.repository.CategoryItemRepository;
+import com.mafoya.oja.repository.CategoryItemRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class CategoryItemServiceImpl  implements CategoryItemService {
+
 
     private final CategoryItemRepository categoryItemRepository;
 
@@ -15,23 +23,42 @@ public class CategoryItemServiceImpl  implements CategoryItemService {
     }
 
     @Override
-    public CategoryItem create(String authorization, CategoryItem categoryItem) {
-        return categoryItemRepository.save(categoryItem);
+    public CategoryItemDto getById(String authorization, String id) {
+        CategoryItemDto categoryItemDto;
+        Optional<CategoryItem> categoryItemOptional = categoryItemRepository.findById(id);
+        if (categoryItemOptional.isPresent()) {
+            categoryItemDto = OjaMapper.mapCategoryItemDto(categoryItemOptional.get());
+            return categoryItemDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
+    }
+
+
+    @Override
+    public CategoryItemDto create(String authorization, CategoryItemDto categoryItemDto) {
+        CategoryItem categoryItem = OjaMapper.mapCategoryItemDo(categoryItemDto);
+        categoryItemRepository.save(categoryItem);
+        return categoryItemDto;
     }
 
     @Override
-    public CategoryItem update(String authorization, CategoryItem categoryItem, String id) {
-        return categoryItemRepository.save(categoryItem);
+    public CategoryItemDto update(String authorization, CategoryItemDto categoryItemDto, String id) {
+        Optional<CategoryItem> categoryItemOptional = categoryItemRepository.findById(id);
+        if (categoryItemOptional.isPresent()) {
+            CategoryItem categoryItem = OjaMapper.mapCategoryItemDo(categoryItemDto);
+            categoryItem.setId(id);
+            categoryItemRepository.save(categoryItem);
+            return categoryItemDto;
+        }
+        throw new DataNotFoundException("Id not found for  " + id);
     }
 
-    @Override
-    public Optional<CategoryItem> getById(String authorization, String id) {
-        return categoryItemRepository.findById(id);
-    }
 
     @Override
-    public List<CategoryItem> getAll(String authorization) {
-        return (List<CategoryItem>) categoryItemRepository.findAll();
+    public List<CategoryItemDto> getAll(String authorization) {
+        List<CategoryItem> doList = (List<CategoryItem>) categoryItemRepository.findAll();
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
