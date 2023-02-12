@@ -25,22 +25,16 @@ public class CategoryParent {
     private Instant createdAt;
     @DynamoDBAttribute(attributeName = "categoryId")
     private String categoryId;
-
     @DynamoDBAttribute(attributeName = "featured")
     private String featured;
-
     @DynamoDBAttribute(attributeName = "description")
     private String description;
     @DynamoDBAttribute(attributeName = "slug")
     private String slug;
-
     @DynamoDBAttribute(attributeName = "image")
     private String image;
-
     @DynamoDBAttribute(attributeName = "icon")
     private String icon;
-
     @DynamoDBAttribute(attributeName = "name")
     private String name;
-
 }

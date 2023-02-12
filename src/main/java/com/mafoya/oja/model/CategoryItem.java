@@ -33,9 +33,6 @@ public class CategoryItem {
     @DynamoDBAttribute(attributeName = "categoryNavigationId")
     private String categoryNavigationId;
 
-    @DynamoDBTypeConverted(converter = ObjectConverter.class)
-    @DynamoDBAttribute(attributeName = "child")
-    private Set<CategoryItem> child;
 }
 
 

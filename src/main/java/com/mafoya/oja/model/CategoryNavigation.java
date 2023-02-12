@@ -26,7 +26,5 @@ public class CategoryNavigation {
     private Instant createdAt;
     @DynamoDBAttribute(attributeName = "category")
     private String category;
-//    @DynamoDBTypeConverted(converter = ObjectConverter.class)
-//    @DynamoDBAttribute(attributeName = "categoryItem")
-//    private Set<CategoryItem> categoryItem;
+
 }

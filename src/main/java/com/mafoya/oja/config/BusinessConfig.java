@@ -30,8 +30,8 @@ public class BusinessConfig {
     }
 
     @Bean
-    CategoryNavigationService categoryNavigationService(CategoryNavigationRepository navigationRepository) {
-        return new CategoryNavigationServiceImpl(navigationRepository);
+    CategoryNavigationService categoryNavigationService(CategoryNavigationRepository navigationRepository,CategoryItemRepository categoryItemRepository) {
+        return new CategoryNavigationServiceImpl(navigationRepository, categoryItemRepository);
     }
 
     @Bean
