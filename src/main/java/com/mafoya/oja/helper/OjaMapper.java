@@ -1,4 +1,4 @@
-package com.mafoya.oja.mapper;
+package com.mafoya.oja.helper;
 
 import com.mafoya.oja.dto.CategoryNavigationDto;
 import com.mafoya.oja.model.CategoryNavigation;
