@@ -24,10 +24,20 @@ public class Shop {
     private Instant createdAt;
     @DynamoDBAttribute(attributeName = "slug")
     private String slug;
-    @DynamoDBAttribute(attributeName = "name")
-    private String name;
-    @DynamoDBAttribute(attributeName = "image")
-    private String image;
-    @DynamoDBAttribute(attributeName = "type")
-    private String type;
+    @DynamoDBAttribute(attributeName = "email")
+    private String email;
+    @DynamoDBAttribute(attributeName = "phone")
+    private String phone;
+    @DynamoDBAttribute(attributeName = "address")
+    private String address;
+    @DynamoDBAttribute(attributeName = "verified")
+    private Boolean verified;
+    @DynamoDBAttribute(attributeName = "coverPicture")
+    private String coverPicture;
+    @DynamoDBAttribute(attributeName = "profilePicture")
+    private String profilePicture;
+    @DynamoDBAttribute(attributeName = "userId")
+    private String userId;
+    @DynamoDBAttribute(attributeName = "socialLinkId")
+    private String socialLinkId;
 }

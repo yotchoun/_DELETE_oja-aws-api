@@ -22,8 +22,10 @@ public class ProductStockOut {
     private String id;
     @DynamoDBAttribute(attributeName = "createdAt")
     private Instant createdAt;
-    @DynamoDBAttribute(attributeName = "product")
-    private String product;
+    @DynamoDBAttribute(attributeName = "amount")
+    private Float amount;
     @DynamoDBAttribute(attributeName = "stock")
     private String stock;
+    @DynamoDBAttribute(attributeName = "product")
+    private String product;
 }

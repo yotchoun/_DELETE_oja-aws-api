@@ -26,17 +26,17 @@ public class Order {
     @DynamoDBAttribute(attributeName = "tax")
     private double tax;
     @DynamoDBAttribute(attributeName = "discount")
-    private double discount;
+    private Integer discount;
     @DynamoDBAttribute(attributeName = "isDelivered")
-    private double isDelivered;
+    private Boolean isDelivered;
     @DynamoDBAttribute(attributeName = "totalPrice")
-    private double totalPrice;
+    private Float totalPrice;
     @DynamoDBAttribute(attributeName = "shippingAddress")
-    private double shippingAddress;
+    private String  shippingAddress;
     @DynamoDBAttribute(attributeName = "status")
-    private double status;
+    private String status;
     @DynamoDBAttribute(attributeName = "deliveredAt")
-    private double deliveredAt;
+    private Instant deliveredAt;
     @DynamoDBAttribute(attributeName = "userId")
     private String userId;
 }

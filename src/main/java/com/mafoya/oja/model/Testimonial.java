@@ -23,7 +23,7 @@ public class Testimonial {
     @DynamoDBAttribute(attributeName = "createdAt")
     private Instant createdAt;
     @DynamoDBAttribute(attributeName = "rating")
-    private String rating;
+    private Integer rating;
     @DynamoDBAttribute(attributeName = "comment")
     private String comment;
     @DynamoDBAttribute(attributeName = "userId")

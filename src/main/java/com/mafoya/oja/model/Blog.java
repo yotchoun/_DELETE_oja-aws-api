@@ -37,5 +37,4 @@ public class Blog {
     @DynamoDBAttribute(attributeName = "userId")
     private String userId;
 
-
 }

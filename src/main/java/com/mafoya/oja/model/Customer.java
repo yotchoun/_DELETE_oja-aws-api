@@ -27,7 +27,7 @@ public class Customer {
     @DynamoDBAttribute(attributeName = "orders")
     private String orders;
     @DynamoDBAttribute(attributeName = "balance")
-    private String balance;
+    private Float balance;
     @DynamoDBAttribute(attributeName = "avatar")
     private String avatar;
     @DynamoDBAttribute(attributeName = "phone")

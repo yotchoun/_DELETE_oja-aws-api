@@ -27,5 +27,5 @@ public class RecentPurchase {
     @DynamoDBAttribute(attributeName = "payment")
     private String payment;
     @DynamoDBAttribute(attributeName = "amount")
-    private String amount;
+    private Float amount;
 }

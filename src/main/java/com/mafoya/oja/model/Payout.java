@@ -27,9 +27,9 @@ public class Payout {
     @DynamoDBAttribute(attributeName = "payment")
     private String payment;
     @DynamoDBAttribute(attributeName = "date")
-    private String date;
+    private Instant date;
     @DynamoDBAttribute(attributeName = "amount")
-    private String amount;
+    private Float amount;
     @DynamoDBAttribute(attributeName = "no")
-    private String no;
+    private Integer no;
 }

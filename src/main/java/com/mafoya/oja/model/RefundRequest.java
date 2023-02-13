@@ -29,7 +29,7 @@ public class RefundRequest {
     @DynamoDBAttribute(attributeName = "status")
     private String status;
     @DynamoDBAttribute(attributeName = "amount")
-    private String amount;
+    private Float amount;
     @DynamoDBAttribute(attributeName = "shopName")
     private String shopName;
     @DynamoDBAttribute(attributeName = "orderNo")

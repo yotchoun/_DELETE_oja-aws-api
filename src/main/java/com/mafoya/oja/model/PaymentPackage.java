@@ -23,7 +23,7 @@ public class PaymentPackage {
     @DynamoDBAttribute(attributeName = "createdAt")
     private Instant createdAt;
     @DynamoDBAttribute(attributeName = "no")
-    private String no;
+    private Integer no;
     @DynamoDBAttribute(attributeName = "date")
     private Instant date;
     @DynamoDBAttribute(attributeName = "seller")
@@ -31,7 +31,7 @@ public class PaymentPackage {
     @DynamoDBAttribute(attributeName = "package")
     private String packages;
     @DynamoDBAttribute(attributeName = "amount")
-    private String amount;
+    private Float amount;
     @DynamoDBAttribute(attributeName = "payment")
     private String payment;
 }

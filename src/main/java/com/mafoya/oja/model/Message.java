@@ -23,14 +23,12 @@ public class Message {
     private String id;
     @DynamoDBAttribute(attributeName = "createdAt")
     private Instant createdAt;
-    @DynamoDBAttribute(attributeName = "no")
-    private Integer no;
-    @DynamoDBAttribute(attributeName = "amount")
-    private BigDecimal amount;
-    @DynamoDBAttribute(attributeName = "status")
-    private String status;
-    @DynamoDBAttribute(attributeName = "message")
-    private String message;
+    @DynamoDBAttribute(attributeName = "imgUrl")
+    private String imgUrl;
+    @DynamoDBAttribute(attributeName = "name")
+    private String name;
+    @DynamoDBAttribute(attributeName = "text")
+    private String text;
     @DynamoDBAttribute(attributeName = "date")
     private Instant date;
 }

@@ -25,10 +25,12 @@ public class Carousel {
     private Instant createdAt;
     @DynamoDBAttribute(attributeName = "title")
     private String title;
+    @DynamoDBAttribute(attributeName = "subTitle")
+    private String subTitle;
+    @DynamoDBAttribute(attributeName = "discount")
+    private Integer discount;
     @DynamoDBAttribute(attributeName = "category")
     private String category;
-    @DynamoDBAttribute(attributeName = "discount")
-    private BigDecimal discount;
     @DynamoDBAttribute(attributeName = "imgUrl")
     private String imgUrl;
     @DynamoDBAttribute(attributeName = "description")
@@ -37,4 +39,8 @@ public class Carousel {
     private String buttonText;
     @DynamoDBAttribute(attributeName = "buttonLink")
     private String buttonLink;
+    @DynamoDBAttribute(attributeName = "playStoreLink")
+    private String playStoreLink;
+    @DynamoDBAttribute(attributeName = "appStoreLink")
+    private String appStoreLink;
 }

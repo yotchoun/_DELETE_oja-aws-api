@@ -26,10 +26,18 @@ public class Ticket {
     private Instant createdAt;
     @DynamoDBAttribute(attributeName = "slug")
     private String slug;
-    @DynamoDBAttribute(attributeName = "name")
-    private String name;
-    @DynamoDBAttribute(attributeName = "image")
-    private String image;
     @DynamoDBAttribute(attributeName = "type")
     private String type;
+    @DynamoDBAttribute(attributeName = "date")
+    private Instant date;
+    @DynamoDBAttribute(attributeName = "title")
+    private String title;
+    @DynamoDBAttribute(attributeName = "status")
+    private String status;
+    @DynamoDBAttribute(attributeName = "category")
+    private String category;
+    @DynamoDBAttribute(attributeName = "conversation")
+    private String conversation;
+    @DynamoDBAttribute(attributeName = "userId")
+    private String userId;
 }

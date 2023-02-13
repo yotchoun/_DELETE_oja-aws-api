@@ -22,12 +22,20 @@ public class PayoutRequest {
     private String id;
     @DynamoDBAttribute(attributeName = "createdAt")
     private Instant createdAt;
-    @DynamoDBAttribute(attributeName = "slug")
-    private String slug;
-    @DynamoDBAttribute(attributeName = "name")
-    private String name;
-    @DynamoDBAttribute(attributeName = "image")
-    private String image;
-    @DynamoDBAttribute(attributeName = "type")
-    private String type;
+    @DynamoDBAttribute(attributeName = "no")
+    private Integer no;
+    @DynamoDBAttribute(attributeName = "date")
+    private Instant date;
+    @DynamoDBAttribute(attributeName = "seller")
+    private String seller;
+    @DynamoDBAttribute(attributeName = "message")
+    private String message;
+    @DynamoDBAttribute(attributeName = "amount")
+    private Float amount;
+    @DynamoDBAttribute(attributeName = "totalAmount")
+    private Float totalAmount;
+    @DynamoDBAttribute(attributeName = "requestAmount")
+    private Float requestAmount;
+    @DynamoDBAttribute(attributeName = "shopName")
+    private String shopName;
 }

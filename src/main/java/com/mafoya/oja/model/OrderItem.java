@@ -22,12 +22,14 @@ public class OrderItem {
     private String id;
     @DynamoDBAttribute(attributeName = "createdAt")
     private Instant createdAt;
-    @DynamoDBAttribute(attributeName = "slug")
-    private String slug;
-    @DynamoDBAttribute(attributeName = "name")
-    private String name;
-    @DynamoDBAttribute(attributeName = "image")
-    private String image;
-    @DynamoDBAttribute(attributeName = "type")
-    private String type;
+    @DynamoDBAttribute(attributeName = "product_img")
+    private String product_img;
+    @DynamoDBAttribute(attributeName = "product_name")
+    private String product_name;
+    @DynamoDBAttribute(attributeName = "product_price")
+    private Float product_price;
+    @DynamoDBAttribute(attributeName = "product_quantity")
+    private Integer product_quantity;
+    @DynamoDBAttribute(attributeName = "orderId")
+    private String orderId;
 }

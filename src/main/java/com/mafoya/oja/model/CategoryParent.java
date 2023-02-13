@@ -26,7 +26,7 @@ public class CategoryParent {
     @DynamoDBAttribute(attributeName = "categoryId")
     private String categoryId;
     @DynamoDBAttribute(attributeName = "featured")
-    private String featured;
+    private Boolean featured;
     @DynamoDBAttribute(attributeName = "description")
     private String description;
     @DynamoDBAttribute(attributeName = "slug")

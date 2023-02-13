@@ -24,4 +24,7 @@ public class Image {
     private Instant createdAt;
     @DynamoDBAttribute(attributeName = "link")
     private String link;
+
+    @DynamoDBAttribute(attributeName = "productId")
+    private String productId;
 }

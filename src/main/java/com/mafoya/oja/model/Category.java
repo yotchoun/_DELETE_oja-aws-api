@@ -34,7 +34,10 @@ public class Category {
     private String description;
     @DynamoDBAttribute(attributeName = "featured")
     private Boolean featured;
-    @DynamoDBAttribute(attributeName = "for")
-    private For displayFor;
+    @DynamoDBAttribute(attributeName = "forId")
+    private String forId;
+
+    @DynamoDBAttribute(attributeName = "productId")
+    private String productId;
 }
 

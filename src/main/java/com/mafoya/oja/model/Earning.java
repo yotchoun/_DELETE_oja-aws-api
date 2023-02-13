@@ -23,11 +23,11 @@ public class Earning {
     @DynamoDBAttribute(attributeName = "createdAt")
     private Instant createdAt;
     @DynamoDBAttribute(attributeName = "no")
-    private String no;
+    private Integer no;
     @DynamoDBAttribute(attributeName = "sellerEarning")
-    private String sellerEarning;
+    private Float sellerEarning;
     @DynamoDBAttribute(attributeName = "adminCommission")
-    private String adminCommission;
+    private Float adminCommission;
     @DynamoDBAttribute(attributeName = "orderNo")
     private String orderNo;
     @DynamoDBAttribute(attributeName = "shopName")

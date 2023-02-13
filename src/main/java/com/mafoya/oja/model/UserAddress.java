@@ -22,24 +22,22 @@ public class UserAddress {
     private String id;
     @DynamoDBAttribute(attributeName = "createdAt")
     private Instant createdAt;
-    @DynamoDBAttribute(attributeName = "appart")
-    private String appart;
-    @DynamoDBAttribute(attributeName = "country")
-    private String country;
-    @DynamoDBAttribute(attributeName = "city")
-    private String city;
-    @DynamoDBAttribute(attributeName = "type")
-    private String type;
-    @DynamoDBAttribute(attributeName = "state")
-    private String state;
-    @DynamoDBAttribute(attributeName = "phone")
-    private String phone;
+    @DynamoDBAttribute(attributeName = "apartNumber")
+    private String apartNumber;
     @DynamoDBAttribute(attributeName = "title")
     private String title;
+    @DynamoDBAttribute(attributeName = "phone")
+    private String phone;
     @DynamoDBAttribute(attributeName = "zipcode")
     private String zipcode;
     @DynamoDBAttribute(attributeName = "street")
     private String street;
+    @DynamoDBAttribute(attributeName = "state")
+    private String state;
+    @DynamoDBAttribute(attributeName = "city")
+    private String city;
+    @DynamoDBAttribute(attributeName = "country")
+    private String country;
     @DynamoDBAttribute(attributeName = "userId")
     private String userId;
 }

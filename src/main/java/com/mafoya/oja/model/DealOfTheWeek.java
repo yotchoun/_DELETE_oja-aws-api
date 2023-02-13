@@ -27,5 +27,5 @@ public class DealOfTheWeek {
     @DynamoDBAttribute(attributeName = "brand")
     private String brand;
     @DynamoDBAttribute(attributeName = "off")
-    private String off;
+    private Integer off;
 }

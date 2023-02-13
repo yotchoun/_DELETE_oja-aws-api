@@ -27,7 +27,7 @@ public class Review {
     @DynamoDBAttribute(attributeName = "productId")
     private String productId;
     @DynamoDBAttribute(attributeName = "published")
-    private String published;
+    private Boolean published;
     @DynamoDBAttribute(attributeName = "comment")
     private String comment;
     @DynamoDBAttribute(attributeName = "image")
@@ -35,5 +35,5 @@ public class Review {
     @DynamoDBAttribute(attributeName = "name")
     private String name;
     @DynamoDBAttribute(attributeName = "rating")
-    private String rating;
+    private Integer rating;
 }
