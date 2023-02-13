@@ -11,4 +11,6 @@ import java.util.Set;
 @Repository
 public interface CategoryItemRepository  extends CrudRepository<CategoryItem, String> {
     Set<CategoryItem> findByCategoryNavigationId(String id);
+
+    Set<CategoryItem> findByCategoryItemId(String id);
 }

@@ -5,7 +5,13 @@ import org.socialsignin.spring.data.dynamodb.repository.EnableScan;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Set;
+
 @EnableScan
 @Repository
 public interface BlogRepository  extends CrudRepository<Blog, String> {
+
+    Set<Blog> findByUserId(String id);
+
+    Set<Blog> findByShopId(String id);
 }
