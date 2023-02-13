@@ -8,19 +8,11 @@ import java.time.Instant;
 @Data
 @ToString
 public class EarningDto {
-
     private String id;
-
     private Instant createdAt;
-
-    private String no;
-
-    private String sellerEarning;
-
-    private String adminCommission;
-
+    private Integer no;
+    private Float sellerEarning;
+    private Float adminCommission;
     private String orderNo;
-
     private String shopName;
-
 }

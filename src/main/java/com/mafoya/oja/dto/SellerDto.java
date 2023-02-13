@@ -8,21 +8,12 @@ import java.time.Instant;
 @Data
 @ToString
 public class SellerDto {
-
     private String id;
-
     private Instant createdAt;
-
-    private String published;
-
+    private Boolean published;
     private String packages;
-
     private String shopName;
-
     private String name;
-
-    private String balance;
-
+    private Float balance;
     private String phone;
-
 }

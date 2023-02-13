@@ -8,23 +8,12 @@ import java.time.Instant;
 @Data
 @ToString
 public class PayoutDto {
-
     private String id;
 
     private Instant createdAt;
-
     private String sellerInfo;
-
     private String payment;
-
-    private String date;
-
-    private String amount;
-
-    private String no;
-
-
-
-
-
+    private Instant date;
+    private Float amount;
+    private Integer no;
 }

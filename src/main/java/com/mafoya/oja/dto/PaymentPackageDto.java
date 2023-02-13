@@ -8,22 +8,13 @@ import java.time.Instant;
 @Data
 @ToString
 public class PaymentPackageDto {
-
     private String id;
-
     private Instant createdAt;
-
-    private String no;
-
+    private Integer no;
     private Instant date;
-
     private String seller;
-
     private String packages;
-
-    private String amount;
-
+    private Float amount;
     private String payment;
-
 
 }

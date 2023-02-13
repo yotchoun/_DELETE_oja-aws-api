@@ -8,16 +8,9 @@ import java.time.Instant;
 @Data
 @ToString
 public class RecentPurchaseDto {
-
     private String id;
-
     private Instant createdAt;
-
     private String product;
-
     private String payment;
-
-    private String amount;
-
-
+    private Float amount;
 }

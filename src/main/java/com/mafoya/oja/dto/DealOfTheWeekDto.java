@@ -8,15 +8,9 @@ import java.time.Instant;
 @Data
 @ToString
 public class DealOfTheWeekDto {
-
     private String id;
-
     private Instant createdAt;
-
     private String imgUrl;
-
     private String brand;
-
-    private String off;
-
+    private Integer off;
 }

@@ -8,18 +8,10 @@ import java.time.Instant;
 @Data
 @ToString
 public class OrderItemDto{
-
     private String id;
-
     private Instant createdAt;
-
-    private String slug;
-
-    private String name;
-
-    private String image;
-
-    private String type;
-
-    private ForDto displayFor;
+    private String product_name;
+    private Float product_price;
+    private Integer product_quantity;
+    private String orderId;
 }

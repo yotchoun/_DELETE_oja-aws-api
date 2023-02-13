@@ -9,27 +9,11 @@ import java.time.Instant;
 @ToString
 public class CardDto {
 
-
     private String id;
-
     private Instant createdAt;
-
     private String title;
-
-
-
     private String amount1;
-
-
-
     private String amount2;
-
-
-
     private String color;
-
-
     private String percentage;
-
-
 }

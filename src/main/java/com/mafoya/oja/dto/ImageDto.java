@@ -8,10 +8,8 @@ import java.time.Instant;
 @Data
 @ToString
 public class ImageDto {
-
     private String id;
-
     private Instant createdAt;
-
     private String link;
+    private String productId;
 }

@@ -8,13 +8,9 @@ import java.time.Instant;
 @Data
 @ToString
 public class ProductStockOutDto {
-
     private String id;
-
     private Instant createdAt;
-
-    private String product;
-
+    private Float amount;
     private String stock;
-
+    private String product;
 }

@@ -8,21 +8,12 @@ import java.time.Instant;
 @Data
 @ToString
 public class RefundRequestDto {
-
     private String id;
-
     private Instant createdAt;
-
     private String image;
-
     private String name;
-
     private String status;
-
-    private String amount;
-
+    private Float amount;
     private String shopName;
-
     private String orderNo;
-
 }

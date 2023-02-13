@@ -10,25 +10,15 @@ import java.time.Instant;
 @ToString
 public class OrderDto {
     private String id;
-
     private Instant createdAt;
-
     private double tax;
-
-    private double discount;
-
-    private double isDelivered;
-
-    private double totalPrice;
-
-    private double shippingAddress;
-
-    private double status;
-
-    private double deliveredAt;
-
+    private Integer discount;
+    private Boolean isDelivered;
+    private Float totalPrice;
+    private String  shippingAddress;
+    private String status;
+    private Instant deliveredAt;
     private String userId;
-
 }
 
 

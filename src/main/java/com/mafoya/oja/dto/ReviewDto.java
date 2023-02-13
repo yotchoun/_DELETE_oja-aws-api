@@ -8,23 +8,14 @@ import java.time.Instant;
 @Data
 @ToString
 public class ReviewDto {
-
     private String id;
-
     private Instant createdAt;
-
     private String customerId;
-
     private String productId;
-
-    private String published;
-
+    private Boolean published;
     private String comment;
-
     private String image;
-
     private String name;
-
-    private String rating;
+    private Integer rating;
 
 }

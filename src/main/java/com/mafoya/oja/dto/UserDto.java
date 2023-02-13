@@ -9,19 +9,17 @@ import java.time.Instant;
 @Data
 @ToString
 public class UserDto {
-
     private String id;
-
     private Instant createdAt;
-
-    private String slug;
-
-    private String name;
-
-    private String image;
-
-    private String type;
-
+    private String cognitoId;
+    private String email;
+    private String phone;
+    private String avatar;
+    private String picture;
+    private Instant dateOfBirth;
+    private Boolean verified;
+    private String userType;
+    private String contactId;
     private ForDto displayFor;
 
 }

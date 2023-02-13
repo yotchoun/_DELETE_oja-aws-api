@@ -8,26 +8,12 @@ import java.time.Instant;
 @Data
 @ToString
 public class BrandDto {
-
-
     private String id;
-
-
     private Instant createdAt;
-
-
     private String slug;
-
-
     private String name;
-
-
     private String image;
-
-
     private String type;
-
-
-    private ForDto displayFor;
-
+    private Boolean featured;
+    private String forId;
 }

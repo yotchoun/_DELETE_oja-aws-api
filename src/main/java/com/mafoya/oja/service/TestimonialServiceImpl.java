@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.TestimonialDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Testimonial;
-import com.mafoya.oja.model.Testimonial;
 import com.mafoya.oja.repository.TestimonialRepository;
 
 import java.util.ArrayList;

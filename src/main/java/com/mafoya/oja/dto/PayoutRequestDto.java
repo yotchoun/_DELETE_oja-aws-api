@@ -8,18 +8,14 @@ import java.time.Instant;
 @Data
 @ToString
 public class PayoutRequestDto {
-
     private String id;
-
     private Instant createdAt;
-
-    private String slug;
-
-    private String name;
-
-    private String image;
-
-    private String type;
-
-    private ForDto displayFor;
+    private Integer no;
+    private Instant date;
+    private String seller;
+    private String message;
+    private Float amount;
+    private Float totalAmount;
+    private Float requestAmount;
+    private String shopName;
 }
