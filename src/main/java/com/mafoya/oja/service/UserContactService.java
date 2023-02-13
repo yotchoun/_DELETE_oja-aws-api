@@ -3,6 +3,7 @@ package com.mafoya.oja.service;
 import com.mafoya.oja.dto.UserContactDto;
 
 import java.util.List;
+import java.util.Set;
 
 public interface UserContactService {
     UserContactDto create(String authorization, UserContactDto userContactDto);
@@ -14,4 +15,6 @@ public interface UserContactService {
     List<UserContactDto> getAll(String authorization);
 
     void delete(String authorization, String id);
+
+    Set<UserContactDto> findByUserId(String authorization,String id);
 }

@@ -6,9 +6,7 @@ import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.OrderItem;
 import com.mafoya.oja.repository.OrderItemRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class OrderItemServiceImpl  implements OrderItemService {
@@ -61,6 +59,13 @@ public class OrderItemServiceImpl  implements OrderItemService {
     @Override
     public void delete(String authorization, String id) {
         orderItemRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<OrderItemDto> findByOrderId(String authorization,String id) {
+        List<OrderItem> doList = (List<OrderItem>) orderItemRepository.findByOrderId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
     }
 }
 

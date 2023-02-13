@@ -1,6 +1,5 @@
 package com.mafoya.oja.repository;
 
-import com.mafoya.oja.model.Testimonial;
 import com.mafoya.oja.model.Ticket;
 import org.socialsignin.spring.data.dynamodb.repository.EnableScan;
 import org.springframework.data.repository.CrudRepository;
@@ -12,5 +11,5 @@ import java.util.Set;
 @Repository
 public interface TicketRepository  extends CrudRepository<Ticket, String> {
 
-    Set<Testimonial> findByUserId(String id);
+    Set<Ticket> findByUserId(String id);
 }

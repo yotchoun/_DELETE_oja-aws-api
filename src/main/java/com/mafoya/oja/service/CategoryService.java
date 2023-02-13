@@ -3,6 +3,7 @@ package com.mafoya.oja.service;
 import com.mafoya.oja.dto.CategoryDto;
 
 import java.util.List;
+import java.util.Set;
 
 public interface CategoryService {
     CategoryDto create(String authorization, CategoryDto categoryDto);
@@ -14,4 +15,8 @@ public interface CategoryService {
     List<CategoryDto> getAll(String authorization);
 
     void delete(String authorization, String id);
+
+    Set<CategoryDto> findByForId(String authorization,String id);
+
+    Set<CategoryDto> findByProductId(String authorization,String id);
 }

@@ -6,9 +6,7 @@ import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.UserAddress;
 import com.mafoya.oja.repository.UserAddressRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class UserAddressServiceImpl  implements UserAddressService {
@@ -61,6 +59,13 @@ public class UserAddressServiceImpl  implements UserAddressService {
     @Override
     public void delete(String authorization, String id) {
         userAddressRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<UserAddressDto> findByUserId(String authorization,String id) {
+        List<UserAddress> doList = (List<UserAddress>) userAddressRepository.findByUserId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
     }
 }
 

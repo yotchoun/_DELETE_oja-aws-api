@@ -3,6 +3,7 @@ package com.mafoya.oja.service;
 import com.mafoya.oja.dto.ImageDto;
 
 import java.util.List;
+import java.util.Set;
 
 public interface ImageService {
     ImageDto create(String authorization, ImageDto imageDto);
@@ -14,4 +15,6 @@ public interface ImageService {
     List<ImageDto> getAll(String authorization);
 
     void delete(String authorization, String id);
+
+    Set<ImageDto> findByProductId(String authorization,String id);
 }

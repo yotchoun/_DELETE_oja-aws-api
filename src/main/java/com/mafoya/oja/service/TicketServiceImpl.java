@@ -6,9 +6,7 @@ import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Ticket;
 import com.mafoya.oja.repository.TicketRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class TicketServiceImpl  implements TicketService {
@@ -61,6 +59,13 @@ public class TicketServiceImpl  implements TicketService {
     @Override
     public void delete(String authorization, String id) {
         ticketRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<TicketDto> findByUserId(String authorization,String id) {
+        List<Ticket> doList = (List<Ticket>) ticketRepository.findByUserId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
     }
 }
 

@@ -6,9 +6,7 @@ import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Testimonial;
 import com.mafoya.oja.repository.TestimonialRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class TestimonialServiceImpl  implements TestimonialService {
@@ -61,6 +59,13 @@ public class TestimonialServiceImpl  implements TestimonialService {
     @Override
     public void delete(String authorization, String id) {
         testimonialRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<TestimonialDto> findByUserId(String authorization,String id) {
+        List<Testimonial> doList = (List<Testimonial>) testimonialRepository.findByUserId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
     }
 }
 

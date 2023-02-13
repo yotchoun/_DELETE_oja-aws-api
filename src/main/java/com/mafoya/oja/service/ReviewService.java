@@ -3,6 +3,7 @@ package com.mafoya.oja.service;
 import com.mafoya.oja.dto.ReviewDto;
 
 import java.util.List;
+import java.util.Set;
 
 public interface ReviewService {
     ReviewDto create(String authorization, ReviewDto reviewDto);
@@ -14,4 +15,8 @@ public interface ReviewService {
     List<ReviewDto> getAll(String authorization);
 
     void delete(String authorization, String id);
+
+    Set<ReviewDto> findByCustomerId(String authorization,String id);
+
+    Set<ReviewDto> findByProductId(String authorization,String id);
 }

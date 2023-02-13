@@ -6,9 +6,7 @@ import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.CategoryItem;
 import com.mafoya.oja.repository.CategoryItemRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class CategoryItemServiceImpl  implements CategoryItemService {
@@ -62,6 +60,20 @@ public class CategoryItemServiceImpl  implements CategoryItemService {
     @Override
     public void delete(String authorization, String id) {
         categoryItemRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<CategoryItemDto> findByCategoryNavigationId(String authorization,String id) {
+        List<CategoryItem> doList = (List<CategoryItem>) categoryItemRepository.findByCategoryNavigationId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
+    }
+
+    @Override
+    public Set<CategoryItemDto> findByCategoryItemId(String authorization,String id) {
+        List<CategoryItem> doList = (List<CategoryItem>) categoryItemRepository.findByCategoryItemId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
     }
 }
 

@@ -6,9 +6,7 @@ import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Review;
 import com.mafoya.oja.repository.ReviewRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ReviewServiceImpl  implements ReviewService {
@@ -61,6 +59,20 @@ public class ReviewServiceImpl  implements ReviewService {
     @Override
     public void delete(String authorization, String id) {
         reviewRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<ReviewDto> findByCustomerId(String authorization,String id) {
+        List<Review> doList = (List<Review>) reviewRepository.findByCustomerId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
+    }
+
+    @Override
+    public Set<ReviewDto> findByProductId(String authorization,String id) {
+        List<Review> doList = (List<Review>) reviewRepository.findByProductId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
     }
 }
 

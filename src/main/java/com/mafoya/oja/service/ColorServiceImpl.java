@@ -6,9 +6,7 @@ import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Color;
 import com.mafoya.oja.repository.ColorRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ColorServiceImpl  implements ColorService {
@@ -61,6 +59,13 @@ public class ColorServiceImpl  implements ColorService {
     @Override
     public void delete(String authorization, String id) {
         colorRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<ColorDto> findByProductId(String authorization,String id) {
+        List<Color> doList = (List<Color>) colorRepository.findByProductId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
     }
 }
 

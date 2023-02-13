@@ -6,9 +6,7 @@ import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.UserContact;
 import com.mafoya.oja.repository.UserContactRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class UserContactServiceImpl  implements UserContactService {
@@ -61,6 +59,13 @@ public class UserContactServiceImpl  implements UserContactService {
     @Override
     public void delete(String authorization, String id) {
         userContactRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<UserContactDto> findByUserId(String authorization,String id) {
+        List<UserContact> doList = (List<UserContact>) userContactRepository.findByUserId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
     }
 }
 

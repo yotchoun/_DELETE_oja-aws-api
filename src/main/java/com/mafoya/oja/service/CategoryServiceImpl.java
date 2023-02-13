@@ -6,9 +6,7 @@ import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Category;
 import com.mafoya.oja.repository.CategoryRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class CategoryServiceImpl  implements CategoryService {
@@ -61,6 +59,20 @@ public class CategoryServiceImpl  implements CategoryService {
     @Override
     public void delete(String authorization, String id) {
         categoryRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<CategoryDto> findByForId(String authorization,String id) {
+        List<Category> doList = (List<Category>) categoryRepository.findByForId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
+    }
+
+    @Override
+    public Set<CategoryDto> findByProductId(String authorization,String id) {
+        List<Category> doList = (List<Category>) categoryRepository.findByProductId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
     }
 }
 

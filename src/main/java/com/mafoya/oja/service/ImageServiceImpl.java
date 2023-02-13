@@ -6,9 +6,7 @@ import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Image;
 import com.mafoya.oja.repository.ImageRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ImageServiceImpl implements ImageService {
@@ -61,6 +59,13 @@ public class ImageServiceImpl implements ImageService {
     @Override
     public void delete(String authorization, String id) {
         imageRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<ImageDto> findByProductId(String authorization,String id) {
+        List<Image> doList = (List<Image>) imageRepository.findByProductId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
     }
 }
 

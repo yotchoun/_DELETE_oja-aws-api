@@ -6,9 +6,7 @@ import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Article;
 import com.mafoya.oja.repository.ArticleRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ArticleServiceImpl implements ArticleService {
@@ -61,5 +59,12 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public void delete(String authorization, String id) {
         articleRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<ArticleDto> findByUserId(String authorization,String id) {
+        List<Article> doList = (List<Article>) articleRepository.findByUserId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
     }
 }

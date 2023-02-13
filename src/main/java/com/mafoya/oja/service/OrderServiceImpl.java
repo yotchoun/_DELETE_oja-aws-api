@@ -6,9 +6,7 @@ import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Order;
 import com.mafoya.oja.repository.OrderRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class OrderServiceImpl implements OrderService {
@@ -61,6 +59,13 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public void delete(String authorization, String id) {
         orderRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<OrderDto> findByUserId(String authorization,String id) {
+        List<Order> doList = (List<Order>) orderRepository.findByUserId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
     }
 }
 

@@ -6,9 +6,7 @@ import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Shop;
 import com.mafoya.oja.repository.ShopRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ShopServiceImpl implements ShopService{
@@ -61,6 +59,20 @@ public class ShopServiceImpl implements ShopService{
     @Override
     public void delete(String authorization, String id) {
         shopRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<ShopDto> findByUserId(String authorization,String id) {
+        List<Shop> doList = (List<Shop>) shopRepository.findByUserId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
+    }
+
+    @Override
+    public Set<ShopDto> findBySocialLinkId(String authorization,String id) {
+        List<Shop> doList = (List<Shop>) shopRepository.findBySocialLinkId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
     }
 }
 

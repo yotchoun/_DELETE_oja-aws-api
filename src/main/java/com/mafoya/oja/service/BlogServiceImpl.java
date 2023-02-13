@@ -6,9 +6,7 @@ import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Blog;
 import com.mafoya.oja.repository.BlogRepository;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class BlogServiceImpl implements BlogService {
@@ -61,6 +59,20 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public void delete(String authorization, String id) {
         blogRepository.deleteById(id);
+    }
+
+    @Override
+    public Set<BlogDto> findByUserId(String authorization,String id) {
+        List<Blog> doList = (List<Blog>) blogRepository.findByUserId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
+    }
+
+    @Override
+    public Set<BlogDto> findByShopId(String authorization,String id) {
+        List<Blog> doList = (List<Blog>) blogRepository.findByShopId(id);
+        return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
+                .collect(Collectors.toCollection(HashSet::new));
     }
 }
 
