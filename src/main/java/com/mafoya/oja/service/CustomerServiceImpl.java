@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.CustomerDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Customer;
-import com.mafoya.oja.model.Customer;
 import com.mafoya.oja.repository.CustomerRepository;
 
 import java.util.ArrayList;

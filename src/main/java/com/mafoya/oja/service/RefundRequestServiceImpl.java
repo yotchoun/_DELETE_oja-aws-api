@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.RefundRequestDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.RefundRequest;
-import com.mafoya.oja.model.RefundRequest;
 import com.mafoya.oja.repository.RefundRequestRepository;
 
 import java.util.ArrayList;

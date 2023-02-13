@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.BlogDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Blog;
-import com.mafoya.oja.model.Blog;
 import com.mafoya.oja.repository.BlogRepository;
 
 import java.util.ArrayList;

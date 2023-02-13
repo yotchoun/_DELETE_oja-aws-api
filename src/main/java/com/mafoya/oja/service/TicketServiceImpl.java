@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.TicketDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Ticket;
-import com.mafoya.oja.model.Ticket;
 import com.mafoya.oja.repository.TicketRepository;
 
 import java.util.ArrayList;

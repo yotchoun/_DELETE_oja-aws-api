@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.PayoutRequestDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.PayoutRequest;
-import com.mafoya.oja.model.PayoutRequest;
 import com.mafoya.oja.repository.PayoutRequestRepository;
 
 import java.util.ArrayList;

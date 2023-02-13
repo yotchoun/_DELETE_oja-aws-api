@@ -4,8 +4,6 @@ import com.mafoya.oja.dto.CategoryItemDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.CategoryItem;
-import com.mafoya.oja.model.CategoryItem;
-import com.mafoya.oja.repository.CategoryItemRepository;
 import com.mafoya.oja.repository.CategoryItemRepository;
 
 import java.util.ArrayList;

@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.UserContactDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.UserContact;
-import com.mafoya.oja.model.UserContact;
 import com.mafoya.oja.repository.UserContactRepository;
 
 import java.util.ArrayList;

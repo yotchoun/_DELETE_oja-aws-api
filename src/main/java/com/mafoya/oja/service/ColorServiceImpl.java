@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.ColorDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Color;
-import com.mafoya.oja.model.Color;
 import com.mafoya.oja.repository.ColorRepository;
 
 import java.util.ArrayList;

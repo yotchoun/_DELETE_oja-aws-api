@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.ReviewDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Review;
-import com.mafoya.oja.model.Review;
 import com.mafoya.oja.repository.ReviewRepository;
 
 import java.util.ArrayList;

@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.OrderItemDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.OrderItem;
-import com.mafoya.oja.model.OrderItem;
 import com.mafoya.oja.repository.OrderItemRepository;
 
 import java.util.ArrayList;

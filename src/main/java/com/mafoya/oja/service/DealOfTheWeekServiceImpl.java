@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.DealOfTheWeekDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.DealOfTheWeek;
-import com.mafoya.oja.model.DealOfTheWeek;
 import com.mafoya.oja.repository.DealOfTheWeekRepository;
 
 import java.util.ArrayList;

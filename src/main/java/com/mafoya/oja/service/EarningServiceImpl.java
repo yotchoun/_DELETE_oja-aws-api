@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.EarningDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Earning;
-import com.mafoya.oja.model.Earning;
 import com.mafoya.oja.repository.EarningRepository;
 
 import java.util.ArrayList;

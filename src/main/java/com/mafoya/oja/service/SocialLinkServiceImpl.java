@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.SocialLinkDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.SocialLink;
-import com.mafoya.oja.model.SocialLink;
 import com.mafoya.oja.repository.SocialLinkRepository;
 
 import java.util.ArrayList;

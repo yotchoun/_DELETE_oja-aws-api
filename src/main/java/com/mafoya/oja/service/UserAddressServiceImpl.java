@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.UserAddressDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.UserAddress;
-import com.mafoya.oja.model.UserAddress;
 import com.mafoya.oja.repository.UserAddressRepository;
 
 import java.util.ArrayList;

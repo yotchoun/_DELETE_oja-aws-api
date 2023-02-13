@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.ImageDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Image;
-import com.mafoya.oja.model.Image;
 import com.mafoya.oja.repository.ImageRepository;
 
 import java.util.ArrayList;

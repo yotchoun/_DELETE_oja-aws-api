@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.BrandDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Brand;
-import com.mafoya.oja.model.Brand;
 import com.mafoya.oja.repository.BrandRepository;
 
 import java.util.ArrayList;

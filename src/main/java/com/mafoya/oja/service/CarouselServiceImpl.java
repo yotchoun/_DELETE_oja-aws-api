@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.CarouselDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Carousel;
-import com.mafoya.oja.model.Carousel;
 import com.mafoya.oja.repository.CarouselRepository;
 
 import java.util.ArrayList;

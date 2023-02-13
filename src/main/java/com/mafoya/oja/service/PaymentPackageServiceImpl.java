@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.PaymentPackageDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.PaymentPackage;
-import com.mafoya.oja.model.PaymentPackage;
 import com.mafoya.oja.repository.PaymentPackageRepository;
 
 import java.util.ArrayList;

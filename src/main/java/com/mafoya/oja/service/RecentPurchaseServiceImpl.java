@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.RecentPurchaseDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.RecentPurchase;
-import com.mafoya.oja.model.RecentPurchase;
 import com.mafoya.oja.repository.RecentPurchaseRepository;
 
 import java.util.ArrayList;

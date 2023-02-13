@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.ProductStockOutDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.ProductStockOut;
-import com.mafoya.oja.model.ProductStockOut;
 import com.mafoya.oja.repository.ProductStockOutRepository;
 
 import java.util.ArrayList;

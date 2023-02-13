@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.ShopDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Shop;
-import com.mafoya.oja.model.Shop;
 import com.mafoya.oja.repository.ShopRepository;
 
 import java.util.ArrayList;

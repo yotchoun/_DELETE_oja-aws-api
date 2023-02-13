@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.DealHotDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.DealHot;
-import com.mafoya.oja.model.DealHot;
 import com.mafoya.oja.repository.DealHotRepository;
 
 import java.util.ArrayList;

@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.MessageDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Message;
-import com.mafoya.oja.model.Message;
 import com.mafoya.oja.repository.MessageRepository;
 
 import java.util.ArrayList;

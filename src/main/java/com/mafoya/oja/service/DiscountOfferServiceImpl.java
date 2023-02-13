@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.DiscountOfferDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.DiscountOffer;
-import com.mafoya.oja.model.DiscountOffer;
 import com.mafoya.oja.repository.DiscountOfferRepository;
 
 import java.util.ArrayList;

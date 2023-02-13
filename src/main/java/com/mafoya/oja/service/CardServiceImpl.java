@@ -4,7 +4,6 @@ import com.mafoya.oja.dto.CardDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Card;
-import com.mafoya.oja.model.Card;
 import com.mafoya.oja.repository.CardRepository;
 
 import java.util.ArrayList;
