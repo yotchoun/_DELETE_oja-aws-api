@@ -1,9 +1,14 @@
 package com.mafoya.oja.service;
 
 import com.mafoya.oja.dto.CategoryDto;
+import com.mafoya.oja.dto.CategoryItemDto;
+import com.mafoya.oja.dto.CategoryParentDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.Category;
+import com.mafoya.oja.model.CategoryItem;
+import com.mafoya.oja.model.CategoryParent;
+import com.mafoya.oja.repository.CategoryParentRepository;
 import com.mafoya.oja.repository.CategoryRepository;
 
 import java.util.*;
@@ -13,8 +18,11 @@ public class CategoryServiceImpl  implements CategoryService {
 
     private final CategoryRepository categoryRepository;
 
-    public CategoryServiceImpl(CategoryRepository categoryRepository) {
+    private final CategoryParentRepository categoryParentRepository;
+
+    public CategoryServiceImpl(CategoryRepository categoryRepository, CategoryParentRepository categoryParentRepository) {
         this.categoryRepository = categoryRepository;
+        this.categoryParentRepository = categoryParentRepository;
     }
 
     @Override
@@ -22,7 +30,11 @@ public class CategoryServiceImpl  implements CategoryService {
         CategoryDto categoryDto;
         Optional<Category> categoryOptional = categoryRepository.findById(id);
         if (categoryOptional.isPresent()) {
+            Set<CategoryParent> categoryParentDo = categoryParentRepository.findByCategoryId(id);
+            Set<CategoryParentDto> categoryParentDTOs = categoryParentDo.stream().map(OjaMapper::mapCategoryParentDto)
+                    .collect(Collectors.toCollection(HashSet::new));
             categoryDto = OjaMapper.mapCategoryDto(categoryOptional.get());
+            categoryDto.setParent(categoryParentDTOs);
             return categoryDto;
         }
         throw new DataNotFoundException("Id not found for  " + id);

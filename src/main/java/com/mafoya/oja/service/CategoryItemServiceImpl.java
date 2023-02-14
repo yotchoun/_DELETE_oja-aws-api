@@ -1,6 +1,7 @@
 package com.mafoya.oja.service;
 
 import com.mafoya.oja.dto.CategoryItemDto;
+import com.mafoya.oja.dto.CategoryParentDto;
 import com.mafoya.oja.exception.DataNotFoundException;
 import com.mafoya.oja.helper.OjaMapper;
 import com.mafoya.oja.model.CategoryItem;
@@ -9,7 +10,7 @@ import com.mafoya.oja.repository.CategoryItemRepository;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class CategoryItemServiceImpl  implements CategoryItemService {
+public class CategoryItemServiceImpl implements CategoryItemService {
 
 
     private final CategoryItemRepository categoryItemRepository;
@@ -23,7 +24,13 @@ public class CategoryItemServiceImpl  implements CategoryItemService {
         CategoryItemDto categoryItemDto;
         Optional<CategoryItem> categoryItemOptional = categoryItemRepository.findById(id);
         if (categoryItemOptional.isPresent()) {
+
+            Set<CategoryItem> categoryItems = categoryItemRepository.findByCategoryItemId(id);
+            Set<CategoryItemDto> categoryParentDTOs = categoryItems.stream().map(OjaMapper::mapCategoryItemDto)
+                    .collect(Collectors.toCollection(HashSet::new));
+
             categoryItemDto = OjaMapper.mapCategoryItemDto(categoryItemOptional.get());
+            categoryItemDto.setChild(categoryParentDTOs);
             return categoryItemDto;
         }
         throw new DataNotFoundException("Id not found for  " + id);
@@ -63,14 +70,14 @@ public class CategoryItemServiceImpl  implements CategoryItemService {
     }
 
     @Override
-    public Set<CategoryItemDto> findByCategoryNavigationId(String authorization,String id) {
+    public Set<CategoryItemDto> findByCategoryNavigationId(String authorization, String id) {
         List<CategoryItem> doList = (List<CategoryItem>) categoryItemRepository.findByCategoryNavigationId(id);
         return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
                 .collect(Collectors.toCollection(HashSet::new));
     }
 
     @Override
-    public Set<CategoryItemDto> findByCategoryItemId(String authorization,String id) {
+    public Set<CategoryItemDto> findByCategoryItemId(String authorization, String id) {
         List<CategoryItem> doList = (List<CategoryItem>) categoryItemRepository.findByCategoryItemId(id);
         return doList.stream().map(objectDo -> getById(authorization, objectDo.getId()))
                 .collect(Collectors.toCollection(HashSet::new));

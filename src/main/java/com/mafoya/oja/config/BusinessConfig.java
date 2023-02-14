@@ -43,8 +43,8 @@ public class BusinessConfig {
         return new CarouselServiceImpl(carouselRepository);
     }
     @Bean
-    CategoryService categoryService(CategoryRepository categoryRepository) {
-        return new CategoryServiceImpl(categoryRepository);
+    CategoryService categoryService(CategoryRepository categoryRepository,CategoryParentRepository categoryParentRepository) {
+        return new CategoryServiceImpl(categoryRepository, categoryParentRepository);
     }
     @Bean
     CategoryItemService categoryItemService(CategoryItemRepository categoryItemRepository) {

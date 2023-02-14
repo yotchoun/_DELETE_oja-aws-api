@@ -20,7 +20,7 @@ public class CategoryDto {
     private String forId;
     private String productId;
     private ForDto displayFor;
-    private Set<CategoryDto> parent;
+    private Set<CategoryParentDto> parent;
 
 }
 
