@@ -20,4 +20,7 @@ public class ShopDto {
     private String userId;
     private String socialLinkId;
     private ForDto displayFor;
+    private UserDto user;
+    private SocialLinkDto socialLinks;
+
 }

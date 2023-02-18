@@ -11,10 +11,10 @@ public class CustomerDto {
 
     private String id;
     private Instant createdAt;
-    private String name;
     private String orders;
     private Float balance;
     private String avatar;
     private String phone;
     private String email;
+    private UserContactDto name;
 }

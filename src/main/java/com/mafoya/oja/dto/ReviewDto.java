@@ -18,4 +18,6 @@ public class ReviewDto {
     private String name;
     private Integer rating;
 
+    private CustomerDto customer;
+
 }

@@ -16,5 +16,7 @@ public class BlogDto {
     private String thumbnail;
     private String slug;
     private String shopId;
+    private ShopDto shop;
     private String userId;
+    private UserDto user;
 }

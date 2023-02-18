@@ -22,8 +22,6 @@ public class Customer {
     private String id;
     @DynamoDBAttribute(attributeName = "createdAt")
     private Instant createdAt;
-    @DynamoDBAttribute(attributeName = "name")
-    private String name;
     @DynamoDBAttribute(attributeName = "orders")
     private String orders;
     @DynamoDBAttribute(attributeName = "balance")

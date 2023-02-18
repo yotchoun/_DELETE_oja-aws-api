@@ -19,4 +19,5 @@ public class TicketDto {
     private String conversation;
     private String userId;
     private ForDto displayFor;
+    private UserDto user;
 }

@@ -4,6 +4,8 @@ import lombok.Data;
 import lombok.ToString;
 
 import java.time.Instant;
+import java.util.Set;
+
 @Data
 @ToString
 public class ProductDto {
@@ -21,4 +23,12 @@ public class ProductDto {
     private Integer unit;
     private String shopId;
     private Boolean published;
+    private ShopDto shop;
+    private Set<ImageDto> images;
+    private Set<CategoryDto> categories;
+    private Set<ReviewDto> reviews;
+
+
+
+
 }

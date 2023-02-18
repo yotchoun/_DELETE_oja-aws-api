@@ -21,5 +21,7 @@ public class UserDto {
     private String userType;
     private String contactId;
     private ForDto displayFor;
+    private UserContactDto name;
+
 
 }

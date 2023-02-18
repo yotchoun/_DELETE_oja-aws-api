@@ -16,4 +16,5 @@ public class BrandDto {
     private String type;
     private Boolean featured;
     private String forId;
+    private ForDto displayFor;
 }

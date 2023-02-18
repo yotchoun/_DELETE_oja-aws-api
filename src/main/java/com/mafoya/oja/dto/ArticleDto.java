@@ -12,8 +12,10 @@ public class ArticleDto {
     private Instant createdAt;
     private String title;
     private String description;
-    private String shopId;
     private String thumbnail;
     private String slug;
+    private String shopId;
+    private ShopDto shop;
     private String userId;
+    private UserDto user;
 }
