@@ -33,7 +33,7 @@ public class Product {
     @DynamoDBAttribute(attributeName = "price")
     private Float price;
     @DynamoDBAttribute(attributeName = "discount")
-    private Instant discount;
+    private Integer discount;
     @DynamoDBAttribute(attributeName = "rating")
     private Integer rating;
     @DynamoDBAttribute(attributeName = "status")

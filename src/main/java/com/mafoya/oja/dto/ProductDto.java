@@ -16,7 +16,7 @@ public class ProductDto {
     private String title;
     private String slug;
     private Float price;
-    private Instant discount;
+    private Integer discount;
     private Integer rating;
     private String status;
     private String thumbnail;
