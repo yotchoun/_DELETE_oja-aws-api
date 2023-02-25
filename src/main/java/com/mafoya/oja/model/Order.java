@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 import java.time.Instant;
 
 @Data
-@DynamoDBTable(tableName = "OjaOrder-hvlboaadvrhhpi7zd6mqvplo6e-dev")
+@DynamoDBTable(tableName = "OjaOrder-6izfil7vl5a77cv7qdoaxmqwey-dev")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor

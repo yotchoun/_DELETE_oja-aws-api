@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 import java.time.Instant;
 
 @Data
-@DynamoDBTable(tableName = "OjaCard-hvlboaadvrhhpi7zd6mqvplo6e-devv")
+@DynamoDBTable(tableName = "OjaCard-6izfil7vl5a77cv7qdoaxmqwey-devv")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
