@@ -1,13 +1,16 @@
 [
   {
     "id": "4c9681ac-69e7-4ab6-b819-971b8ee9563b",
+    "categoryId": "4c9681ac-69e7-4ab6-b819-971b8ee9563b",
     "name": "Birthday Gift",
-    "icon": null,
+    "icon":"/assets/images/Gift Shop/Product 1.png",
     "image": "/assets/images/Gift Shop/Product 1.png",
     "slug": "birthday-gift",
     "parent": [],
     "description": "27 Available Items",
-    "featured": true
+    "featured": true,
+    "createdAt": "1930-01-01T16:00:00-07:00",
+    "updatedAt": "1930-01-01T16:00:00-07:00"
   },
   {
     "id": "c8305a8a-a71e-4240-a01f-6b6336be20d9",
