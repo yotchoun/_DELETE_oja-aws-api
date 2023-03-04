@@ -13,7 +13,7 @@ import java.time.Instant;
 
 
 @Data
-@DynamoDBTable(tableName = "OjaFor-6izfil7vl5a77cv7qdoaxmqwey-dev")
+@DynamoDBTable(tableName = "OjaFor-tdkjweejdrbvpdpqy72fsp6a2y-dev")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
